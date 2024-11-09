@@ -3,7 +3,7 @@ class App {
 
     constructor() {
         const hash = location.hash;
-        const target = hash.length > 0 ? hash.substring(1) : "dashboard";
+        const target = hash.length > 0 ? hash.substring(1) : "welcome";
 
         this.sidebar = $("#side-menu");
         this.content = $("#page-content");
