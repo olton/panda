@@ -1,8 +1,8 @@
-<script>window.PAGE_TITLE = 'UI Elements | Cards'</script>
+<script>window.PAGE_TITLE = 'UI Elements | Cards & Panels'</script>
 
 <div class="row">
     <div class="cell-md-6 d-flex flex-align-center">
-        <h3>Cards</h3>
+        <h3>Cards &amp; Panels</h3>
     </div>
     <div class="cell-md-6 d-flex flex-justify-end flex-align-center">
         <ul class="breadcrumbs arrow">
@@ -10,6 +10,259 @@
             <li><a href="#">UI</a></li>
             <li class="active"><a href="#">Cards</a></li>
         </ul>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Social Box</div>
+    <p class="text-muted">
+        You can create like social boxes for people with <code>.social-box</code> cards.
+    </p>
+    <div class="mt-4">
+        <div class="row">
+            <div class="cell-lg-4">
+                <div class="social-box">
+                    <div class="header">
+                        <span class="avatar">
+                            <span class="mif-person"></span>
+                        </span>
+                        <div class="title">Jon Dou</div>
+                        <div class="subtitle">Unknown</div>
+                    </div>
+                    <div class="content">
+                        <ul class="skills">
+                            <li>
+                                <div class="text-bold">0</div>
+                                <div>Item 1</div>
+                            </li>
+                            <li>
+                                <div class="text-bold">0</div>
+                                <div>Item 2</div>
+                            </li>
+                            <li>
+                                <div class="text-bold">0</div>
+                                <div>Item 3</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="cell-lg-4">
+                <div class="social-box">
+                    <div class="header bg-cyan fg-white">
+                        <img src="/images/igor.png" class="avatar" alt=""/>
+                        <div class="title">Igor Vereshagin</div>
+                        <div class="subtitle">Director</div>
+                    </div>
+                    <div class="content">
+                        <ul class="skills">
+                            <li>
+                                <div class="text-bold">0</div>
+                                <div class="text-upper">Awards</div>
+                            </li>
+                            <li>
+                                <div class="text-bold">0</div>
+                                <div class="text-upper">Nominations</div>
+                            </li>
+                            <li>
+                                <div class="text-bold">0</div>
+                                <div class="text-upper">Films</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mt-4">
+        <pre><code>
+            &lt;div class="social-box"&gt;
+                &lt;div class="header"&gt;
+                    &lt;span class="avatar"&gt;
+                        &lt;span class="mif-person"&gt;&lt;/span&gt;
+                    &lt;/span&gt;
+                    &lt;div class="title"&gt;Jon Dou&lt;/div&gt;
+                    &lt;div class="subtitle"&gt;Unknown&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="content"&gt;
+                    &lt;ul class="skills"&gt;
+                        &lt;li&gt;
+                            &lt;div class="text-bold"&gt;0&lt;/div&gt;
+                            &lt;div&gt;Item 1&lt;/div&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;div class="text-bold"&gt;0&lt;/div&gt;
+                            &lt;div&gt;Item 2&lt;/div&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;div class="text-bold"&gt;0&lt;/div&gt;
+                            &lt;div&gt;Item 3&lt;/div&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        </code></pre>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Skill Boxes</div>
+    <p class="text-muted">
+        You can create skill boxes for people with <code>.skill-box</code> cards.
+    </p>
+    <div class="mt-4">
+        <div class="row">
+            <div class="cell-lg-4">
+                <div class="skill-box">
+                    <div class="header">
+                        <span class="avatar">
+                            <span class="mif-person"></span>
+                        </span>
+                        <div class="title">Jon Dou</div>
+                        <div class="subtitle">Unknown</div>
+                    </div>
+                    <div class="content">
+                        <ul class="skills">
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                            <li>Item 3</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="cell-lg-4">
+                <div class="skill-box">
+                    <div class="header gr-cyan fg-dark">
+                        <img src="/images/julia.png" class="avatar" alt=""/>
+                        <div class="title">Julia Wagner</div>
+                        <div class="subtitle">Actress</div>
+                    </div>
+                    <div class="content">
+                        <ul class="skills">
+                            <li>
+                                <span>Kung-Fu</span>
+                                <span class="float-right">90%</span>
+                                <div data-role="progress"
+                                     data-value="90"
+                                     data-small="true"></div>
+                            </li>
+                            <li>
+                                <span>Karate Do</span>
+                                <div data-role="progress"
+                                     data-value="75"
+                                     data-small="true"
+                                     data-cls-bar="bg-cyan"></div>
+                            </li>
+                            <li>
+                                <span>Dancing</span>
+                                <div data-role="progress"
+                                     data-value="35"
+                                     data-small="true"
+                                     data-cls-bar="bg-red"></div>
+                            </li>
+                            <li>
+                                <span>Singing</span>
+                                <div data-role="progress"
+                                     data-value="45"
+                                     data-small="true"
+                                     data-cls-bar="bg-orange"></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="cell-lg-4">
+                <div class="skill-box">
+                    <div class="header bg-coral fg-white">
+                        <img src="/images/mark.png" class="avatar" alt=""/>
+                        <div class="title">Mark Vernon</div>
+                        <div class="subtitle">CEO of Company</div>
+                    </div>
+                    <div class="content">
+                        <ul class="skills">
+                            <li>
+                                <span>Projects</span>
+                                <span class="badge bg-orange fg-white">25</span>
+                            </li>
+                            <li>
+                                <span>Tasks</span>
+                                <span class="badge bg-cyan fg-white">5</span>
+                            </li>
+                            <li>
+                                <span>Completed Projects</span>
+                                <span class="badge bg-green fg-white">21</span>
+                            </li>
+                            <li>
+                                <span>Followers</span>
+                                <span class="badge bg-red fg-white">1024</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mt-4">
+        <pre><code>
+            &lt;div class="skill-box"&gt;
+                &lt;div class="header"&gt;
+                    &lt;span class="avatar"&gt;
+                        &lt;span class="mif-person"&gt;&lt;/span&gt;
+                    &lt;/span&gt;
+                    &lt;div class="title"&gt;Jon Dou&lt;/div&gt;
+                    &lt;div class="subtitle"&gt;Unknown&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="content"&gt;
+                    &lt;ul class="skills"&gt;
+                        &lt;li&gt;Item 1&lt;/li&gt;
+                        &lt;li&gt;Item 2&lt;/li&gt;
+                        &lt;li&gt;Item 3&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        </code></pre>
+    </div>
+</div>
+
+<div class="box">
+    <script>
+        var panelCustomButtons = [
+            {
+                html: `<span class="mif-bin"></span>`,
+                onclick: `alert("Bin button clicked")`,
+            },
+            {
+                html: '<span class="mif-share"></span>',
+                onclick: `alert("Share button clicked")`,
+            },
+        ]
+    </script>
+    <div class="box-title">Panel</div>
+    <p class="text-muted">
+        Create a panel with <code>Panel</code> component.
+    </p>
+    <div class="mt-4">
+        <div data-role="panel" data-width="300"
+             data-title-caption="Panel"
+             data-title-icon="<span class='mif-rocket'>"
+             data-collapsible="true"
+             data-custom-buttons="panelCustomButtons"
+        >
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+    </div>
+    <div class="mt-4">
+        <pre><code>
+            &lt;div data-role="panel" data-width="300"
+                 data-title-caption="Panel"
+                 data-title-icon="&lt;span class='mif-rocket'&gt;"
+                 data-custom-buttons="panelCustomButtons"
+                 data-collapsible="true"&gt;
+                &lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry.&lt;/p&gt;
+                &lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry.&lt;/p&gt;
+            &lt;/div&gt;
+        </code></pre>
     </div>
 </div>
 
@@ -130,6 +383,52 @@
                 &lt;div class="card-footer"&gt;
                     &lt;button class="button primary"&gt;Ok&lt;/button&gt;
                     &lt;button class="button"&gt;Cancel&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        </code></pre>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">.info-box</div>
+    <p class="text-muted">
+        Use <code>InfoBox</code> component to show any message.
+    </p>
+    <div class="mt-4">
+        <button class="button" onclick="Metro.getPlugin('#info-box', 'infobox').open()">Open InfoBox</button>
+        <button class="button alert" onclick="Metro.getPlugin('#info-box-alert', 'infobox').open()">Open InfoBox</button>
+    </div>
+    <div class="mt-4">
+        <div class="info-box" data-role="info-box" id="info-box" data-overlay-click-close="true">
+            <span class="button square closer"></span>
+            <div class="info-box-content">
+                <h3>What is Lorem Ipsum?</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+        </div>
+        <div class="info-box bg-red fg-white" data-role="info-box" id="info-box-alert" data-overlay-click-close="true">
+            <span class="button square closer"></span>
+            <div class="info-box-content">
+                <h3>What is Lorem Ipsum?</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+        </div>
+    </div>
+    <div class="mt-4">
+        <pre><code>
+            &lt;button class="button"
+                onclick="Metro.getPlugin('#info-box', 'infobox').open()"&gt;
+                Open InfoBox
+            &lt;/button&gt;
+
+            &lt;div class="info-box"
+                 data-role="info-box"
+                 id="info-box"
+                 data-overlay-click-close="true"&gt;
+                &lt;span class="button square closer"&gt;&lt;/span&gt;
+                &lt;div class="info-box-content"&gt;
+                    &lt;h3&gt;What is Lorem Ipsum?&lt;/h3&gt;
+                    &lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry.&lt;/p&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         </code></pre>

@@ -50,3 +50,13 @@
         background: #282c34;
     }
 }
+
+pre:not(.stay-on) {
+    display: none;
+}
+
+html.show-code {
+    pre:not(.stay-on) {
+        display: block;
+    }
+}

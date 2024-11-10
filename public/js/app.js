@@ -60,6 +60,15 @@ class App {
             that.currentPage = location.hash.substring(1);
             that.loadPage().then(() => {});
         })
+
+        $("#showCodeToggle").on("click", function() {
+            const checked = this.checked;
+            if (checked) {
+                $("html").addClass("show-code");
+            } else {
+                $("html").removeClass("show-code");
+            }
+        })
     }
 
     setPageTitle(title){
