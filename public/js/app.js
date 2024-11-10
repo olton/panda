@@ -33,7 +33,13 @@ class App {
             this.setPageTitle(window["PAGE_TITLE"]);
         }
         Metro.utils.cleanPreCode("pre code");
+
         hljs.highlightAll();
+
+        $("pre").each((i, el) => {
+            const btn = $("<button>").addClass("button square small copy-code-button").html("<span class='mif-copy'>");
+            $(el).append(btn);
+        })
     }
 
     eventHandler(){
@@ -61,13 +67,19 @@ class App {
             that.loadPage().then(() => {});
         })
 
-        $("#showCodeToggle").on("click", function() {
+        $("#showCodeToggle").on("click", function(e) {
             const checked = this.checked;
             if (checked) {
                 $("html").addClass("show-code");
             } else {
                 $("html").removeClass("show-code");
             }
+        })
+
+        $("document").on("click", ".copy-code-button", function() {
+            const code = $(this).siblings("code").text();
+            Metro.utils.copy2clipboard(code);
+            Metro.toast.create("Code copied to clipboard!", {})
         })
     }
 

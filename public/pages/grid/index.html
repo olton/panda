@@ -1,8 +1,8 @@
 <script>window.PAGE_TITLE = 'General | Grid System'</script>
 <style>
-    .grid.demo {
+    .demo {
         margin: 20px 0;
-        [class*="cell-"] {
+        [class*="cell-"], [class*="qc-"] {
             height: 40px;
             background: var(--default-background);
             color: var(--default-color);
@@ -15,8 +15,8 @@
     }
 
     .dark-side {
-        .grid.demo {
-            [class*="cell-"] {
+        .demo {
+            [class*="cell-"], [class*="qc-"] {
                 background: var(--default-background);
                 color: var(--default-color);
                 border: 1px solid var(--border-color);
@@ -26,10 +26,10 @@
 </style>
 
 <div class="row">
-    <div class="cell-md-6 d-flex flex-align-center">
+    <div class="cell-lg-6 d-flex flex-align-center">
         <h3>Grid System</h3>
     </div>
-    <div class="cell-md-6 d-flex flex-justify-end flex-align-center">
+    <div class="cell-lg-6 d-flex flex-justify-end-lg flex-align-center">
         <ul class="breadcrumbs arrow">
             <li><a href="#">Pandora 2.0</a></li>
             <li class="active"><a href="#">Grid System</a></li>
@@ -188,3 +188,39 @@
         </div>
     </div>
 </div>
+
+<div class="box">
+    <div class="box-title">Container Grid</div>
+    <div class="ribbon ribbon-crimson right"><span class="icon mif-notifications ani-ring"></span>New</div>
+    <p class="text-muted">
+        You can use <code>container query</code> CSS feature with <code>.container-query</code> and <code>.qc-***</code> classes.
+    </p>
+    <div class="mt-4">Default behavior</div>
+    <div class="grid demo">
+        <div class="row">
+            <div class="cell-md-4">1</div>
+            <div class="cell-md-4">2</div>
+            <div class="cell-md-4">3</div>
+        </div>
+    </div>
+    <div>Container query behavior</div>
+    <div class="container-query demo">
+        <div class="row">
+            <div class="qc-md-4">1</div>
+            <div class="qc-md-4">2</div>
+            <div class="qc-md-4">3</div>
+        </div>
+    </div>
+    <div class="mt-4">
+        <pre class="stay-on"><code>
+            &lt;div class="grid-container"&gt;
+                &lt;div class="row"&gt;
+                    &lt;div class="qc-md-4"&gt;1&lt;/div&gt;
+                    &lt;div class="qc-md-4"&gt;2&lt;/div&gt;
+                    &lt;div class="qc-md-4"&gt;3&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        </code></pre>
+    </div>
+</div>
+
