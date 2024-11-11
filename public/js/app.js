@@ -40,6 +40,12 @@ class App {
             const btn = $("<button>").addClass("button square small copy-code-button").html("<span class='mif-copy'>");
             $(el).append(btn);
         })
+
+        const showCode = Metro.storage.getItem("pandora:showCode", false);
+        if (showCode) {
+            $("html").addClass("show-code");
+            $("#showCodeToggle").attr("checked", true);
+        }
     }
 
     eventHandler(){
@@ -74,6 +80,7 @@ class App {
             } else {
                 $("html").removeClass("show-code");
             }
+            Metro.storage.setItem("pandora:showCode", checked);
         })
 
         $("document").on("click", ".copy-code-button", function() {
