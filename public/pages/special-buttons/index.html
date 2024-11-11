@@ -571,6 +571,37 @@
 </div>
 
 <div class="box">
+    <div class="box-title">Button Group</div>
+    <p class="text-muted">
+        Create a button group with <code>Button Group</code> component. You can create a group with radio state or multi state with attribute <code>data-mode="multi"</code>.
+    </p>
+    <div class="mt-4">
+        <div data-role="button-group">
+            <button class="button square active"><span class="mif-format_align_left"></span></button>
+            <button class="button square"><span class="mif-format_align_center"></span></button>
+            <button class="button square"><span class="mif-format_align_right"></span></button>
+            <button class="button square"><span class="mif-format_align_justify"></span></button>
+        </div>
+        <div data-role="button-group" data-mode="multi">
+            <button class="button square active"><span class="mif-format_bold"></span></button>
+            <button class="button square"><span class="mif-format_italic"></span></button>
+            <button class="button square active"><span class="mif-format_underlined"></span></button>
+            <button class="button square"><span class="mif-format_strikethrough_s"></span></button>
+        </div>
+    </div>
+    <div class="mt-4">
+        <pre><code>
+            &lt;div data-role="button-group"&gt;
+                &lt;button class="button square active"&gt;&lt;span class="mif-format_align_left"&gt;&lt;/span&gt;&lt;/button&gt;
+                &lt;button class="button square"&gt;&lt;span class="mif-format_align_center"&gt;&lt;/span&gt;&lt;/button&gt;
+                &lt;button class="button square"&gt;&lt;span class="mif-format_align_right"&gt;&lt;/span&gt;&lt;/button&gt;
+                &lt;button class="button square"&gt;&lt;span class="mif-format_align_justify"&gt;&lt;/span&gt;&lt;/button&gt;
+            &lt;/div&gt;
+        </code></pre>
+    </div>
+</div>
+
+<div class="box">
     <div class="box-title">Pagination</div>
     <p class="text-muted">
         Use <code>.pagination</code> to create pagination for your data.
