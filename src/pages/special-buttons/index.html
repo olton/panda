@@ -20,14 +20,15 @@
         to change the style of breadcrumbs.
     </p>
     <div class="mt-4">
-        <ul class="breadcrumbs default mt-4 mb-4">
+        <div class="text-bold">Default</div>
+        <ul class="breadcrumbs default p-4 border bd-default">
             <li><a href="#"><span class="mif-home icon"></span>Home</a></li>
             <li><a href="#">Library</a></li>
             <li><a href="#">Data</a></li>
             <li class="active"><a href="#">Bootstrap</a></li>
         </ul>
     </div>
-    <div class="mt-4">
+    <div class="mt-4">        
         <pre><code class="language-html">
             &lt;ul class="breadcrumbs default"&gt;
                 &lt;li&gt;&lt;a href="#"&gt;&lt;span class="mif-home icon"&gt;&lt;/span&gt;Home&lt;/a&gt;&lt;/li&gt;
@@ -39,7 +40,8 @@
     </div>
 
     <div class="mt-4">
-        <ul class="breadcrumbs arrow mt-4">
+        <div class="text-bold">Arrow</div>
+        <ul class="breadcrumbs arrow p-4 border bd-default">
             <li><a href="#"><span class="mif-home icon"></span>Home</a></li>
             <li><a href="#">Library</a></li>
             <li><a href="#">Data</a></li>
@@ -158,10 +160,10 @@
             <div class="cell-md-3">
                 <div class="multi-action">
                     <button class="action-button rotate-minus bg-red fg-white" onclick="$(this).toggleClass('active')">
-                        <span class="icon"><span class="mif-add"></span></span>
+                        <span class="icon"><span class="mif-plus"></span></span>
                     </button>
                     <ul class="actions drop-right">
-                        <li class="bg-blue"><a href="#"><span class="mif-person_add"></span></a></li>
+                        <li class="bg-blue"><a href="#"><span class="mif-add-person"></span></a></li>
                         <li class="bg-teal"><a href="#"><span class="mif-library"></span></a></li>
                         <li class="bg-pink"><a href="#"><span class="mif-alarm"></span></a></li>
                         <li class="bg-orange"><a href="#"><span class="mif-lock"></span></a></li>
@@ -171,10 +173,10 @@
             <div class="cell-md-3 d-flex flex-justify-center">
                 <div class="multi-action">
                     <button class="action-button rotate-minus bg-red fg-white" onclick="$(this).toggleClass('active')">
-                        <span class="icon"><span class="mif-add"></span></span>
+                        <span class="icon"><span class="mif-plus"></span></span>
                     </button>
                     <ul class="actions drop-up">
-                        <li class="bg-blue"><a href="#"><span class="mif-person_add"></span></a></li>
+                        <li class="bg-blue"><a href="#"><span class="mif-add-person"></span></a></li>
                         <li class="bg-teal"><a href="#"><span class="mif-library"></span></a></li>
                         <li class="bg-pink"><a href="#"><span class="mif-alarm"></span></a></li>
                         <li class="bg-orange"><a href="#"><span class="mif-lock"></span></a></li>
@@ -184,10 +186,10 @@
             <div class="cell-md-3 d-flex flex-justify-center">
                 <div class="multi-action">
                     <button class="action-button rotate-minus bg-red fg-white" onclick="$(this).toggleClass('active')">
-                        <span class="icon"><span class="mif-add"></span></span>
+                        <span class="icon"><span class="mif-plus"></span></span>
                     </button>
                     <ul class="actions drop-down">
-                        <li class="bg-blue"><a href="#"><span class="mif-person_add"></span></a></li>
+                        <li class="bg-blue"><a href="#"><span class="mif-add-person"></span></a></li>
                         <li class="bg-teal"><a href="#"><span class="mif-library"></span></a></li>
                         <li class="bg-pink"><a href="#"><span class="mif-alarm"></span></a></li>
                         <li class="bg-orange"><a href="#"><span class="mif-lock"></span></a></li>
@@ -197,10 +199,10 @@
             <div class="cell-md-3 d-flex flex-justify-end">
                 <div class="multi-action">
                     <button class="action-button rotate-minus bg-red fg-white" onclick="$(this).toggleClass('active')">
-                        <span class="icon"><span class="mif-add"></span></span>
+                        <span class="icon"><span class="mif-plus"></span></span>
                     </button>
                     <ul class="actions drop-left">
-                        <li class="bg-blue"><a href="#"><span class="mif-person_add"></span></a></li>
+                        <li class="bg-blue"><a href="#"><span class="mif-add-person"></span></a></li>
                         <li class="bg-teal"><a href="#"><span class="mif-library"></span></a></li>
                         <li class="bg-pink"><a href="#"><span class="mif-alarm"></span></a></li>
                         <li class="bg-orange"><a href="#"><span class="mif-lock"></span></a></li>
@@ -384,16 +386,16 @@
     <div class="mt-2">
         <div class="toolbar movable">
             <button class="tool-button">
-                <span class="icon mif-format_align_left"></span>
+                <span class="icon mif-align-left"></span>
             </button>
             <button class="tool-button">
-                <span class="icon mif-format_align_center"></span>
+                <span class="icon mif-align-center"></span>
             </button>
             <button class="tool-button">
-                <span class="icon mif-format_align_right"></span>
+                <span class="icon mif-align-right"></span>
             </button>
             <button class="tool-button">
-                <span class="icon mif-format_align_justify"></span>
+                <span class="icon mif-align-justify"></span>
             </button>
         </div>
     </div>
@@ -404,16 +406,16 @@
     <div class="mt-2">
         <div class="toolbar movable">
             <button class="tool-button outline">
-                <span class="icon mif-format_align_left"></span>
+                <span class="icon mif-align-left"></span>
             </button>
             <button class="tool-button outline">
-                <span class="icon mif-format_align_center"></span>
+                <span class="icon mif-align-center"></span>
             </button>
             <button class="tool-button outline">
-                <span class="icon mif-format_align_right"></span>
+                <span class="icon mif-align-right"></span>
             </button>
             <button class="tool-button outline">
-                <span class="icon mif-format_align_justify"></span>
+                <span class="icon mif-align-justify"></span>
             </button>
         </div>
     </div>
@@ -424,16 +426,16 @@
     <div class="mt-4">
         <div class="toolbar movable" data-caption="Text Align">
             <button class="tool-button">
-                <span class="icon mif-format_align_left"></span>
+                <span class="icon mif-align-left"></span>
             </button>
             <button class="tool-button">
-                <span class="icon mif-format_align_center"></span>
+                <span class="icon mif-align-center"></span>
             </button>
             <button class="tool-button">
-                <span class="icon mif-format_align_right"></span>
+                <span class="icon mif-align-right"></span>
             </button>
             <button class="tool-button">
-                <span class="icon mif-format_align_justify"></span>
+                <span class="icon mif-align-justify"></span>
             </button>
         </div>
     </div>
@@ -577,16 +579,16 @@
     </p>
     <div class="mt-4">
         <div data-role="button-group">
-            <button class="button square active"><span class="mif-format_align_left"></span></button>
-            <button class="button square"><span class="mif-format_align_center"></span></button>
-            <button class="button square"><span class="mif-format_align_right"></span></button>
-            <button class="button square"><span class="mif-format_align_justify"></span></button>
+            <button class="button square active"><span class="mif-align-left"></span></button>
+            <button class="button square"><span class="mif-align-center"></span></button>
+            <button class="button square"><span class="mif-align-right"></span></button>
+            <button class="button square"><span class="mif-align-justify"></span></button>
         </div>
         <div data-role="button-group" data-mode="multi">
-            <button class="button square active"><span class="mif-format_bold"></span></button>
-            <button class="button square"><span class="mif-format_italic"></span></button>
-            <button class="button square active"><span class="mif-format_underlined"></span></button>
-            <button class="button square"><span class="mif-format_strikethrough_s"></span></button>
+            <button class="button square active"><span class="mif-bold"></span></button>
+            <button class="button square"><span class="mif-italic"></span></button>
+            <button class="button square active"><span class="mif-underline"></span></button>
+            <button class="button square"><span class="mif-strikethrough-s"></span></button>
         </div>
     </div>
     <div class="mt-4">

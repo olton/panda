@@ -5,6 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="metro:smooth_scroll" content="true">
     <title>Pandora 2.0 - The template set built with Metro UI</title>
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-light.min.css">
@@ -29,10 +30,10 @@
             <button class="pull-button">
                 <span class="mif-menu"></span>
             </button>
-            <div class="d-flex flex-align-center text-logo" style="width: calc(100% - 54px)">
+            <a href="/" class="d-flex flex-align-center text-logo bg-transparent" style="width: calc(100% - 54px)">
                 <img src="/images/p-120x120.png" alt="logo" height="30"/>
                 <div class="enlarge-2">Pandora 2.0</div>
-            </div>
+            </a>
         </div>
 
         <div class="suggest-box mt-4">
@@ -51,6 +52,70 @@
                 </a>
             </li>
 
+            <li class="item-header">Samples Pages</li>
+            <li>
+                <a href="#" class="dropdown-toggle">
+                    <span class="icon"><span class="mif-developer-board"></span></span>
+                    <span class="caption">Dashboards</span>
+                </a>
+                <ul class="navview-menu " data-role="collapse" data-collapsed="true">
+                    <li>
+                        <a href="#dashboard/hosting">
+                            <span class="icon"><span class="mif-net-server"></span></span>
+                            <span class="caption">Hosting Panel</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#dashboard/ecommerce">
+                            <span class="icon"><span class="mif-shop"></span></span>
+                            <span class="caption">E-Commerce</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#dashboard/crypto">
+                            <span class="icon"><span class="mif-bitcoin"></span></span>
+                            <span class="caption">Cryptocurrency</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#signin">
+                    <span class="icon"><span class="mif-add-person-alt"></span></span>
+                    <span class="caption">SignIn &amp; Register</span>
+                </a>
+            </li>
+            <li>
+                <a href="#errors">
+                    <span class="icon"><span class="mif-error"></span></span>
+                    <span class="caption">Errors &amp; Maintains</span>
+                </a>
+            </li>
+            <li>
+                <a href="#support">
+                    <span class="icon"><span class="mif-support-agent"></span></span>
+                    <span class="caption">Support &amp; Help</span>
+                </a>
+            </li>
+            <li>
+                <a href="#ecommerce">
+                    <span class="icon"><span class="mif-add-shopping-cart"></span></span>
+                    <span class="caption">E-Commerce</span>
+                </a>
+            </li>
+            <li>
+                <a href="#email">
+                    <span class="icon"><span class="mif-email"></span></span>
+                    <span class="caption">Work with Emails</span>
+                </a>
+            </li>
+            <li>
+                <a href="#multimedia">
+                    <span class="icon"><span class="mif-youtube"></span></span>
+                    <span class="caption">Multimedia</span>
+                </a>
+            </li>
+
             <li class="item-header">Common</li>
             <li>
                 <a href="#" class="dropdown-toggle">
@@ -60,13 +125,13 @@
                 <ul class="navview-menu " data-role="collapse" data-collapsed="true">
                     <li>
                         <a href="#typography">
-                            <span class="icon"><span class="mif-format_size"></span></span>
+                            <span class="icon"><span class="mif-letter-size"></span></span>
                             <span class="caption">Typography</span>
                         </a>
                     </li>
                     <li>
                         <a href="#colors">
-                            <span class="icon"><span class="mif-format_paint"></span></span>
+                            <span class="icon"><span class="mif-paint"></span></span>
                             <span class="caption">Colors</span>
                         </a>
                     </li>
@@ -78,7 +143,7 @@
                     </li>
                     <li>
                         <a href="#spacing-and-sizing">
-                            <span class="icon"><span class="mif-format_line_spacing"></span></span>
+                            <span class="icon"><span class="mif-line-spacing"></span></span>
                             <span class="caption">Spacing &amp; Sizing</span>
                         </a>
                     </li>
@@ -110,7 +175,7 @@
                     </li>
                     <li>
                         <a href="#lib-farbe">
-                            <span class="icon"><span class="mif-format_paint"></span></span>
+                            <span class="icon"><span class="mif-paint"></span></span>
                             <span class="caption">Farbe</span>
                         </a>
                     </li>
@@ -122,7 +187,7 @@
                     </li>
                     <li>
                         <a href="#lib-string">
-                            <span class="icon"><span class="mif-format_strikethrough_s"></span></span>
+                            <span class="icon"><span class="mif-strikethrough-s"></span></span>
                             <span class="caption">String</span>
                         </a>
                     </li>
@@ -198,7 +263,7 @@
                     </li>
                     <li>
                         <a href="#navview">
-                            <span class="icon"><span class="mif-list_bulleted"></span></span>
+                            <span class="icon"><span class="mif-list-bulleted"></span></span>
                             <span class="caption">ListView</span>
                         </a>
                     </li>
@@ -222,13 +287,13 @@
                     </li>
                     <li>
                         <a href="#dialogs">
-                            <span class="icon"><span class="mif-dynamic_feed"></span></span>
+                            <span class="icon"><span class="mif-dynamic-feed"></span></span>
                             <span class="caption">Dialogs</span>
                         </a>
                     </li>
                     <li>
                         <a href="#hints">
-                            <span class="icon"><span class="mif-mark_chat_unread"></span></span>
+                            <span class="icon"><span class="mif-mark-chat-unread"></span></span>
                             <span class="caption">Hints &amp; Popovers</span>
                         </a>
                     </li>
@@ -248,7 +313,7 @@
             </li>
             <li>
                 <a href="#" class="dropdown-toggle">
-                    <span class="icon"><span class="mif-format_shapes"></span></span>
+                    <span class="icon"><span class="mif-shapes"></span></span>
                     <span class="caption">Forms</span>
                 </a>
                 <ul class="navview-menu " data-role="collapse" data-collapsed="true">
@@ -274,7 +339,7 @@
             </li>
             <li>
                 <a href="#" class="dropdown-toggle">
-                    <span class="icon"><span class="mif-menu_open"></span></span>
+                    <span class="icon"><span class="mif-menu-open"></span></span>
                     <span class="caption">Navigation</span>
                 </a>
                 <ul class="navview-menu " data-role="collapse" data-collapsed="true">
@@ -292,7 +357,7 @@
                     </li>
                     <li>
                         <a href="#menus">
-                            <span class="icon"><span class="mif-menu_open"></span></span>
+                            <span class="icon"><span class="mif-vertical-split"></span></span>
                             <span class="caption">Menus</span>
                         </a>
                     </li>
@@ -328,76 +393,18 @@
                             <span class="caption">Chat</span>
                         </a>
                     </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><span class="mif-cube"></span></span>
+                            <span class="caption">Cube</span>
+                        </a>
+                    </li>
                 </ul>
             </li>
             <li>
                 <a href="#icons">
                     <span class="icon"><span class="mif-photo"></span></span>
                     <span class="caption">Icons</span>
-                </a>
-            </li>
-
-            <li class="item-header">Samples Pages</li>
-            <li>
-                <a href="#" class="dropdown-toggle">
-                    <span class="icon"><span class="mif-developer_board"></span></span>
-                    <span class="caption">Dashboards</span>
-                </a>
-                <ul class="navview-menu " data-role="collapse" data-collapsed="true">
-                    <li>
-                        <a href="#dashboard/hosting">
-                            <span class="icon"><span class="mif-net-server"></span></span>
-                            <span class="caption">Hosting Panel</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#dashboard/ecommerce">
-                            <span class="icon"><span class="mif-shop"></span></span>
-                            <span class="caption">E-Commerce</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#dashboard/crypto">
-                            <span class="icon"><span class="mif-bitcoin"></span></span>
-                            <span class="caption">Cryptocurrency</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="#signin">
-                    <span class="icon"><span class="mif-person_add_alt"></span></span>
-                    <span class="caption">SignIn &amp; Register</span>
-                </a>
-            </li>
-            <li>
-                <a href="#errors">
-                    <span class="icon"><span class="mif-error"></span></span>
-                    <span class="caption">Errors &amp; Maintains</span>
-                </a>
-            </li>
-            <li>
-                <a href="#support">
-                    <span class="icon"><span class="mif-support_agent"></span></span>
-                    <span class="caption">Support &amp; Help</span>
-                </a>
-            </li>
-            <li>
-                <a href="#ecommerce">
-                    <span class="icon"><span class="mif-add-shopping-cart"></span></span>
-                    <span class="caption">E-Commerce</span>
-                </a>
-            </li>
-            <li>
-                <a href="#email">
-                    <span class="icon"><span class="mif-email"></span></span>
-                    <span class="caption">Work with Emails</span>
-                </a>
-            </li>
-            <li>
-                <a href="#multimedia">
-                    <span class="icon"><span class="mif-youtube"></span></span>
-                    <span class="caption">Multimedia</span>
                 </a>
             </li>
 
@@ -438,7 +445,7 @@
 </script>
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-<script src="/metroui/metro.js"></script>
-<script src="/js/app.js"></script>
+<script src="/metroui/metro.js" type="module"></script>
+<script src="/js/app.js" type="module"></script>
 </body>
 </html>

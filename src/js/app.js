@@ -1,5 +1,11 @@
+// globalThis.handlers = {
+//     intervals: [],
+// }
+//
 class App {
-    currentPage = "";
+    static intervals = [];
+
+    page = "";
 
     constructor() {
         const hash = location.hash;
@@ -7,7 +13,7 @@ class App {
 
         this.sidebar = $("#side-menu");
         this.content = $("#page-content");
-        this.currentPage = target
+        this.page = target
         this.loadPage().then(() => {})
         this.eventHandler()
         this.initSidebar()
@@ -16,7 +22,7 @@ class App {
     initSidebar(){
         this.sidebar.find(".active").removeClass("active");
 
-        const anchor = this.sidebar.find(`a[href='#${this.currentPage}']`)
+        const anchor = this.sidebar.find(`a[href='#${this.page}']`)
         const link = anchor.parent()
         const parent_menu = anchor.closest("ul[data-role=collapse]")
         link.addClass("active");
@@ -26,8 +32,13 @@ class App {
     }
 
     async loadPage(){
-        const component = `/pages/${this.currentPage}/index.html`;
-        const content = await fetch(component).then(response => response.text());
+        const component = `/pages/${this.page}/index.html`;
+        const content = await fetch(component).then(response => response.text()).catch(e => 'error');
+        
+        for(let interval of App.intervals) {
+            clearInterval(interval);
+        }
+        
         this.content.html(content);
         if (window["PAGE_TITLE"]) {
             this.setPageTitle(window["PAGE_TITLE"]);
@@ -49,7 +60,8 @@ class App {
     }
 
     eventHandler(){
-        const that = this;
+        const that = this;        
+        
         this.sidebar.on('click', 'a', function(e) {
             const anchor = $(this);
             const href = anchor.attr('href');
@@ -58,9 +70,9 @@ class App {
             if (href.startsWith("#")) {
                 that.sidebar.find(".active").removeClass("active");
                 li.addClass("active");
-                that.currentPage = href.substring(1);
+                that.page = href.substring(1);
                 that.loadPage().then(() => {});
-                window.history.pushState(null, null, "/#"+that.currentPage);
+                window.history.pushState(null, null, "/#"+that.page);
                 e.preventDefault();
                 e.stopPropagation();
             } else {
@@ -68,8 +80,8 @@ class App {
             }
         })
 
-        $(window).on('popstate', function() {
-            that.currentPage = location.hash.substring(1);
+        $(window).on('popstate', function(e) {  
+            that.page = location.hash.substring(1);
             that.loadPage().then(() => {});
         })
 
@@ -96,6 +108,8 @@ class App {
         $("#content-title").html(title);
     }
 }
+
+globalThis.App = App;
 
 $(function(){
     new App();

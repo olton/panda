@@ -8,7 +8,7 @@ const isDev = process.env.MODE === "development"
 await build({
     entryPoints: ["metro/index.js"],
     bundle: true,
-    outfile: "public/metroui/metro.js",
+    outfile: "src/metroui/metro.js",
     plugins: [
         progress({
             text: 'Building Metro UI...',

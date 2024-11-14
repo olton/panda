@@ -11,7 +11,7 @@
     "site": "https://pimenov.com.ua"
   },
   "scripts": {
-    "start": "node .",
+    "start": "vite",
     "dev": "nodemon .",
     "build": "cross-env MODE=development node metro/build.js",
     "watch": "cross-env MODE=development node metro/watch.js",
@@ -27,7 +27,8 @@
     "esbuild": "^0.24.0",
     "esbuild-plugin-less": "^1.3.10",
     "less": "^4.2.0",
-    "nodemon": "^3.1.7"
+    "nodemon": "^3.1.7",
+    "vite": "^5.4.11"
   },
   "dependencies": {
     "@fastify/static": "^8.0.2",
