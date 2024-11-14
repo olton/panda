@@ -50,16 +50,42 @@
     </div>
     <p class="text-muted">
         To change bar color use color classes <code>bg-***</code>, <code>soft-***</code>, or <code>normal-***</code> and attribute <code>data-cls-bar</code>.
+        Or use classes <code>.progress-***</code> where *** is color name or accent name.
     </p>
     <div class="mt-4">
         <div data-role="progress" data-value="25" data-cls-bar="bg-cyan"></div>
+        <div data-role="progress" data-value="25" class="progress-brown mt-1"></div>
+        <div data-role="progress" data-value="25" class="progress-alert mt-1"></div>
     </div>
     <div class="mt-4">
         <pre><code class="language-html">
             &lt;div data-role="progress" data-value="25" data-cls-bar="bg-cyan"&gt;&lt;/div&gt;
+            &lt;div data-role="progress" data-value="25" class="progress-brown"&gt;&lt;/div&gt;
+            &lt;div data-role="progress" data-value="25" class="progress-alert"&gt;&lt;/div&gt;
         </code></pre>
     </div>
 </div>
+
+<div class="box">
+    <div class="box-title">Donut</div>
+    <p class="text-muted">
+        Use <code>donut</code> component to create donut progress bars. To set value use attribute <code>data-value</code>.
+        To change color, use classes <code>.donut-***</code> where *** is color name or accent name.
+    </p>
+    <div class="mt-4">
+        <div data-role="donut" data-value="25" class="d-inline-flex"></div>
+        <div data-role="donut" data-value="65" class="d-inline-flex donut-green"></div>
+        <div data-role="donut" data-value="35" class="d-inline-flex donut-alert"></div>
+    </div>
+    <div class="mt-4">
+        <pre><code class="language-html">
+            &lt;div data-role="donut" data-value="25"&gt;&lt;/div&gt;
+            &lt;div data-role="donut" data-value="65" class="donut-green"&gt;&lt;/div&gt;
+            &lt;div data-role="donut" data-value="35" class="donut-alert"&gt;&lt;/div&gt;
+        </code></pre>
+    </div>
+</div>
+
 
 <div class="box">
     <div class="box-title">Activities</div>

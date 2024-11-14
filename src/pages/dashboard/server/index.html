@@ -1,0 +1,380 @@
+<script>window.PAGE_TITLE = 'Dashboards | Server Panel'</script>
+
+<style>
+    .cpu-load {
+        .progress {
+            margin-bottom: 4px;
+        }
+    }
+</style>
+
+<div class="row">
+    <div class="cell-lg-6 d-flex flex-align-center">
+        <h3>BIG-PIG <small>(H-165007)</small></h3>
+    </div>
+    <div class="cell-lg-6 d-flex flex-justify-end-lg flex-align-start">
+        <ul class="breadcrumbs default">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shared Servers</a></li>
+            <li class="active"><a href="#">BIG-PIG</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="container-query mt-4">
+    <div class="row">
+        <div class="qc-md-3">
+            <div class="info-box2">
+                <div class="title">Status</div>
+                <div class="value mono">
+                    <span class="primary-value">Active</span>
+                </div>
+            </div>
+        </div>
+        <div class="qc-md-3">
+            <div class="info-box2">
+                <div class="title">Image</div>
+                <div class="value mono">
+                    <span class="primary-value">Ubuntu</span>
+                    <span class="secondary-value">20.04</span>
+                </div>
+            </div>
+        </div>
+        <div class="qc-md-3">
+            <div class="info-box2">
+                <div class="title">IPv4</div>
+                <div class="value mono">
+                    <span class="primary-value">127.0.0.1</span>
+                </div>
+            </div>
+        </div>
+        <div class="qc-md-3">
+            <div class="info-box2">
+                <div class="title">IPv6</div>
+                <div class="value mono">
+                    <span class="primary-value">::1</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="qc-md-3">
+            <div class="icon-box">
+                <div class="icon bg-pink fg-white"><span class="mif-apps"></span></div>
+                <div class="content">
+                    <div class="title">Plan</div>
+                    <div class="value">DMH61</div>
+                </div>
+            </div>
+        </div>
+        <div class="qc-md-3">
+            <div class="icon-box">
+                <div class="icon bg-cyan fg-white"><span class="mif-cpu"></span></div>
+                <div class="content">
+                    <div class="title">V-CPU</div>
+                    <div class="value">16</div>
+                </div>
+            </div>
+        </div>
+        <div class="qc-md-3">
+            <div class="icon-box">
+                <div class="icon bg-green fg-white"><span class="mif-ram"></span></div>
+                <div class="content">
+                    <div class="title">RAM</div>
+                    <div class="value">64 GB</div>
+                </div>
+            </div>
+        </div>
+        <div class="qc-md-3">
+            <div class="icon-box">
+                <div class="icon bg-sand fg-white"><span class="mif-hdd"></span></div>
+                <div class="content">
+                    <div class="title">DISK</div>
+                    <div class="value">360 GB</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="qc-md-4">
+            <div class="chart-card">
+                <div class="content">
+                    <div class="title">Memory Usage</div>
+                    <div class="value" id="ram-value">60%</div>
+                    <div class="subtitle">
+                        Server memory usage.
+                    </div>
+                </div>
+                <div class="chart">
+                    <div id="memory-usage" data-role="donut" data-animate="500" data-value="60" class="donut-orange"></div>
+                </div>
+            </div>
+        </div>
+        <div class="qc-md-4">
+            <div class="chart-card">
+                <div class="content">
+                    <div class="title">CPU Usage</div>
+                    <div class="value" id="cpu-value">0%</div>
+                    <div class="subtitle">
+                        Server CPU usage.
+                    </div>
+                </div>
+                <div class="chart">
+                    <div id="cpu-usage" data-role="donut" data-animate="500" data-value="0" class="donut-green"></div>
+                </div>
+            </div>
+        </div>
+        <div class="qc-md-4">
+            <div class="chart-card">
+                <div class="content">
+                    <div class="title">Disk Usage</div>
+                    <div class="value">75%</div>
+                    <div class="subtitle">
+                        Server disk usage.
+                    </div>
+                </div>
+                <div class="chart">
+                    <div id="disk-usage" data-role="donut" data-animate="500" data-value="75" class="donut-warning"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-query mt-4">
+    <div class="row">
+        <div class="qc-md-8">
+            <div class="box m-0">
+                <div class="row">
+                    <div class="qc-md-6">
+                        <div class="box-title-secondary text-bold">Cores Loading</div>
+                        <div class="cpu-load mt-4">
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-1"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-2"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-3"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-4"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-5"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-6"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-7"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-8"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-9"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-10"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-11"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-12"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-13"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-14"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-15"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-16"></div>
+                        </div>
+                    </div>
+                    <div class="qc-md-6">
+                        <div class="box-title-secondary text-bold">Cores Loading</div>
+                        <div class="cpu-load mt-4">
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-1-1"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-1-2"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-1-3"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-1-4"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-1-5"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-1-6"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-1-7"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-1-8"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-1-9"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-1-10"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-1-11"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-1-12"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-1-13"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-1-14"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-1-15"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-1-16"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="qc-md-4">
+            <div class="box m-0">
+                <div id="cpu-load-chart"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-query mt-4">
+    <div class="row">
+        <div class="qc-md-6">
+            <div class="box m-0">
+                <div class="box-title-secondary">Network In</div>
+                <div id="net1-load-chart"></div>
+            </div>
+        </div>
+        <div class="qc-md-6">
+            <div class="box m-0">
+                <div class="box-title-secondary">Network Out</div>
+                <div id="net2-load-chart"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    (() => {
+        var cpuData = [], net1Data = [], net2Data = []
+        
+        var startTime = new Date().getTime() - 1000*99
+        for (let i = 0; i < 99; i++) {
+            cpuData.push([startTime + i * 1000, 0])
+            net1Data.push([startTime + i * 1000, 0])
+            net2Data.push([startTime + i * 1000, 0])
+        }
+        
+        var options = {
+            chart: {
+                type: 'area',
+                height: 180,
+                zoom: {
+                    enabled: false
+                },
+                animations: {
+                    enabled: false,
+                }
+            },
+            dataLabels: {
+                enabled: false
+            },
+            stroke: {
+                curve: 'straight',
+                width: 1
+            },
+            xaxis: {
+                type: 'numeric',
+                labels: {
+                    show: false,
+                }
+            },
+            yaxis: {
+                min: 0,
+                max: 100
+            },
+            legend: {
+                enabled: false,
+            },
+            title: {
+                enabled: false,
+            }
+        };
+
+        const cpuLoadChart = new ApexCharts(document.querySelector("#cpu-load-chart"), {
+            ...options,
+            series: [{
+                name: "CPU",
+                data: cpuData
+            }],
+        });
+        cpuLoadChart.render();
+       
+        const net1LoadChart = new ApexCharts(document.querySelector("#net1-load-chart"), {
+            ...options,
+            series: [{
+                name: "CPU",
+                data: net1Data
+            }],
+            yaxis: {
+                min: 0,
+                max: 1024,
+            }
+        });
+        net1LoadChart.render();
+       
+        const net2LoadChart = new ApexCharts(document.querySelector("#net2-load-chart"), {
+            ...options,
+            series: [{
+                name: "CPU",
+                data: net2Data
+            }],
+            yaxis: {
+                min: 0,
+                max: 1024,
+            }
+        });
+        net2LoadChart.render();
+       
+        
+        const interval = setInterval(() => {
+            const valMemoryUsage = Math.floor(Math.random() * 100)
+
+            Metro.getPlugin("#memory-usage", "donut").val(valMemoryUsage)
+
+            let colorCpu = 'donut-red', colorRam = 'donut-red'
+
+            if (valMemoryUsage <= 50) {
+                colorRam = 'donut-green'
+            } else if (valMemoryUsage > 50 && valMemoryUsage <= 75) {
+                colorRam = 'donut-orange'
+            }
+
+            $("#memory-usage").removeClassBy("donut-").addClass(colorRam)
+
+            $("#ram-value").html(valMemoryUsage + '%')
+
+            let cpuLoad = 0
+            for (let i = 1; i <= 16; i++) {
+                const val = Math.floor(Math.random() * 100)
+                const id = '#core-load-' + i
+                const id2 = '#core-load-1-' + i
+                $(id).attr('data-value', val).removeClassBy("progress-").addClass('progress-cyan')
+                $(id2).attr('data-value', val).removeClassBy("progress-").addClass('progress-' + (val < 50 ? 'success' : val < 75 ? 'warning' : 'alert'))
+                cpuLoad += val
+            }
+
+            const valCpuUsage = Math.round(cpuLoad/16)
+            Metro.getPlugin("#cpu-usage", "donut").val(valCpuUsage)
+            if (valCpuUsage <= 50) {
+                colorCpu = 'donut-green'
+            } else if (valCpuUsage > 50 && valCpuUsage <= 75) {
+                colorCpu = 'donut-orange'
+            }
+            $("#cpu-usage").removeClassBy("donut-").addClass(colorCpu)
+            $("#cpu-value").html(valCpuUsage + '%')
+            
+            cpuData.push([new Date().getTime(), valCpuUsage])
+            cpuLoadChart.updateSeries([
+                {
+                    name: "CPU",
+                    data: cpuData
+                }
+            ])
+            if (cpuData.length > 100) {
+                cpuData.shift()
+            }
+
+            const net1 = Math.floor(Math.random() * 1024)
+            net1Data.push([new Date().getTime(), net1])
+            net1LoadChart.updateSeries([
+                {
+                    name: "Network In",
+                    data: net1Data
+                }
+            ])
+            if (net1Data.length > 100) {
+                net1Data.shift()
+            }
+
+            const net2 = Math.floor(Math.random() * 1024)
+            net2Data.push([new Date().getTime(), net2])
+            net2LoadChart.updateSeries([
+                {
+                    name: "Network In",
+                    data: net2Data
+                }
+            ])
+            if (net2Data.length > 100) {
+                net2Data.shift()
+            }
+            
+        }, 2000)
+
+        App.intervals.push(interval)
+    })();
+</script>

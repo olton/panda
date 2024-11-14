@@ -1,0 +1,57 @@
+<script>window.PAGE_TITLE = 'Metro UI | Colors'</script>
+
+<style>
+    .color-item {
+        --background-color: #ffffff;
+        background: var(--background-color);
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        margin: 0;
+        
+        &.dark-color {
+            color: #ffffff;
+        }
+    }
+</style>
+
+<div class="box">
+    <div class="box-title">Colors</div>
+    <p class="text-muted">
+        You can use a palette of 32 built-in colors. Each color is manually generated without auto-generation. 
+        For each color, you can use three different variants: light <code>--color-light-*</code>, normal <code>--color-*</code> and dark <code>--color-dark-*</code>.
+    </p>
+    <div class="mt-4">
+        <pre><code class="language-css">
+            .box {
+                background: var(--color-light-red);
+            }
+        </code></pre>
+    </div>
+</div>
+
+<div class="box container-query">
+    <div class="box-title">Color Palette</div>
+    <div class="row" id="color-palette"></div>
+</div>
+
+
+<script>
+    (function(){
+        const colors = [
+            'lime', 'green', 'emerald', 'blue', 'teal', 'cyan', 'cobalt', 'indigo', 'violet', 'pink',
+            'magenta', 'crimson', 'red', 'orange', 'amber', 'yellow', 'brown', 'olive', 'steel',
+            'mauve', 'taupe', 'champagne', 'khaki', 'charcoal', 'bronze', 'windstorm', 'nude',
+            'terracotta', 'coral', 'army', 'seashell', 'sand'
+        ]
+        
+        for (let c of colors) {
+            $("#color-palette")
+                .append(`<div class="qc-md-4 color-item light-color" style="background: var(--color-light-${c})">light-${c}</div>`)
+                .append(`<div class="qc-md-4 color-item normal-color" style="background: var(--color-${c})">${c}</div>`)
+                .append(`<div class="qc-md-4 color-item dark-color" style="background: var(--color-dark-${c})">dark-${c}</div>`)
+        }
+    })()
+</script>
