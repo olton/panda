@@ -22,8 +22,39 @@
             <li><a href="#tabs-3">Tab 3</a></li>
         </ul>
     </div>
+
+    <div class="mt-4">
+        <ul data-role="tabs" data-expand-point="md">
+            <li><a href="#tabs-1">Tab 1</a></li>
+            <li><a href="#tabs-2">Tab 2</a></li>
+            <li><a href="#tabs-3">Tab 3</a></li>
+        </ul>
+    </div>
 </div>
 
 <div class="box">
     <div class="box-title">Page Control</div>
+    <div class="mt-4">
+        <ul data-role="page-control" id="pc1"
+            data-append-button="true"
+            data-tabs-actions="tabActions"
+            data-ref-control="true"
+        >
+            <li data-ref="#report1" data-icon="mif-sql">Report 1</li>
+            <li data-ref="#report2" data-icon="mif-sql">Report 2</li>
+            <li data-ref="#report3" data-icon="mif-sql">Report 3</li>
+        </ul>
+    </div>
 </div>
+
+<script>
+    function tabActions(){
+        return [
+            {
+                title: "User Action",
+                icon: "mif-user",
+                onclick: () => alert(1)
+            }
+        ]
+    }
+</script>
