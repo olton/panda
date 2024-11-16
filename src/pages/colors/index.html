@@ -30,6 +30,17 @@
         outline-offset: 4px;
         border-radius: 6px;
     }
+    
+    .pseudo-demo {
+        &::before {
+            content: 'before';
+            margin-right: 10px;
+        }
+        &::after {
+            content: 'after';
+            margin-left: 10px;
+        }
+    }
 </style>
 
 <div class="row">
@@ -237,11 +248,43 @@
 </div>
 
 <div class="box">
-    <div class="box-title">Fill Color</div>
+    <div class="box-title">Fill &amp; Stroke</div>
+    <p class="text-muted">
+        You can use classes <code>fc-***</code> and <code>st-***</code> to change the fill and stroke color properties for svg elements.
+    </p>
+    <div class="mt-4">
+        <svg class="st-red fc-light-red">
+            <g stroke-width="10">
+                <circle cx="100" cy="100" r="40" />
+                <rect x="20" y="20" width="80" height="80" />
+            </g>
+        </svg>
+    </div>
+    <div class="mt-4">
+        <pre><code class="language-html">
+            &lt;svg class="st-red fc-light-red"&gt;
+                &lt;g fill="none" stroke-width="10"&gt;
+                    &lt;circle cx="100" cy="100" r="40" /&gt;
+                    &lt;rect x="20" y="20" width="80" height="80" /&gt;
+                &lt;/g&gt;
+            &lt;/svg&gt;
+        </code></pre>
+    </div>
 </div>
 
 <div class="box">
-    <div class="box-title">Pseudo Color</div>
+    <div class="box-title">Pseudo Elements</div>
+    <p class="text-muted">
+        With classes <code>.before-bg-***</code>, <code>.before-fg-***</code>, <code>.after-fg-***</code>, and <code>.after-fg-***</code> you can change colors for pseudo-elements. 
+    </p>
+    <div class="mt-4">
+        <div class="pseudo-demo before-fg-red after-fg-green">Element</div>
+    </div>
+    <div class="mt-4">
+        <pre><code class="language-html">
+            &lt;div class="pseudo-demo before-fg-red after-fg-green"&gt;Element&lt;/div&gt;
+        </code></pre>
+    </div>
 </div>
 
 
