@@ -2,7 +2,7 @@
 <style>
     .demo {
         margin: 20px 0;
-        [class*="cell-"], [class*="qc-"] {
+        [class*="cell-"], [class*="cell-"] {
             height: 40px;
             background: var(--default-background);
             color: var(--default-color);
@@ -16,7 +16,7 @@
 
     .dark-side {
         .demo {
-            [class*="cell-"], [class*="qc-"] {
+            [class*="cell-"], [class*="cell-"] {
                 background: var(--default-background);
                 color: var(--default-color);
                 border: 1px solid var(--border-color);
@@ -42,7 +42,8 @@
     <p class="text-muted">
         You can create a grid with built-in grid system.
         The grid system uses a series of containers, rows, and columns to layout and align content.
-        It’s built with flexbox and is fully responsive. The following css classes are available for building a grid:
+        It is built with CSS container query, flexbox and is fully responsive. 
+        The following CSS classes are available for building a grid:
         <code>.grid</code>,
         <code>.row</code>,
         <code>.cell-*</code>,
@@ -188,39 +189,3 @@
         </div>
     </div>
 </div>
-
-<div class="box">
-    <div class="box-title">Container Grid</div>
-    <div class="ribbon ribbon-crimson right"><span class="icon mif-notifications ani-ring"></span>New</div>
-    <p class="text-muted">
-        You can use <code>container query</code> CSS feature with <code>.container-query</code> and <code>.qc-***</code> classes.
-    </p>
-    <div class="mt-4">Default behavior</div>
-    <div class="grid demo">
-        <div class="row">
-            <div class="cell-md-4">1</div>
-            <div class="cell-md-4">2</div>
-            <div class="cell-md-4">3</div>
-        </div>
-    </div>
-    <div>Container query behavior</div>
-    <div class="container-query demo">
-        <div class="row">
-            <div class="qc-md-4">1</div>
-            <div class="qc-md-4">2</div>
-            <div class="qc-md-4">3</div>
-        </div>
-    </div>
-    <div class="mt-4">
-        <pre class="stay-on"><code class="language-html">
-            &lt;div class="grid-container"&gt;
-                &lt;div class="row"&gt;
-                    &lt;div class="qc-md-4"&gt;1&lt;/div&gt;
-                    &lt;div class="qc-md-4"&gt;2&lt;/div&gt;
-                    &lt;div class="qc-md-4"&gt;3&lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        </code></pre>
-    </div>
-</div>
-

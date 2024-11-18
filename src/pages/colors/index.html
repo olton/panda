@@ -1,4 +1,4 @@
-<script>window.PAGE_TITLE = 'Metro UI | Colors'</script>
+<script>window.PAGE_TITLE = 'Pandora 2.0 | Colors'</script>
 
 <style>
     .color-item {
@@ -299,9 +299,9 @@
         
         for (let c of colors) {
             $("#color-palette")
-                .append(`<div class="qc-sm-4 color-item light-color" style="background: var(--color-light-${c})">light-${c}</div>`)
-                .append(`<div class="qc-sm-4 color-item normal-color" style="background: var(--color-${c})">${c}</div>`)
-                .append(`<div class="qc-sm-4 color-item dark-color" style="background: var(--color-dark-${c})">dark-${c}</div>`)
+                .append(`<div class="cell-sm-4 color-item light-color" style="background: var(--color-light-${c})">light-${c}</div>`)
+                .append(`<div class="cell-sm-4 color-item normal-color" style="background: var(--color-${c})">${c}</div>`)
+                .append(`<div class="cell-sm-4 color-item dark-color" style="background: var(--color-dark-${c})">dark-${c}</div>`)
         }
     })()
 </script>
