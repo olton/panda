@@ -43,6 +43,8 @@
         You can create a grid with built-in grid system.
         The grid system uses a series of containers, rows, and columns to layout and align content.
         It is built with CSS container query, flexbox and is fully responsive. 
+    </p>
+    <p class="text-muted">
         The following CSS classes are available for building a grid:
         <code>.grid</code>,
         <code>.row</code>,
@@ -59,54 +61,65 @@
         and <code>.offset-*-*</code>.
     </p>
 
+    <p class="text-muted">
+        Grid uses <code>@container</code> queries and adapts depending on the size of the closest parent with the <code>.row</code> class.
+    </p>
+    
+    <p class="text-muted">
+        if you need to focus, for example, on the body or another container, 
+        then you can add the <code>.viewport</code> class to the container and use the <code>.v-cell-*</code>, <code>.v-col-*</code> classes to specify cell.
+    </p>
+    
     <div class="mt-4 table-scrollable">
+        <div class="box-title-secondary">Breakpoints:</div>
+        <table class="table striped border bd-default cell-border striped">
+            <thead>
+            <tr>
+                <th>Breakpoint</th>
+                <th>Size (px)</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr><td>fs</td><td>&lt; 360</td></tr>
+            <tr><td>xs</td><td>&gt;= 360</td></tr>
+            <tr><td>sm</td><td>&gt;= 576</td></tr>
+            <tr><td>ld</td><td>&gt;= 640</td></tr>
+            <tr><td>md</td><td>&gt;= 768</td></tr>
+            <tr><td>lg</td><td>&gt;= 992</td></tr>
+            <tr><td>xl</td><td>&gt;= 1200</td></tr>
+            <tr><td>xxl</td><td>&gt;= 1400</td></tr>
+            <tr><td>xxxl</td><td>&gt;= 2000</td></tr>
+            </tbody>
+        </table>
+
+        <div class="box-title-secondary">Grid Features:</div>
         <table class="table striped border bd-default cell-border">
             <thead>
             <tr>
-                <th></th>
-                <th class="text-center">Super small<br><small>&lt;360px</small></th>
-                <th class="text-center">Extra small<br><small>≥360px</small></th>
-                <th class="text-center">Small<br><small>≥576px</small></th>
-                <th class="text-center">Extra Medium<br><small>≥640px</small></th>
-                <th class="text-center">Medium<br><small>≥768px</small></th>
-                <th class="text-center">Large<br><small>≥992px</small></th>
-                <th class="text-center">Extra large<br><small>≥1200px</small></th>
-                <th class="text-center">XX large<br><small>≥1400px</small></th>
-                <th class="text-center">XXX large<br><small>≥2000px</small></th>
+                <th>Feature</th>
+                <th>Description</th>
             </tr>
             </thead>
             <tbody>
             <tr>
-                <th class="text-nowrap" scope="row">Class prefix</th>
-                <td><code>.col-fs-*</code></td>
-                <td><code>.col-xs-*</code></td>
-                <td><code>.col-sm-*</code></td>
-                <td><code>.col-ld-*</code></td>
-                <td><code>.col-md-*</code></td>
-                <td><code>.col-lg-*</code></td>
-                <td><code>.col-xl-*</code></td>
-                <td><code>.col-xxl-*</code></td>
-                <td><code>.col-xxxl-*</code></td>
+                <td># of columns</td>
+                <td>12</td>
             </tr>
             <tr>
-                <th class="text-nowrap" scope="row"># of columns</th>
-                <td colspan="9">12</td>
+                <td>Gutter width</td>
+                <td>16px</td>
             </tr>
             <tr>
-                <th class="text-nowrap" scope="row">Gutter width</th>
-                <td colspan="9">16px</td>
+                <td>Custom gutters</td>
+                <td>Yes, with CSS variable <code>--grid-gutter</code></td>
             </tr>
             <tr>
-                <th class="text-nowrap" scope="row">Custom gutters</th>
-                <td colspan="9">Yes, with CSS variable</td>
+                <td>Nestable</td>
+                <td>Yes, <code>.row > .row > ...</code></td>
             </tr>
             <tr>
-                <th class="text-nowrap" scope="row">Nestable</th>
-                <td colspan="9">Yes, .row > .row > ...</td>
-            </tr>
-            <tr>
-                <th class="text-nowrap" scope="row">Column ordering</th>
-                <td colspan="9">Yes, with classes <code>order-*-*</code></td>
+                <td>Column ordering</td>
+                <td>Yes, with classes <code>order-*-*</code></td>
             </tr>
             </tbody>
         </table>
