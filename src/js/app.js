@@ -4,6 +4,7 @@
 //
 class App {
     static intervals = [];
+    static sandbox = null;
 
     page = "";
 
@@ -32,14 +33,20 @@ class App {
     }
 
     async loadPage(){
-        const component = `/pages/${this.page}/index.html`;
-        const content = await fetch(component).then(response => response.text()).catch(e => 'error');
-        
         for(let interval of App.intervals) {
             clearInterval(interval);
         }
+        App.sandbox = null;
+
+        const component = `./pages/${this.page}/index.html`;
+        const content = await fetch(component).then(response => response.text()).catch(e => 'error');
         
         this.content.html(content);
+        if (typeof App.sandbox === "function") {
+            try {
+                App.sandbox();
+            } catch (e) {}           
+        }
         if (window["PAGE_TITLE"]) {
             this.setPageTitle(window["PAGE_TITLE"]);
         }
@@ -52,7 +59,7 @@ class App {
             $(el).append(btn);
         })
 
-        const showCode = Metro.storage.getItem("pandora:showCode", false);
+        const showCode = Metro.storage.getItem("panda:showCode", false);
         if (showCode) {
             $("html").addClass("show-code");
             $("#showCodeToggle").attr("checked", true);
@@ -92,7 +99,7 @@ class App {
             } else {
                 $("html").removeClass("show-code");
             }
-            Metro.storage.setItem("pandora:showCode", checked);
+            Metro.storage.setItem("panda:showCode", checked);
         })
 
         $("document").on("click", ".copy-code-button", function() {
@@ -103,7 +110,7 @@ class App {
     }
 
     setPageTitle(title){
-        $("title").html(`${title} - Pandora 2.0 The theme set built with Metro UI`);
+        $("title").html(`${title} - The template set built with Metro UI`);
         $("#page-title").html(title);
         $("#content-title").html(title);
     }

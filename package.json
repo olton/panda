@@ -1,6 +1,6 @@
 {
-  "name": "pandora",
-  "version": "2.0.0",
+  "name": "panda",
+  "version": "1.0.0",
   "description": "Template set built with Metro UI",
   "type": "module",
   "main": "src/index.js",
@@ -31,7 +31,5 @@
     "vite": "^5.4.11"
   },
   "dependencies": {
-    "@fastify/static": "^8.0.2",
-    "fastify": "^5.0.0"
   }
 }

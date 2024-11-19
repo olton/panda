@@ -149,7 +149,7 @@
             <div class="box m-0">
                 <div class="row">
                     <div class="cell-xs-6">
-                        <div class="box-title-secondary text-bold">Cores Loading</div>
+                        <div class="box-title-secondary">Cores Loading</div>
                         <div class="cpu-load mt-4">
                             <div data-role="progress" data-small="true" data-value="0" id="core-load-1"></div>
                             <div data-role="progress" data-small="true" data-value="0" id="core-load-2"></div>
@@ -170,7 +170,7 @@
                         </div>
                     </div>
                     <div class="cell-xs-6">
-                        <div class="box-title-secondary text-bold">Cores Loading</div>
+                        <div class="box-title-secondary">Cores Loading</div>
                         <div class="cpu-load mt-4">
                             <div data-role="progress" data-small="true" data-value="0" id="core-load-1-1"></div>
                             <div data-role="progress" data-small="true" data-value="0" id="core-load-1-2"></div>
@@ -195,6 +195,7 @@
         </div>
         <div class="cell-md-4">
             <div class="box m-0">
+                <div class="box-title-secondary">CPU</div>
                 <div id="cpu-load-chart"></div>
             </div>
         </div>
@@ -219,20 +220,20 @@
 
 
 <script>
-    (() => {
-        var cpuData = [], net1Data = [], net2Data = []
+    App.sandbox = () => {
+        const cpuData = [], net1Data = [], net2Data = []
         
-        var startTime = new Date().getTime() - 1000*99
+        const startTime = new Date().getTime() - 1000*99
         for (let i = 0; i < 99; i++) {
             cpuData.push([startTime + i * 1000, 0])
             net1Data.push([startTime + i * 1000, 0])
             net2Data.push([startTime + i * 1000, 0])
         }
         
-        var options = {
+        const options = {
             chart: {
                 type: 'area',
-                height: 180,
+                height: 155,
                 zoom: {
                     enabled: false
                 },
@@ -301,7 +302,7 @@
         net2LoadChart.render();
        
         
-        const interval = setInterval(() => {
+        const updateCharts = () => {
             const valMemoryUsage = Math.floor(Math.random() * 100)
 
             Metro.getPlugin("#memory-usage", "donut").val(valMemoryUsage)
@@ -337,7 +338,7 @@
             }
             $("#cpu-usage").removeClassBy("donut-").addClass(colorCpu)
             $("#cpu-value").html(valCpuUsage + '%')
-            
+
             cpuData.push([new Date().getTime(), valCpuUsage])
             cpuLoadChart.updateSeries([
                 {
@@ -372,9 +373,8 @@
             if (net2Data.length > 100) {
                 net2Data.shift()
             }
-            
-        }, 2000)
-
-        App.intervals.push(interval)
-    })();
+        }
+        
+        App.intervals.push(setInterval(updateCharts, 2000))
+    }
 </script>
