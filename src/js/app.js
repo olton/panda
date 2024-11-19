@@ -4,12 +4,12 @@ class App {
     page = "";
 
     constructor() {
-        const hash = location.hash;
-        const target = hash.length > 0 ? hash.substring(1) : "welcome";
+        const {pathname: path = 'welcome', hash} = location;
 
         this.sidebar = $("#side-menu");
         this.content = $("#page-content");
-        this.page = target
+        this.location = {path: path === "/" ? "welcome" : path.substring(1), hash}
+        
         this.loadPage().then(() => {})
         this.eventHandler()
         this.initSidebar()
@@ -32,10 +32,17 @@ class App {
             clearInterval(interval);
         }
 
-        const component = `./pages/${this.page}/index.html`;
+        const component = `/pages/${this.location.path}/index.html`;
         const content = await fetch(component).then(response => response.text()).catch(e => 'error');
-        
+
         this.content.html(content);
+        
+        if (this.location.hash) {
+            const scrollToEl = $(this.location.hash)
+            if (scrollToEl.length > 0) {
+                scrollToEl[0].scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+            }
+        }
 
         if (window["PAGE_TITLE"]) {
             this.setPageTitle(window["PAGE_TITLE"]);
@@ -65,17 +72,16 @@ class App {
             const href = anchor.attr('href');
             const li = anchor.parent();
 
-            if (href.startsWith("#")) {
-                that.sidebar.find(".active").removeClass("active");
-                li.addClass("active");
-                that.page = href.substring(1);
-                that.loadPage().then(() => {});
-                window.history.pushState(null, null, "/#"+that.page);
-                e.preventDefault();
-                e.stopPropagation();
-            } else {
+            if (href.startsWith("http")) {
                 window.location.href = href;
+                return;
             }
+            
+            window.history.replaceState(null, null, href);
+            const [path, hash = ''] = href.split("#");
+            that.location = {path: path.substring(1), hash};
+            that.loadPage().then(() => {});
+            e.preventDefault();
         })
 
         $(window).on('popstate', function(e) {  
