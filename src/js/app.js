@@ -77,15 +77,19 @@ class App {
                 return;
             }
             
-            window.history.replaceState(null, null, href);
+            $("#side-menu .active").removeClass("active");
+            li.addClass("active");
+            
+            window.history.pushState(null, null, href);
             const [path, hash = ''] = href.split("#");
             that.location = {path: path.substring(1), hash};
             that.loadPage().then(() => {});
             e.preventDefault();
         })
 
-        $(window).on('popstate', function(e) {  
-            that.page = location.hash.substring(1);
+        $(window).on('popstate', function(e) {
+            const {pathname: path = 'welcome', hash} = location;
+            that.location = {path: path === "/" ? "welcome" : path.substring(1), hash}
             that.loadPage().then(() => {});
         })
 
