@@ -1,10 +1,5 @@
-// globalThis.handlers = {
-//     intervals: [],
-// }
-//
 class App {
     static intervals = [];
-    static sandbox = null;
 
     page = "";
 
@@ -36,20 +31,16 @@ class App {
         for(let interval of App.intervals) {
             clearInterval(interval);
         }
-        App.sandbox = null;
 
         const component = `./pages/${this.page}/index.html`;
         const content = await fetch(component).then(response => response.text()).catch(e => 'error');
         
         this.content.html(content);
-        if (typeof App.sandbox === "function") {
-            try {
-                App.sandbox();
-            } catch (e) {}           
-        }
+
         if (window["PAGE_TITLE"]) {
             this.setPageTitle(window["PAGE_TITLE"]);
         }
+
         Metro.utils.cleanPreCode("pre code");
 
         hljs.highlightAll();

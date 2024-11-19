@@ -220,7 +220,7 @@
 
 
 <script>
-    App.sandbox = () => {
+    (() => {
         const cpuData = [], net1Data = [], net2Data = []
         
         const startTime = new Date().getTime() - 1000*99
@@ -376,5 +376,5 @@
         }
         
         App.intervals.push(setInterval(updateCharts, 2000))
-    }
+    })()
 </script>
