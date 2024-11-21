@@ -12,7 +12,7 @@
   },
   "scripts": {
     "start": "vite",
-    "deploy": "node deploy.js",
+    "pub": "node deploy.js",
     "build": "cross-env MODE=development node metro/build.js",
     "watch": "cross-env MODE=development node metro/watch.js",
     "build:prod": "cross-env MODE=production node metro/build.js",
