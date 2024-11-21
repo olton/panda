@@ -12,7 +12,7 @@
   },
   "scripts": {
     "start": "vite",
-    "dev": "nodemon .",
+    "deploy": "node deploy.js",
     "build": "cross-env MODE=development node metro/build.js",
     "watch": "cross-env MODE=development node metro/watch.js",
     "build:prod": "cross-env MODE=production node metro/build.js",
@@ -26,10 +26,8 @@
     "cross-env": "^7.0.3",
     "esbuild": "^0.24.0",
     "esbuild-plugin-less": "^1.3.10",
+    "ftp-deploy": "^2.4.7",
     "less": "^4.2.0",
-    "nodemon": "^3.1.7",
     "vite": "^5.4.11"
-  },
-  "dependencies": {
   }
 }

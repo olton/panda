@@ -1,8 +1,6 @@
 class App {
     static intervals = [];
 
-    page = "";
-
     constructor() {
         const {pathname: path = 'welcome', hash} = location;
 
@@ -18,7 +16,7 @@ class App {
     initSidebar(){
         this.sidebar.find(".active").removeClass("active");
 
-        const anchor = this.sidebar.find(`a[href='#${this.page}']`)
+        const anchor = this.sidebar.find(`a[href='/${this.location.path}']`)
         const link = anchor.parent()
         const parent_menu = anchor.closest("ul[data-role=collapse]")
         link.addClass("active");
@@ -32,8 +30,14 @@ class App {
             clearInterval(interval);
         }
 
-        const component = `/pages/${this.location.path}/index.html`;
-        const content = await fetch(component).then(response => response.text()).catch(e => 'error');
+        let component = `/pages/${this.location.path}/index.html`;
+        let content = await fetch(component).then(response => response.text())
+
+
+        if (content.includes("<!-- root -->")) {
+            component = `/pages/under-construction/index.html`;
+            content = await fetch(component).then(response => response.text());
+        }
 
         this.content.html(content);
         
