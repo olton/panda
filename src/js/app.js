@@ -35,7 +35,7 @@ class App {
 
 
         if (content.includes("<!-- root -->")) {
-            component = `/pages/under-construction/index.html`;
+            component = `/pages/coming-soon/index.html`;
             content = await fetch(component).then(response => response.text());
         }
 
