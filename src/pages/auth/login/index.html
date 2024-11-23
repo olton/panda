@@ -23,7 +23,7 @@
 
 <div class="container-xl h-100">
     <div class="h-100 d-flex flex-align-center flex-justify-center">
-        <div class="row w-100 flex-justify-center">
+        <div class="row w-100 flex-justify-center m-0">
             <div class="cell-md-6 d-flex flex-align-center flex-justify-center">
                 <div class="box">
                     <div class="h3 text-weight-7 border-bottom bd-default pb-2">Login to Service</div>
@@ -33,30 +33,30 @@
 
                     <form action="javascript:" class="mt-4 mb-2">
                         <div class="form-group">
-                            <input type="text" data-role="input" data-label="User name:" placeholder="Enter username..." data-prepend="<span class='mif-person'>"/>
+                            <input type="text" data-role="input" placeholder="Enter username..." data-prepend="<span class='mif-person'>" class="pill-input input-large-sm"/>
                         </div>
                         <div class="form-group">
-                            <input type="password" data-role="input" data-label="Password:" placeholder="Enter password..." data-prepend="<span class='mif-lock'>"/>
+                            <input type="password" data-role="input" placeholder="Enter password..." data-prepend="<span class='mif-lock'>" class="pill-input input-large-sm"/>
                         </div>
                         <div class="form-group">
                             <input type="checkbox" data-role="checkbox" data-caption="Remember Me"/>
                         </div>
                         <div class="form-actions border-top border-bottom bd-gray pt-6 pb-6 d-flex flex-justify-start flex-align-center z-1">
-                            <button class="button success">Login</button>
+                            <button class="button success pill-button large-sm">Login To <span class="mif-run ml-2"></span></button>
                             <div class="ml-auto">
-                                No account yet? <a class="ml-1" href="/auth/register">Sign Up</a>
+                                <span class="reduce-2">No account?</span> <a class="ml-1" href="/auth/register">Sign Up</a>
                             </div>
                         </div>
                         <div class="d-flex flex-column flex-align-center flex-justify-start">
                             <div>or use: </div>
                             <div class="ml-2">
-                                <button class="button square bg-facebook">
+                                <button class="button cycle bg-facebook">
                                     <span class="mif-facebook"></span>
                                 </button>
-                                <button class="button square bg-twitter">
+                                <button class="button cycle bg-twitter">
                                     <span class="mif-twitter"></span>
                                 </button>
-                                <button class="button square bg-github">
+                                <button class="button cycle bg-github">
                                     <span class="mif-github"></span>
                                 </button>
                             </div>

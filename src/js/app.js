@@ -75,8 +75,6 @@ class App {
             const anchor = $(this);
             const href = anchor.attr('href');
             const li = anchor.parent();
-
-            console.log(li)
             
             if (href.startsWith("http")) {
                 window.location.href = href;
