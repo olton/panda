@@ -1,0 +1,69 @@
+<script>window.PAGE_TITLE = 'Authentication | Login'</script>
+
+<style>
+    .auth-box {
+        width: 600px;
+        max-width: 90%;
+    }
+    
+    #page-content {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 120px;
+    }
+    
+    @media screen and (min-width: 768px) {
+        #page-content {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+    }
+</style>
+
+<div class="container-xl h-100">
+    <div class="h-100 d-flex flex-align-center flex-justify-center">
+        <div class="row w-100" style="--grid-gutter: 40px">
+            <div class="cell-md-6 d-flex flex-column flex-align-center flex-justify-center">
+                <img src="/images/login.svg" alt="Password" class="w-100" style="max-height: 400px"/>
+                <div class="text-muted">
+                    No account yet? <a href="#" class="ml-2 button small soft-cyan">Sign Up</a>
+                </div>
+            </div>
+            <div class="cell-md-6 d-flex flex-align-center flex-justify-center">
+                <div class="box animated-border-blue">
+                    <div class="h3 text-weight-7 border-bottom bd-default pb-2">Login to Service</div>
+                    <form action="javascript:" class="mt-4 mb-3">
+                        <div class="form-group">
+                            <input type="text" data-role="input" data-label="User name:" placeholder="Enter username..." data-prepend="<span class='mif-person'>"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" data-role="input" data-label="Password:" placeholder="Enter password..." data-prepend="<span class='mif-lock'>"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" data-role="checkbox" data-caption="Remember Me"/>
+                        </div>
+                        <div class="form-actions border-top border-bottom bd-default pt-6 pb-6 d-flex flex-justify-center">
+                            <button class="button primary">Login</button>
+                            <button class="button ml-1">Cancel</button>
+                        </div>
+                        <div class="d-flex flex-column flex-align-center flex-justify-start">
+                            <div>or use: </div>
+                            <div class="ml-2">
+                                <button class="button square bg-facebook">
+                                    <span class="mif-facebook"></span>
+                                </button>
+                                <button class="button square bg-twitter">
+                                    <span class="mif-twitter"></span>
+                                </button>
+                                <button class="button square bg-github">
+                                    <span class="mif-github"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>
+

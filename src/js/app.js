@@ -76,6 +76,8 @@ class App {
             const href = anchor.attr('href');
             const li = anchor.parent();
 
+            console.log(li)
+            
             if (href.startsWith("http")) {
                 window.location.href = href;
                 return;
@@ -89,6 +91,7 @@ class App {
             that.location = {path: path.substring(1), hash};
             that.loadPage().then(() => {});
             e.preventDefault();
+            e.stopPropagation();
         })
 
         $(window).on('popstate', function(e) {
