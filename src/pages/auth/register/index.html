@@ -1,1 +1,73 @@
 <script>window.PAGE_TITLE = 'Authentication | Sign Up'</script>
+
+<style>
+    .navview-content {
+        background: url("/images/bg-1.jpeg") bottom right no-repeat;
+        background-size: cover;
+    }
+
+    .box {
+        background: rgba(255,255,255,0.85);
+    }
+
+    .dark-side {
+        .navview-content {
+            background: url("/images/bg-2.jpeg") bottom right no-repeat;
+        }
+
+        .box {
+            background: rgba(19,19,19,0.85);
+        }
+    }
+</style>
+
+<div class="container-xl h-100">
+    <div class="h-100 d-flex flex-align-center flex-justify-center">
+        <div class="row w-100 flex-justify-center">
+            <div class="cell-md-6 d-flex flex-align-center flex-justify-center">
+                <div class="box">
+                    <div class="h3 text-weight-7 border-bottom bd-default pb-2">Sign Up</div>
+                    <div class="text-muted">
+                        Welcome to our service! Please fill the form to continue.
+                    </div>
+                    <form action="javascript:" class="mt-4 mb-2">
+                        <div class="form-group">
+                            <input type="text" data-role="input" data-label="User name:" placeholder="Enter username..." data-prepend="<span class='mif-person'>"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" data-role="input" data-label="Email:" placeholder="Enter email..." data-prepend="<span class='mif-email'>"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" data-role="input" data-label="Password:" placeholder="Enter password..." data-prepend="<span class='mif-lock'>"/>
+                            <input type="password" data-role="input" placeholder="Confirm password..." data-prepend="<span class='mif-lock'>" class="mt-1"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" data-role="checkbox" data-caption="I read and agree to the <a href='#'>terms and conditions</a>"/>
+                        </div>
+                        <div class="form-actions border-top border-bottom bd-gray pt-6 pb-6 d-flex flex-justify-center flex-align-center z-1">
+                            <button class="button success">Sign Up</button>
+                            <div class="ml-auto">
+                                Have an account? <a class="ml-1" href="/auth/login">Login</a>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-align-center flex-justify-start">
+                            <div>or use: </div>
+                            <div class="ml-2">
+                                <button class="button square bg-facebook">
+                                    <span class="mif-facebook"></span>
+                                </button>
+                                <button class="button square bg-twitter">
+                                    <span class="mif-twitter"></span>
+                                </button>
+                                <button class="button square bg-github">
+                                    <span class="mif-github"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

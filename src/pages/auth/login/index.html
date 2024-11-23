@@ -7,7 +7,7 @@
     }
         
     .box {
-        background: rgba(255,255,255,0.95);
+        background: rgba(255,255,255,0.85);
     }
     
     .dark-side {
@@ -16,7 +16,7 @@
         }
 
         .box {
-            background: rgba(19,19,19,0.95);
+            background: rgba(19,19,19,0.85);
         }
     }
 </style>
@@ -30,7 +30,8 @@
                     <div class="text-muted">
                         Welcome to our service! Please, login to continue.
                     </div>
-                    <form action="javascript:" class="mt-10 mb-2">
+
+                    <form action="javascript:" class="mt-4 mb-2">
                         <div class="form-group">
                             <input type="text" data-role="input" data-label="User name:" placeholder="Enter username..." data-prepend="<span class='mif-person'>"/>
                         </div>
@@ -40,10 +41,11 @@
                         <div class="form-group">
                             <input type="checkbox" data-role="checkbox" data-caption="Remember Me"/>
                         </div>
-                        <div class="form-actions border-top border-bottom bd-default pt-6 pb-6 d-flex flex-justify-center z-1">
+                        <div class="form-actions border-top border-bottom bd-gray pt-6 pb-6 d-flex flex-justify-start flex-align-center z-1">
                             <button class="button success">Login</button>
-                            <button class="button ml-1">Cancel</button>
-                            <button class="button ml-auto info animated-border-blue">Sign Up</button>
+                            <div class="ml-auto">
+                                No account yet? <a class="ml-1" href="/auth/register">Sign Up</a>
+                            </div>
                         </div>
                         <div class="d-flex flex-column flex-align-center flex-justify-start">
                             <div>or use: </div>
