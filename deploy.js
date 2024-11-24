@@ -20,7 +20,11 @@ const config = {
     forcePasv: true
 }
 
+ftpDeploy.on("uploading", function (data) {
+    console.log(data.filename); // partial path with filename being uploaded
+});
+
 ftpDeploy
     .deploy(config)
-    .then(res => console.log(res))
+    .then(res => console.log(`Uploading finished!`))
     .catch(err => console.log(err))
