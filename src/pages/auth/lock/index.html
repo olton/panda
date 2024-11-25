@@ -20,6 +20,16 @@
             border: 2px solid #ffffff;
         }
     }
+    
+    .login-button {
+        background: #fff;
+    }
+    
+    .dark-side {
+        .login-button {
+            background: #2c2d2e;
+        }
+    }
 </style>
 
 <script>
@@ -46,15 +56,15 @@
         <div class="avatar shadow-normal">
             <img src="/images/norma.png" alt="Norma"/>
         </div>
-        <div class="h4 text-weight-9 text-shadow mt-2 mb-2 user-name">Norma Winter</div>
+        <div class="h4 text-weight-9 text-shadow mt-2 mb-4 user-name">Norma Winter</div>
         <form action="javascript:" id="form" onsubmit="submitForm(this)">
             <div class="form-group">
                 <input type="password" data-role="input" placeholder="Enter password..." data-reveal-button="false" data-clear-button="false" data-prepend="<span class='mif-lock'>" data-custom-buttons="inputCustomButtons"/>
             </div>
         </form>
         <div class="reduce-4 text-muted mt-1">Enter your password to retrieve your session</div>
-        <div class="mt-20 mb-4"><a href="#">or log in as different user</a></div>
-        <div class="reduce-2 text-muted text-center">
+        <div class="mt-20 mb-4"><a href="#" class="login-button button pill-button animated-border">or log in as different user</a></div>
+        <div class="mt-10 reduce-4 text-muted text-center">
             Copyright &copy; <span data-role="eval">{{ new Date().getFullYear() }}</span>
             by Panda Template.<br/>All rights reserved.
         </div>
