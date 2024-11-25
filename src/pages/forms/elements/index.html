@@ -1,0 +1,134 @@
+<script>window.PAGE_TITLE = 'Forms | Elements'</script>
+
+<script>
+    var inputCustomButtons = [
+        {
+            html: `<span class="mif-run"></span>`,
+            onclick: () => alert(`Custom button 1`)
+        },
+        {
+            html: `<span class="mif-bin"></span>`,
+            cls: `alert`,
+            onclick: () => alert(`Custom button 2`)
+        },
+    ]
+</script>
+
+<div class="row">
+    <div class="cell-md-6 d-flex flex-align-center">
+        <h3>Form Elements</h3>
+    </div>
+    <div class="cell-lg-6 d-flex flex-justify-end-lg flex-align-center">
+        <ul class="breadcrumbs arrow">
+            <li><a href="/">Panda 1.0</a></li>
+            <li><a href="#">Forms</a></li>
+            <li class="active"><a href="#">Elements</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">About Form Elements</div>
+    <p class="text-muted">
+        Panda uses a more powerful input component provided by the Metro UI library. 
+        This component turns a regular input into a multipurpose user input tool.
+        You can use <code>text inputs</code>, <code>checkboxes</code>, <code>radio buttons</code>, <code>text area</code>, and other input types.
+    </p>
+</div>
+
+<div class="box">
+    <div class="box-title">Inputs</div>
+    <p class="text-muted">
+        Use standard HTML input with attribute <code>data-role="input"</code> to create input control with extended features.
+    </p>
+    <div class="mt-4">
+        <div class="row">
+            <div class="cell-md-6">
+                <input type="text" placeholder="Enter text..." data-role="input" data-label="Text" />
+            </div>
+            <div class="cell-md-6">
+                <input type="password" placeholder="Enter text..." data-role="input" data-label="Password" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="cell-md-6">
+                <input type="text" placeholder="Enter text..." data-role="input" data-label="Prepend and Append" data-prepend="Prepend:" data-append=".append" />
+            </div>
+            <div class="cell-md-6">
+                <input type="text" placeholder="Enter text..." data-role="input" data-label="Custom buttons" data-custom-buttons="inputCustomButtons" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="cell-md-6">
+                <input type="text" placeholder="Enter text..." data-role="input" data-label="Search mode" data-search-button="true" />
+                <div class="reduce-2">
+                    You can use built-in search button.
+                </div>
+            </div>
+            <div class="cell-md-6">
+                <input type="text" placeholder="Enter text..." data-role="input" data-label="History mode" data-history="true" data-history-preset="Value 1|Value 2|Value 3" />
+                <div class="reduce-2">
+                    <div>Use <kbd>Enter</kbd> to store value, and <kbd>Up</kbd>, <kbd>Down</kbd> to access to history</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="cell-md-6">
+                <input type="text" placeholder="Enter country name..." data-role="input" data-label="Autocomplete" data-autocomplete="Ukraine, USA, Canada, Marokko, Singapur"/>
+            </div>
+            <div class="cell-md-6">
+                <input type="text" placeholder="أدخل النص..." data-role="input" data-label="دعم الكتابة من اليمين إلى اليسار" dir="rtl"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Checkbox, Radio Buttons, and Switches</div>
+    <p class="text-muted">
+        Use standard HTML input with attribute <code>data-role="checkbox"</code>, <code>data-role="radio"</code> or <code>data-role="switch"</code> to create stylized controls.
+    </p>
+    <div class="mt-4">
+        <div class="row">
+            <div class="cell-md-4">
+                <input type="checkbox" data-role="checkbox" data-caption="Caption" />
+                <input type="checkbox" data-role="checkbox" data-caption="Caption" checked/>
+                <input type="checkbox" data-role="checkbox" data-caption="Caption" disabled/>
+                <input type="checkbox" data-role="checkbox" data-caption="Caption" checked disabled/>
+            </div>
+            <div class="cell-md-4">
+                <input name="r1" type="radio" data-role="radio" data-caption="Caption" />
+                <input name="r1" type="radio" data-role="radio" data-caption="Caption" checked/>
+                <input name="r1" type="radio" data-role="radio" data-caption="Caption" disabled/>
+                <input name="r2" type="radio" data-role="radio" data-caption="Caption" checked disabled/>
+            </div>
+            <div class="cell-md-4">
+                <input type="checkbox" data-role="switch" />
+                <input type="checkbox" data-role="switch" checked/>
+                <input type="checkbox" data-role="switch" disabled/>
+                <input type="checkbox" data-role="switch" checked disabled/>
+                <input type="checkbox" data-role="switch" data-material="true"/>
+                <input type="checkbox" data-role="switch" checked data-material="true"/>
+                <input type="checkbox" data-role="switch" disabled data-material="true"/>
+                <input type="checkbox" data-role="switch" checked disabled data-material="true"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Textarea</div>
+    <p class="text-muted">
+        Use role <code>textarea</code> to extend standard HTML textarea element.
+    </p>
+    <div class="mt-4">
+        <div class="row">
+            <div class="cell-md-6">
+                <textarea data-role="textarea" placeholder="Enter text..." data-label="Textarea"></textarea>
+            </div>
+            <div class="cell-md-6">
+                <textarea data-role="textarea" placeholder="Enter text..." data-label="Textarea" data-prepend="<span class='mif-book-reference'>"></textarea>
+            </div>
+        </div>
+    </div>
+</div>
