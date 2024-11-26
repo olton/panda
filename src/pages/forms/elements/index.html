@@ -236,13 +236,61 @@
     <div class="mt-4">
         <div class="row">
             <div class="cell-ld-4">
-                <input type="text" data-role="keypad" data-label="Keypad" />
+                <input type="text" data-role="keypad" data-label="Keypad"/>
             </div>
             <div class="cell-ld-4">
                 <input type="text" data-role="keypad" data-label="Shuffle Buttons" data-shuffle="true"/>
             </div>
             <div class="cell-ld-4">
                 <input type="password" data-role="keypad" data-label="Hidden input"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="box" id="slider">
+    <div class="box-title">Slider</div>
+    <div class="mt-4">
+        <div class="row">
+            <div class="cell-ld-4">
+                <input type="text" data-role="slider" data-label="Slider" data-value="50"/>
+            </div>
+            <div class="cell-ld-4">
+                <input type="text" data-role="slider" data-label="With Buffer" data-value="35" data-buffer="75"/>
+            </div>
+            <div class="cell-ld-4">
+                <input type="text" data-role="slider" data-label="With Hint" data-value="35" data-hint="true" data-hint-always="true"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Double Slider (Range Slider)</div>
+    <div class="mt-4">
+        <div class="row">
+            <div class="cell-ld-6">
+                <input type="text" data-role="double-slider" data-label="Slider" data-value-min="15" data-value-max="65"/>
+            </div>
+            <div class="cell-ld-6">
+                <input type="text" data-role="double-slider" data-label="Slider" data-value-min="15" data-value-max="65" data-hint="true" data-hint-always="true" data-show-min-max="true"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="box" id="rating">
+    <div class="box-title">Rating</div>
+    <div class="mt-4">
+        <div class="row">
+            <div class="cell-ld-4">
+                <input type="text" data-role="rating" data-label="Rating" data-value="3.2" />
+            </div>
+            <div class="cell-ld-4">
+                <input type="text" data-role="rating" data-label="Static Rating" data-value="3.5" data-static="true" data-message="(avg 3.5 from 3856)"/>
+            </div>
+            <div class="cell-ld-4">
+                <input type="text" data-role="rating" data-label="Custom Symbol, Color, Count" data-starred-color="#FFA500" data-value="3.5" data-symbol="☀" data-round-func="none" data-stars="10"/>
             </div>
         </div>
     </div>
