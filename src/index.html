@@ -107,10 +107,36 @@
                 </ul>
             </li>
             <li>
-                <a href="/errors">
+                <a href="#" class="dropdown-toggle">
                     <span class="icon"><span class="mif-error"></span></span>
                     <span class="caption">Errors &amp; Maintains</span>
                 </a>
+                <ul class="navview-menu" data-role="collapse" data-collapsed="true">
+                    <li>
+                        <a href="/errors/404">
+                            <span class="icon"><span class="mif-error"></span></span>
+                            <span class="caption">404 Page</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/errors/500">
+                            <span class="icon"><span class="mif-error"></span></span>
+                            <span class="caption">500 Page</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/errors/maintenance">
+                            <span class="icon"><span class="mif-maintenance"></span></span>
+                            <span class="caption">Maintenance</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/errors/under-construction">
+                            <span class="icon"><span class="mif-under-construction"></span></span>
+                            <span class="caption">Under Construction</span>
+                        </a>
+                    </li>
+                </ul>
             </li>
             <li>
                 <a href="/support">
@@ -458,7 +484,7 @@
             </div>
 
             <div class="app-bar-item-static ml-auto">
-                <input type="checkbox" data-role="switch" data-caption="Show Code" id="showCodeToggle"/>
+                <input type="checkbox" data-role="switch" data-show-on-off="true" data-text-on="Code" id="showCodeToggle" />
             </div>
 
             <div class="app-bar-item-static">
@@ -470,7 +496,6 @@
         </div>
 
         <div id="page-content"></div>
-
     </div>
 </div>
 <script>
