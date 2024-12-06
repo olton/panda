@@ -5,7 +5,7 @@ import FtpDeploy from "ftp-deploy"
 
 const auth = JSON.parse(fs.readFileSync("./.ftpauth", "utf8"))
 
-const {user, password, host, port} = auth;
+const {user, password, host, port, root} = auth;
 const ftpDeploy = new FtpDeploy();
 
 const config = {
@@ -14,7 +14,7 @@ const config = {
     host,
     port,
     localRoot: "./src",
-    remoteRoot: "panda.metroui.org.ua/",
+    remoteRoot: root,
     include: ["**/*", ".*"],
     deleteRemote: true,
     forcePasv: true
