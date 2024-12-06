@@ -63,8 +63,7 @@
 
     <p class="text-muted">
         Grid uses <code>@container</code> queries and adapts depending on the size of the closest parent with the <code>.row</code> class.
-        if you need to focus, for example, on the body or another container, 
-        then you can add the <code>.viewport</code> class to the container and use the <code>.v-cell-*</code>, <code>.v-col-*</code> classes to specify cell.
+        if you need to focus, to the <code>viewport</code>, use the <code>.vp-cell-*</code>, <code>.vp-col-*</code>, <code>.vp-offset-*</code> classes to specify cell.
     </p>
     
     <div class="mt-4 table-scrollable">
@@ -108,7 +107,7 @@
             </tr>
             <tr>
                 <td>Custom gutters</td>
-                <td>Yes, with CSS variable <code>--grid-gutter</code></td>
+                <td>Yes, with CSS variable <code>--grid-gap</code></td>
             </tr>
             <tr>
                 <td>Nestable</td>
@@ -126,19 +125,19 @@
 <div class="box">
     <div class="box-title">Grid Gutter Size</div>
     <p class="text-muted">
-        Grid System used <code>--grid-gutter</code> variable to set gutter width.
+        Grid System used <code>--grid-gap</code> variable to set gutter width.
         To set gutter width to <code>10px</code>, you can use the following code:
     </p>
     <div class="mt-2 text-bold">Global setup:</div>
     <pre class="stay-on"><code class="language-css">
         :root {
-            --grid-gutter: 10px;
+            --grid-gap: 10px;
         }
     </code></pre>
 
     <div class="mt-2 text-bold">Local setup:</div>
     <pre class="stay-on"><code class="language-html">
-        &lt;row style="--grid-gutter: 10px;"&gt;
+        &lt;row style="--grid-gap: 10px;"&gt;
             ...
         &lt;/row&gt;
     </code></pre>
@@ -157,7 +156,7 @@
     </code></pre>
 </div>
 
-<div class="box">
+<div class="box" id="grid-example">
     <div class="box-title">Grid Example</div>
 
     <div class="grid demo">
