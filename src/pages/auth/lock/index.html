@@ -35,7 +35,7 @@
 <script>
     var inputCustomButtons = [
         {
-            html: `<span class="mif-run">`,
+            text: `<span class="mif-arrow-right">`,
             onclick: function(e){
                 $("#form").submit();
             }
@@ -59,7 +59,13 @@
         <div class="h4 text-weight-9 text-shadow mt-2 mb-4 user-name">Norma Winter</div>
         <form action="javascript:" id="form" onsubmit="submitForm(this)">
             <div class="form-group">
-                <input type="password" data-role="input" placeholder="Enter password..." data-reveal-button="false" data-clear-button="false" data-prepend="<span class='mif-lock'>" data-custom-buttons="inputCustomButtons"/>
+                <input type="password" 
+                       data-role="input" 
+                       placeholder="Enter password..." 
+                       data-reveal-button="false" 
+                       data-clear-button="false" 
+                       data-prepend="<span class='mif-lock'>" 
+                       data-custom-buttons="inputCustomButtons"/>
             </div>
         </form>
         <div class="reduce-4 text-muted mt-1">Enter your password to retrieve your session</div>

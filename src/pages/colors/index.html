@@ -294,14 +294,15 @@
             'lime', 'green', 'emerald', 'blue', 'teal', 'cyan', 'cobalt', 'indigo', 'violet', 'pink',
             'magenta', 'crimson', 'red', 'orange', 'amber', 'yellow', 'brown', 'olive', 'steel',
             'mauve', 'taupe', 'champagne', 'khaki', 'charcoal', 'bronze', 'windstorm', 'nude',
-            'terracotta', 'coral', 'army', 'seashell', 'sand'
+            'terracotta', 'coral', 'army', 'seashell', 'sand', 'gray', 'gray-blue', 'gray-mouse'
         ]
         
         for (let c of colors) {
             $("#color-palette")
-                .append(`<div class="cell-sm-4 color-item light-color" style="background: var(--color-light-${c})">light-${c}</div>`)
-                .append(`<div class="cell-sm-4 color-item normal-color" style="background: var(--color-${c})">${c}</div>`)
-                .append(`<div class="cell-sm-4 color-item dark-color" style="background: var(--color-dark-${c})">dark-${c}</div>`)
+                .append(`<div class="cell-sm-3 color-item light-color" style="background: var(--color-light-${c})">light-${c}</div>`)
+                .append(`<div class="cell-sm-3 color-item normal-color" style="background: var(--color-${c})">${c}</div>`)
+                .append(`<div class="cell-sm-3 color-item dark-color" style="background: var(--color-sat-${c})">sat-${c}</div>`)
+                .append(`<div class="cell-sm-3 color-item dark-color" style="background: var(--color-dark-${c})">dark-${c}</div>`)
         }
     })()
 </script>
