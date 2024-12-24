@@ -23,6 +23,8 @@
         align-items: center;
         justify-content: center;
         font-size: 12px;
+        position: relative;
+        background: var(--default-background);
     }
     
     .outline {
@@ -220,14 +222,16 @@
         A special classes <code>.animated-border</code>, <code>.animated-border-***</code> will add an animated border to your element.
         To use animated border, the element must have a background and a parent element must have a <code>z-index</code>.
     </p>
-    <div class="mt-4 d-flex flex-row z-1"> 
+    <div class="mt-4 d-flex flex-row gap-2 z-1"> 
         <div class="demo-box border bd-red"></div>
-        <div class="demo-box bg-white animated-border ml-2"></div>
-        <div class="demo-box bg-white border bd-cyan animated-border-cyan ml-2"></div>
+        <div class="demo-box bg-white rainbow-border"></div>
+        <div class="demo-box bg-white animated-border border-radius-10"></div>
+        <div class="demo-box bg-white border bd-cyan animated-border-cyan"></div>
     </div>
     <div class="mt-4">
         <pre><code class="language-html">
             &lt;div class="border bd-red"&gt;&lt;/div&gt;
+            &lt;div class="bg-white rainbow-border"&gt;&lt;/div&gt;
             &lt;div class="bg-white animated-border"&gt;&lt;/div&gt;
             &lt;div class="bg-white border bd-cyan animated-border-cyan"&gt;&lt;/div&gt;
         </code></pre>

@@ -30,7 +30,7 @@
 <div class="box">
     <div class="box-title">About Form Elements</div>
     <p class="text-muted">
-        Panda uses a more powerful input component provided by the Metro UI library. 
+        Panda uses a more powerful input component provided by the Metro UI library.
         This component turns a regular input into a multipurpose user input tool.
         You can use <code>text inputs</code>, <code>checkboxes</code>, <code>radio buttons</code>, <code>text area</code>, and other input types.
     </p>
@@ -44,29 +44,30 @@
     <div class="mt-4">
         <div class="row">
             <div class="cell-ld-6">
-                <input type="text" placeholder="Enter text..." data-role="input" data-label="Text" />
+                <input type="text" placeholder="Enter text..." data-role="input" data-label="Text"/>
             </div>
             <div class="cell-ld-6">
-                <input type="password" placeholder="Enter text..." data-role="input" data-label="Password" />
-            </div>
-        </div>
-        <div class="row">
-            <div class="cell-ld-6">
-                <input type="text" placeholder="Enter text..." data-role="input" data-label="Prepend and Append" data-prepend="Prepend:" data-append=".append" />
-            </div>
-            <div class="cell-ld-6">
-                <input type="text" placeholder="Enter text..." data-role="input" data-label="Custom buttons" data-custom-buttons="inputCustomButtons" />
+                <input type="password" placeholder="Enter text..." data-role="input" data-label="Password"/>
             </div>
         </div>
         <div class="row">
             <div class="cell-ld-6">
-                <input type="text" placeholder="Enter text..." data-role="input" data-label="Search mode" data-search-button="true" />
+                <input type="text" placeholder="Enter text..." data-role="input" data-label="Prepend and Append" data-prepend="Prepend:" data-append=".append"/>
+            </div>
+            <div class="cell-ld-6">
+                <input type="text" placeholder="Enter text..." data-role="input" data-label="Custom buttons" data-custom-buttons="inputCustomButtons"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="cell-ld-6">
+                <input type="text" placeholder="Enter text..." data-role="input" data-label="Search mode" data-search-button="true"/>
                 <div class="reduce-2">
                     You can use built-in search button.
                 </div>
             </div>
             <div class="cell-ld-6">
-                <input type="text" placeholder="Enter text..." data-role="input" data-label="History mode" data-history="true" data-history-preset="Value 1|Value 2|Value 3" />
+                <input type="text" placeholder="Enter text..." data-role="input" data-label="History mode" data-history="true"
+                       data-history-preset="Value 1|Value 2|Value 3"/>
                 <div class="reduce-2">
                     <div>Use <kbd>Enter</kbd> to store value, and <kbd>Up</kbd>, <kbd>Down</kbd> to access to history</div>
                 </div>
@@ -74,7 +75,8 @@
         </div>
         <div class="row">
             <div class="cell-ld-6">
-                <input type="text" placeholder="Enter country name..." data-role="input" data-label="Autocomplete" data-autocomplete="Ukraine, USA, Canada, Marokko, Singapur"/>
+                <input type="text" placeholder="Enter country name..." data-role="input" data-label="Autocomplete"
+                       data-autocomplete="Ukraine, USA, Canada, Marokko, Singapur"/>
             </div>
             <div class="cell-ld-6">
                 <input type="text" placeholder="أدخل النص..." data-role="input" data-label="دعم الكتابة من اليمين إلى اليسار" dir="rtl"/>
@@ -86,24 +88,25 @@
 <div class="box">
     <div class="box-title">Checkbox, Radio Buttons, and Switches</div>
     <p class="text-muted">
-        Use standard HTML input with attribute <code>data-role="checkbox"</code>, <code>data-role="radio"</code> or <code>data-role="switch"</code> to create stylized controls.
+        Use standard HTML input with attribute <code>data-role="checkbox"</code>, <code>data-role="radio"</code> or <code>data-role="switch"</code> to create
+        stylized controls.
     </p>
     <div class="mt-4">
         <div class="row">
             <div class="cell-ld-4">
-                <input type="checkbox" data-role="checkbox" data-caption="Caption" />
+                <input type="checkbox" data-role="checkbox" data-caption="Caption"/>
                 <input type="checkbox" data-role="checkbox" data-caption="Caption" checked/>
                 <input type="checkbox" data-role="checkbox" data-caption="Caption" disabled/>
                 <input type="checkbox" data-role="checkbox" data-caption="Caption" checked disabled/>
             </div>
             <div class="cell-ld-4">
-                <input name="r1" type="radio" data-role="radio" data-caption="Caption" />
+                <input name="r1" type="radio" data-role="radio" data-caption="Caption"/>
                 <input name="r1" type="radio" data-role="radio" data-caption="Caption" checked/>
                 <input name="r1" type="radio" data-role="radio" data-caption="Caption" disabled/>
                 <input name="r2" type="radio" data-role="radio" data-caption="Caption" checked disabled/>
             </div>
             <div class="cell-ld-4">
-                <input type="checkbox" data-role="switch" />
+                <input type="checkbox" data-role="switch"/>
                 <input type="checkbox" data-role="switch" checked/>
                 <input type="checkbox" data-role="switch" disabled/>
                 <input type="checkbox" data-role="switch" checked disabled/>
@@ -170,9 +173,39 @@
                     <option value="5">Value 5</option>
                 </select>
             </div>
+            <div class="cell-ld-4">
+                <select data-role="select" data-label="Iconic Options">
+                    <option value="1" data-icon="<span class='mif-rocket'>">Rocket</option>
+                    <option value="2" data-icon="<span class='mif-florist'>" selected>Florist</option>
+                </select>
+            </div>
+            <div class="cell-ld-4">
+                <select data-role="select" data-label="Iconic Options" multiple>
+                    <option value="1" data-icon="<span class='mif-rocket'>" selected>Rocket</option>
+                    <option value="2" data-icon="<span class='mif-florist'>" selected>Florist</option>
+                </select>
+            </div>
+            <div class="cell-ld-4">
+                <select data-role="select" data-label="Group tag" data-show-group-name="true">
+                    <optgroup label="Group 1">
+                        <option value="2" data-icon="<span class='mif-florist'>" selected>Florist</option>
+                    </optgroup>
+                    <option value="1" data-icon="<span class='mif-rocket'>">Rocket</option>
+                </select>
+            </div>
+            <div class="cell-ld-4">
+                <select data-role="select" data-label="Group tag" multiple data-show-group-name="true">
+                    <optgroup label="Group 1">
+                        <option value="1" data-icon="<span class='mif-rocket'>" selected>Rocket</option>
+                    </optgroup>
+                    <optgroup label="Group 2">
+                        <option value="2" data-icon="<span class='mif-florist'>" selected>Florist</option>
+                    </optgroup>
+                </select>
+            </div>
         </div>
     </div>
-    
+
     <div class="box-title-secondary">Double Select Box</div>
     <div class="mt-4">
         <div data-role="double-select-box">
@@ -195,13 +228,13 @@
     <div class="mt-4">
         <div class="row">
             <div class="cell-ld-4">
-                <input type="text" data-role="calendarpicker" data-label="Calendar Picker" />
+                <input type="text" data-role="calendarpicker" data-label="Calendar Picker"/>
             </div>
             <div class="cell-ld-4">
-                <input type="text" data-role="datepicker" data-label="Date Picker" />
+                <input type="text" data-role="datepicker" data-label="Date Picker"/>
             </div>
             <div class="cell-ld-4">
-                <input type="text" data-role="timepicker" data-label="Time Picker" />
+                <input type="text" data-role="timepicker" data-label="Time Picker"/>
             </div>
         </div>
     </div>
@@ -219,7 +252,7 @@
     <div class="mt-4">
         <div class="row">
             <div class="cell-ld-4">
-                <input type="text" data-role="spinner" data-label="Spinner" />
+                <input type="text" data-role="spinner" data-label="Spinner"/>
             </div>
             <div class="cell-ld-4">
                 <input type="text" data-role="spinner" data-label="Spinner" data-buttons-position="left"/>
@@ -273,7 +306,8 @@
                 <input type="text" data-role="double-slider" data-label="Slider" data-value-min="15" data-value-max="65"/>
             </div>
             <div class="cell-ld-6">
-                <input type="text" data-role="double-slider" data-label="Slider" data-value-min="15" data-value-max="65" data-hint="true" data-hint-always="true" data-show-min-max="true"/>
+                <input type="text" data-role="double-slider" data-label="Slider" data-value-min="15" data-value-max="65" data-hint="true"
+                       data-hint-always="true" data-show-min-max="true"/>
             </div>
         </div>
     </div>
@@ -284,13 +318,14 @@
     <div class="mt-4">
         <div class="row">
             <div class="cell-ld-4">
-                <input type="text" data-role="rating" data-label="Rating" data-value="3.2" />
+                <input type="text" data-role="rating" data-label="Rating" data-value="3.2"/>
             </div>
             <div class="cell-ld-4">
                 <input type="text" data-role="rating" data-label="Static Rating" data-value="3.5" data-static="true" data-message="(avg 3.5 from 3856)"/>
             </div>
             <div class="cell-ld-4">
-                <input type="text" data-role="rating" data-label="Custom Symbol, Color, Count" data-on-color="#FFA500" data-value="3.5" data-symbol="☀" data-round-func="none" data-stars="10"/>
+                <input type="text" data-role="rating" data-label="Custom Symbol, Color, Count" data-on-color="#FFA500" data-value="3.5" data-symbol="☀"
+                       data-round-func="none" data-stars="10"/>
             </div>
         </div>
     </div>

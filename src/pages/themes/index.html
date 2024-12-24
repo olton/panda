@@ -41,6 +41,24 @@
 </div>
 
 <div class="box">
+    <div class="box-title">Theme according to the system</div>
+    <p class="text-muted">
+        You can use the <code>prefers-color-scheme</code> media feature to detect if the user has requested the system use a light or dark color theme.
+        To use this feature, add meta tag <code>metroui:theme</code> with content <code>auto</code> to the <code>page head</code>.
+        Also, you can use values <code>light</code> and <code>dark</code> to set the specific theme.
+    </p>
+    <div class="mt-4">
+        <pre><code class="language-html">
+            &lt;meta name="metroui:theme" content="auto"&gt;
+        </code></pre>
+    </div>
+    <div class="remark">
+        <span content="icon mif-exclamation"></span>
+        <div>The component <code>theme-switcher</code> The component will not work if this meta tag is used!</div>
+    </div>
+</div>
+
+<div class="box">
     <div class="box-title">Theme Switcher</div>
     <p class="text-muted">
         You can use component <code>theme-switcher</code> to add control to switch between light and dark themes.
