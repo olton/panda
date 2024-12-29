@@ -1,4 +1,16 @@
-<script>window.PAGE_TITLE = 'i18n'</script>
+<script>window.PAGE_TITLE = 'Internationalization (i18n)'</script>
+
+<div class="row">
+    <div class="cell-lg-6 d-flex flex-align-center">
+        <h3>Internationalization</h3>
+    </div>
+    <div class="cell-lg-6 d-flex flex-justify-end-lg flex-align-center">
+        <ul class="breadcrumbs default">
+            <li><a href="#">Panda 1.0</a></li>
+            <li class="active"><a href="#">i18n</a></li>
+        </ul>
+    </div>
+</div>
 
 <div class="box">
     <div class="box-title">About <span class="text-weight-9">i18n</span></div>
@@ -12,6 +24,7 @@
     <div class="box-title">Metro UI i18n module</div>
     <p class="text-muted">
         Metro UI has a built-in i18n module that helps you to easily translate your app into different languages and switch between defined languages.
+        Locales out from box - <code>en</code>, <code>ua</code>. Available built-in labels you can see in Metro UI <a href="https://github.com/olton/Metro-UI-CSS/blob/dev/source/i18n/en.js">source code</a> on GitHub.
     </p>
     
     <div class="box-title-secondary">Methods</div>
@@ -29,6 +42,8 @@
     <div class="box-title-secondary">Properties</div>
     <ul>
         <li><code>Metro.i18n.language</code> - current language ID</li>
+        <li><code>Metro.locales</code> - available locales</li>
+        <li><code>Metro.locale</code> - current locale - is an object contains pairs key, value</li>
     </ul>
 </div>
 
