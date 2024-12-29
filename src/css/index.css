@@ -8,13 +8,20 @@
     --logo-color: #faf5f5;
 }
 
-.logo-container {
+.logo-container, .logo-container-big {
     background: var(--logo-background);
     color: var(--logo-color);
     display: flex;
     align-items: center;
     height: 52px;
     border-bottom: 1px solid var(--border-color);
+}
+
+.logo-container-big {
+    width: 128px;
+    height: 128px;
+    flex-shrink: 0;
+    border-radius: 50%;
 }
 
 .navview {
