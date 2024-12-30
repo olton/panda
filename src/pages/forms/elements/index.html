@@ -3,11 +3,11 @@
 <script>
     var inputCustomButtons = [
         {
-            html: `<span class="mif-run"></span>`,
+            text: `<span class="mif-run">`,
             onclick: () => alert(`Custom button 1`)
         },
         {
-            html: `<span class="mif-bin"></span>`,
+            text: `<span class="mif-bin">`,
             cls: `alert`,
             onclick: () => alert(`Custom button 2`)
         },
@@ -82,40 +82,85 @@
                 <input type="text" placeholder="أدخل النص..." data-role="input" data-label="دعم الكتابة من اليمين إلى اليسار" dir="rtl"/>
             </div>
         </div>
+        <div class="row">
+            <div class="cell-ld-6">
+                <input type="text"
+                       data-role="input, input-mask"
+                       data-mask="__/__/____"
+                       data-mask-pattern="\d"
+                       value=""
+                       data-label="Input Mask"
+                />
+            </div>
+            <div class="cell-ld-6">
+                <input type="text"
+                       data-role="material-input"
+                       placeholder="Enter your email"
+                       data-label="Material Input"
+                       data-icon="<span class='mif-email'>"
+                       data-informer="Enter a valid email address"
+                       data-validate="required email"
+                >
+            </div>
+        </div>
     </div>
 </div>
 
 <div class="box">
-    <div class="box-title">Checkbox, Radio Buttons, and Switches</div>
+    <div class="box-title">Checkboxes and Radio Buttons</div>
     <p class="text-muted">
-        Use standard HTML input with attribute <code>data-role="checkbox"</code>, <code>data-role="radio"</code> or <code>data-role="switch"</code> to create
-        stylized controls.
+        Use standard HTML input to create stylized controls, add class <code>checkbox-***</code> or <code>radio-***</code> (where *** is color name) to change control color.
+    </p>
+    
+    <div class="box-title-secondary">Checkboxes</div>
+    <div class="mt-4">
+        <input type="checkbox" />
+        <input type="checkbox" checked/>
+        <input type="checkbox" disabled/>
+        <input type="checkbox" checked disabled/>
+        <input type="checkbox" checked class="checkbox-red" />
+    </div>
+    
+    <div class="box-title-secondary">Extended Checkboxes</div>
+    <p class="text-muted">
+        Use attribute <code>data-role="checkbox"</code> to create stylized controls with extended options.
     </p>
     <div class="mt-4">
-        <div class="row">
-            <div class="cell-ld-4">
-                <input type="checkbox" data-role="checkbox" data-caption="Caption"/>
-                <input type="checkbox" data-role="checkbox" data-caption="Caption" checked/>
-                <input type="checkbox" data-role="checkbox" data-caption="Caption" disabled/>
-                <input type="checkbox" data-role="checkbox" data-caption="Caption" checked disabled/>
-            </div>
-            <div class="cell-ld-4">
-                <input name="r1" type="radio" data-role="radio" data-caption="Caption"/>
-                <input name="r1" type="radio" data-role="radio" data-caption="Caption" checked/>
-                <input name="r1" type="radio" data-role="radio" data-caption="Caption" disabled/>
-                <input name="r2" type="radio" data-role="radio" data-caption="Caption" checked disabled/>
-            </div>
-            <div class="cell-ld-4">
-                <input type="checkbox" data-role="switch"/>
-                <input type="checkbox" data-role="switch" checked/>
-                <input type="checkbox" data-role="switch" disabled/>
-                <input type="checkbox" data-role="switch" checked disabled/>
-                <input type="checkbox" data-role="switch" data-material="true"/>
-                <input type="checkbox" data-role="switch" checked data-material="true"/>
-                <input type="checkbox" data-role="switch" disabled data-material="true"/>
-                <input type="checkbox" data-role="switch" checked disabled data-material="true"/>
-            </div>
-        </div>
+        <input type="checkbox" data-role="checkbox" data-prepend="Two State"/>
+        <input type="checkbox" data-role="checkbox" data-three-state="true" data-prepend="Three State"/>
+        <input type="checkbox" data-role="checkbox" data-three-state="true" data-state="0" data-prepend="Indeterminate"/>
+    </div>
+    
+    <div class="box-title-secondary">Radio Buttons</div>
+    <div class="mt-4">
+        <input name="r1" type="radio" />
+        <input name="r1" type="radio" checked/>
+        <input name="r1" type="radio" disabled/>
+        <input name="r2" type="radio" checked disabled/>
+        <input name="r3" type="radio" class="radio-red" checked/>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Switch</div>
+    <p class="text-muted">
+        Use standard HTML input with attribute <code>data-role="switch"</code> to create stylized controls.
+    </p>
+    <div class="mt-4">
+        <input type="checkbox" data-role="switch"/>
+        <input type="checkbox" data-role="switch" checked/>
+        <input type="checkbox" data-role="switch" checked class="switch-red"/>
+        <input type="checkbox" data-role="switch" data-onoff="true"/>
+        <input type="checkbox" data-role="switch" disabled/>
+        <input type="checkbox" data-role="switch" checked disabled/>
+    </div>
+    <div class="mt-4">
+        <input type="checkbox" data-role="switch" data-material="true"/>
+        <input type="checkbox" data-role="switch" data-material="true" checked />
+        <input type="checkbox" data-role="switch" data-material="true" checked class="switch-red"/>
+        <input type="checkbox" data-role="switch" data-material="true" data-onoff="true" />
+        <input type="checkbox" data-role="switch" data-material="true" disabled />
+        <input type="checkbox" data-role="switch" data-material="true" checked disabled/>
     </div>
 </div>
 
