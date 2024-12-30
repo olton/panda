@@ -120,6 +120,11 @@
         <input type="checkbox" checked disabled/>
         <input type="checkbox" checked class="checkbox-red" />
     </div>
+    <div class="mt-4">
+        <pre><code class="language-html">
+            &lt;input type="checkbox" checked class="checkbox-red" /&gt;
+        </code></pre>
+    </div>
     
     <div class="box-title-secondary">Extended Checkboxes</div>
     <p class="text-muted">
@@ -130,6 +135,15 @@
         <input type="checkbox" data-role="checkbox" data-three-state="true" data-prepend="Three State"/>
         <input type="checkbox" data-role="checkbox" data-three-state="true" data-state="0" data-prepend="Indeterminate"/>
     </div>
+    <div class="mt-4">
+        <pre><code class="language-html">
+            &lt;input type="checkbox" 
+                   data-role="checkbox" 
+                   data-three-state="true" 
+                   data-state="0" data-prepend="Indeterminate"
+            /&gt;
+        </code></pre>
+    </div>
     
     <div class="box-title-secondary">Radio Buttons</div>
     <div class="mt-4">
@@ -138,6 +152,11 @@
         <input name="r1" type="radio" disabled/>
         <input name="r2" type="radio" checked disabled/>
         <input name="r3" type="radio" class="radio-red" checked/>
+    </div>
+    <div class="mt-4">
+        <pre><code class="language-html">
+            &lt;input type="radio" checked class="radio-red" /&gt;
+        </code></pre>
     </div>
 </div>
 
@@ -162,6 +181,11 @@
         <input type="checkbox" data-role="switch" data-material="true" disabled />
         <input type="checkbox" data-role="switch" data-material="true" checked disabled/>
     </div>
+    <div class="mt-4">
+        <pre><code class="language-html">
+            &lt;input type="checkbox" data-role="switch" class="switch-red" data-onoff="true" /&gt;
+        </code></pre>
+    </div>
 </div>
 
 <div class="box">
@@ -179,10 +203,22 @@
             </div>
         </div>
     </div>
+    <div class="mt-4">
+        <pre><code class="language-html">
+            &lt;textarea data-role="textarea" 
+                      placeholder="Enter text..." 
+                      data-label="Textarea" 
+                      data-prepend="&lt;span class='mif-book-reference'&gt;"
+            &gt;&lt;/textarea&gt;
+        </code></pre>
+    </div>
 </div>
 
 <div class="box">
     <div class="box-title">Select</div>
+    <p class="text-muted">
+        Use role <code>select</code> to extend standard HTML select element.
+    </p>
     <div class="mt-4">
         <div class="row">
             <div class="cell-ld-4">
@@ -264,14 +300,14 @@
     <div class="mt-4">
         <div data-role="double-select-box">
             <select>
-                <option value="ie" data-template="<span class='icon mif-ie'></span> $1">IE</option>
-                <option value="chrome" data-template="<span class='icon mif-chrome'></span> $1">Chrome</option>
-                <option value="firefox" data-template="<span class='icon mif-firefox'></span> $1">Firefox</option>
+                <option value="ie" data-icon="<span class='mif-ie'>">IE</option>
+                <option value="chrome" data-icon="<span class='mif-chrome'>">Chrome</option>
+                <option value="firefox" data-icon="<span class='mif-firefox'>">Firefox</option>
             </select>
 
             <select>
-                <option value="safari" data-template="<span class='icon mif-safari'></span> $1">Safari</option>
-                <option value="firefox" data-template="<span class='icon mif-opera'></span> $1">Opera</option>
+                <option value="safari" data-icon="<span class='mif-safari'>">Safari</option>
+                <option value="firefox" data-icon="<span class='mif-opera'>">Opera</option>
             </select>
         </div>
     </div>
