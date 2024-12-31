@@ -30,10 +30,10 @@
             display: none!important;
         }
     }
-}
-
-.navview-content {
-    padding-top: 50px;
+    
+    .navview-content {
+        overflow: hidden;
+    }
 }
 
 #page-content {
@@ -49,7 +49,7 @@
 
 @media screen and (min-width: 768px) {
     #page-content {
-        padding: 2rem;
+        padding: 1rem;
     }
 }
 
