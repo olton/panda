@@ -44,12 +44,11 @@
     flex-direction: column;
     z-index: 1;
     padding: .5rem;
-    
 }
 
 @media screen and (min-width: 768px) {
     #page-content {
-        padding: 1rem;
+        padding: 1rem 1rem 4rem 1rem;
     }
 }
 
