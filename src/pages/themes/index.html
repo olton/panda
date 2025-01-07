@@ -52,9 +52,8 @@
             &lt;meta name="metroui:theme" content="auto"&gt;
         </code></pre>
     </div>
-    <div class="remark">
-        <span content="icon mif-exclamation"></span>
-        <div>The component <code>theme-switcher</code> The component will not work if this meta tag is used!</div>
+    <div data-role="directive" data-directive="warning" data-show-icon="true">
+        The component <code>theme-switcher</code> will not work if this meta-tag is used!
     </div>
 </div>
 
@@ -65,13 +64,23 @@
         This component automatically sets theme class <code>.dark-side</code> to the specified in attribute <code>data-target</code> element (by default it is <code>&lt;html&gt;</code> element).
         To use this component, add attribute <code>data-role="theme-switcher"</code> to the <code>&lt;input&gt;</code> element. 
     </p>
+    
+    <div class="box-title-secondary">Switch Mode</div>
     <div class="mt-4">
         <input type="checkbox" data-role="theme-switcher"/>
-        <input type="checkbox" data-role="theme-switcher" data-mode="button"/>
     </div>
     <div class="mt-4">
         <pre><code class="language-html">
             &lt;input type="checkbox" data-role="theme-switcher"/&gt;
+        </code></pre>
+    </div>
+
+    <div class="box-title-secondary">Button Mode</div>
+    <div class="mt-4">
+        <input type="checkbox" data-role="theme-switcher" data-mode="button"/>
+    </div>
+    <div class="mt-4">
+        <pre><code class="language-html">
             &lt;input type="checkbox" data-role="theme-switcher" data-mode="button"/&gt;
         </code></pre>
     </div>
