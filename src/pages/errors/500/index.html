@@ -1,30 +1,31 @@
 <script>window.PAGE_TITLE = 'Errors | 500'</script>
 
+<style>
+    #page-content {
+        background: url(/images/policia.jpeg);
+        background-size: cover;
+        background-position: left bottom;
+    }
+</style>
+
 <div class="h-100 d-flex flex-align-center flex-justify-center flex-column">
-    <div>
-        <span class="display4 mif-skull-and-bones"></span>
-    </div>
-    <div class="display4 text-weight-9 text-3d d-flex flex-row" >
-        <span class="mif-chevron-left"></span>
-        <div class="text-center fg-red"><div class="text-bold text-small no-shadow text-center mt-3-minus">ERROR</div> 500 </div>
-        <span class="mif-chevron-right"></span>
-    </div>
-    
-    <div class="h3 text-center">Oops... Something went wrong!</div>
-    <div class="text-center text-leader2 w-75">
-        We will work on fixing that right away.
-        <br/>Meanwhile, you may return to <a class="text-bold" href="/">previous page</a>,<br/>or try using the search form.
-    </div>
-    <div class="row mt-10 flex-justify-center">
-        <form class="cell-sm-6">
-            <div class="form-group">
-                <input type="text" 
-                       data-role="input" 
-                       placeholder="Enter search data..." 
-                       data-prepend="Search:" 
-                       data-search-button="true" 
-                       class="pill-input input-large-sm">
+    <div data-role="window" data-width="65%" data-height="400" data-resizable="false" data-title="Server Error" data-cls-window="bg-glassmorphism" data-can-close="false" data-can-maximize="false" data-can-minimize="false">
+        <div class="d-flex flex-align-center flex-justify-center flex-column">
+            <h1 class="display4 text-weight-9 mt-6 fg-red ">500</h1>
+            <h3 class="text-light m-0">Internal Server Error</h3>
+            <p class="text-light m-0">Something went wrong. Please try again later.</p>
+            <div class="row mt-10 flex-justify-center">
+                <form class="cell-sm-6">
+                    <div class="form-group">
+                        <input type="text"
+                               data-role="input"
+                               placeholder="Enter search data..."
+                               data-prepend="Search:"
+                               data-search-button="true"
+                               class="animated-border-red">
+                    </div>
+                </form>
             </div>
-        </form>
+        </div>
     </div>
 </div>
