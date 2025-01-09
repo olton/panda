@@ -60,21 +60,6 @@
         You can extend the Metro UI i18n module with custom labels for your app.
         To do this, you need to call the <code>Metro.i18n.extend(data)</code> method and pass an object with custom labels.
     </p>
-    <div class="mt-4">
-        <pre><code class="language-javascript">
-            Metro.i18n.extend({
-                "en": {
-                    "label_welcome": "Welcome to Metro UI",
-                },
-                "ua": {
-                    "label_welcome": "Ласкаво просимо до Metro UI",
-                },
-                "de": {
-                    "label_welcome": "Willkommen bei Metro UI",
-                }
-            })
-        </code></pre>
-    </div>
     
     <div class="box-title-secondary">Update UI</div>
     <p class="text-muted">
@@ -82,11 +67,6 @@
         To update labels for the specified context and language, you need to call the <code>Metro.i18n.updateUI(context, lang)</code> method.
         By default, this method uses <b>document</b> as context and attr <b>lang</b> from <b>html</b> tag.
     </p>
-    <div class="mt-4">
-        <pre><code class="language-html">
-            &lt;div data-i18n="label_welcome"&gt;Welcome to Metro UI&lt;/div&gt;
-        </code></pre>
-    </div>
 </div>
 
 <div class="box">

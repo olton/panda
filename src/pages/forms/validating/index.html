@@ -23,27 +23,12 @@
     <p class="text-muted">
         To enable the validation system, add attribute <code>data-role="validator"</code> to the <code>&lt;form&gt;</code> element.
     </p>
-    <div class="mt-4">
-        <pre><code class="language-html">
-            &lt;form data-role="validator"&gt;
-                ...
-            &lt;/form&gt;
-        </code></pre>
-    </div>
+
     <p class="text-muted">
         To validate data, add attribute <code>data-validate="..."</code> to the form input element. 
         To show invalid feedback, add element <code>&lt;span class="invalid_feedback"&gt;...&lt;/span&gt;</code> after the form input element.
     </p>
-    <div class="mt-4">
-        <pre><code class="language-html">
-            &lt;form data-role="validator"&gt;
-                &lt;div class="form-group"&gt;
-                    &lt;input data-role="input" data-label="Label:" data-validate="required"/&gt;
-                    &lt;span class="invalid_feedback"&gt;Enter data in field.&lt;/span&gt;
-                &lt;/div&gt;
-            &lt;/form&gt;
-        </code></pre>
-    </div>
+
     <div class="mt-4">
         <div class="box-title-secondary">Example form</div>
         <div class="row">
@@ -69,11 +54,6 @@
         <div class="row">
             <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
                 <div class="box-title-secondary">Required</div>
-                <div class="mt-4 mb-4">
-                    <pre><code class="language-html">
-                        &lt;input data-validate="required"/&gt;
-                    </code></pre>
-                </div>
                 <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
                     <input data-validate="required" class="metro-input"/>
                     <div class="form-actions">
@@ -83,11 +63,6 @@
             </div>
             <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
                 <div class="box-title-secondary">Length</div>
-                <div class="mt-4 mb-4">
-                    <pre><code class="language-html">
-                        &lt;input data-validate="length=4"/&gt;
-                    </code></pre>
-                </div>
                 <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
                     <input data-validate="length=4" class="metro-input"/>
                     <div class="form-actions">
@@ -97,11 +72,6 @@
             </div>
             <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
                 <div class="box-title-secondary">minLength</div>
-                <div class="mt-4 mb-4">
-                    <pre><code class="language-html">
-                        &lt;input data-validate="minlength=4"/&gt;
-                    </code></pre>
-                </div>
                 <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
                     <input data-validate="minlength=4" class="metro-input"/>
                     <div class="form-actions">
@@ -111,11 +81,6 @@
             </div>
             <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
                 <div class="box-title-secondary">maxLength</div>
-                <div class="mt-4 mb-4">
-                    <pre><code class="language-html">
-                        &lt;input data-validate="maxlength=4"/&gt;
-                    </code></pre>
-                </div>
                 <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
                     <input data-validate="maxlength=4" class="metro-input"/>
                     <div class="form-actions">
@@ -125,11 +90,6 @@
             </div>
             <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
                 <div class="box-title-secondary">min</div>
-                <div class="mt-4 mb-4">
-                    <pre><code class="language-html">
-                        &lt;input data-validate="min=4"/&gt;
-                    </code></pre>
-                </div>
                 <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
                     <input data-validate="min=4" class="metro-input"/>
                     <div class="form-actions">
@@ -139,11 +99,6 @@
             </div>
             <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
                 <div class="box-title-secondary">max</div>
-                <div class="mt-4 mb-4">
-                    <pre><code class="language-html">
-                        &lt;input data-validate="max=4"/&gt;
-                    </code></pre>
-                </div>
                 <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
                     <input data-validate="max=4" class="metro-input"/>
                     <div class="form-actions">
@@ -153,11 +108,6 @@
             </div>
             <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
                 <div class="box-title-secondary">email</div>
-                <div class="mt-4 mb-4">
-                    <pre><code class="language-html">
-                        &lt;input data-validate="email"/&gt;
-                    </code></pre>
-                </div>
                 <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
                     <input data-validate="email" class="metro-input"/>
                     <div class="form-actions">
@@ -167,11 +117,6 @@
             </div>
             <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
                 <div class="box-title-secondary">domain</div>
-                <div class="mt-4 mb-4">
-                    <pre><code class="language-html">
-                        &lt;input data-validate="domain"/&gt;
-                    </code></pre>
-                </div>
                 <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
                     <input data-validate="domain" class="metro-input"/>
                     <div class="form-actions">
@@ -181,11 +126,6 @@
             </div>
             <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
                 <div class="box-title-secondary">url</div>
-                <div class="mt-4 mb-4">
-                    <pre><code class="language-html">
-                        &lt;input data-validate="url"/&gt;
-                    </code></pre>
-                </div>
                 <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
                     <input data-validate="url" class="metro-input"/>
                     <div class="form-actions">
@@ -195,11 +135,6 @@
             </div>
             <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
                 <div class="box-title-secondary">date</div>
-                <div class="mt-4 mb-4">
-                    <pre><code class="language-html">
-                        &lt;input data-validate="date"/&gt;
-                    </code></pre>
-                </div>
                 <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
                     <input data-validate="date" class="metro-input"/>
                     <div class="form-actions">
@@ -209,11 +144,6 @@
             </div>
             <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
                 <div class="box-title-secondary">number</div>
-                <div class="mt-4 mb-4">
-                    <pre><code class="language-html">
-                        &lt;input data-validate="number"/&gt;
-                    </code></pre>
-                </div>
                 <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
                     <input data-validate="number" class="metro-input"/>
                     <div class="form-actions">
@@ -223,11 +153,6 @@
             </div>
             <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
                 <div class="box-title-secondary">integer</div>
-                <div class="mt-4 mb-4">
-                    <pre><code class="language-html">
-                        &lt;input data-validate="integer"/&gt;
-                    </code></pre>
-                </div>
                 <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
                     <input data-validate="integer" class="metro-input"/>
                     <div class="form-actions">
@@ -237,11 +162,6 @@
             </div>
             <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
                 <div class="box-title-secondary">safeInteger</div>
-                <div class="mt-4 mb-4">
-                    <pre><code class="language-html">
-                        &lt;input data-validate="safeinteger"/&gt;
-                    </code></pre>
-                </div>
                 <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
                     <input data-validate="safeinteger" class="metro-input"/>
                     <div class="form-actions">
@@ -251,11 +171,6 @@
             </div>
             <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
                 <div class="box-title-secondary">float</div>
-                <div class="mt-4 mb-4">
-                    <pre><code class="language-html">
-                        &lt;input data-validate="float"/&gt;
-                    </code></pre>
-                </div>
                 <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
                     <input data-validate="float" class="metro-input"/>
                     <div class="form-actions">
@@ -265,11 +180,6 @@
             </div>
             <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
                 <div class="box-title-secondary">digits</div>
-                <div class="mt-4 mb-4">
-                    <pre><code class="language-html">
-                        &lt;input data-validate="digits"/&gt;
-                    </code></pre>
-                </div>
                 <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
                     <input data-validate="digits" class="metro-input"/>
                     <div class="form-actions">
@@ -279,11 +189,6 @@
             </div>
             <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
                 <div class="box-title-secondary">hexColor</div>
-                <div class="mt-4 mb-4">
-                    <pre><code class="language-html">
-                        &lt;input data-validate="hexcolor"/&gt;
-                    </code></pre>
-                </div>
                 <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
                     <input data-validate="hexcolor" class="metro-input"/>
                     <div class="form-actions">
@@ -293,11 +198,6 @@
             </div>
             <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
                 <div class="box-title-secondary">color</div>
-                <div class="mt-4 mb-4">
-                    <pre><code class="language-html">
-                        &lt;input data-validate="color"/&gt;
-                    </code></pre>
-                </div>
                 <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
                     <input data-validate="color" class="metro-input"/>
                     <div class="form-actions">
@@ -307,11 +207,6 @@
             </div>
             <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
                 <div class="box-title-secondary">pattern</div>
-                <div class="mt-4 mb-4">
-                    <pre><code class="language-html">
-                        &lt;input data-validate="pattern=(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)"/&gt;
-                    </code></pre>
-                </div>
                 <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
                     <input data-validate="pattern=(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)" class="metro-input"/>
                     <div class="form-actions">
@@ -332,12 +227,6 @@
         <div class="row">
             <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
                 <div class="box-title-secondary">compare to fields (using ==)</div>
-                <div class="mt-4 mb-4">
-                    <pre><code class="language-html">
-                        &lt;input type="password" name="pass1"/&gt;
-                        &lt;input type="password" data-validate="compare=pass1" name="pass2"/&gt;
-                    </code></pre>
-                </div>
                 <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
                     <input type="password" name="pass1" class="metro-input" placeholder="Enter password..."/>
                     <input type="password" data-validate="compare=pass1" name="pass2" class="metro-input mt-1" placeholder="Confirm password..."/>
@@ -348,12 +237,6 @@
             </div>
             <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
                 <div class="box-title-secondary">compare to fields (using !=)</div>
-                <div class="mt-4 mb-4">
-                    <pre><code class="language-html">
-                        &lt;input type="password" name="pass1"/&gt;
-                        &lt;input type="password" data-validate="not=pass1" name="pass2"/&gt;
-                    </code></pre>
-                </div>
                 <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
                     <input type="password" name="pass1" class="metro-input" placeholder="Enter password..."/>
                     <input type="password" data-validate="not=pass1" name="pass2" class="metro-input mt-1" placeholder="Confirm password..."/>
@@ -364,12 +247,6 @@
             </div>
             <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
                 <div class="box-title-secondary">Equals to fields (using ===)</div>
-                <div class="mt-4 mb-4">
-                    <pre><code class="language-html">
-                        &lt;input type="password" name="pass1"/&gt;
-                        &lt;input type="password" data-validate="equals=pass1" name="pass2"/&gt;
-                    </code></pre>
-                </div>
                 <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
                     <input type="password" name="pass1" class="metro-input" placeholder="Enter password..."/>
                     <input type="password" data-validate="equals=pass1" name="pass2" class="metro-input mt-1" placeholder="Enter second password..."/>
@@ -380,12 +257,6 @@
             </div>
             <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
                 <div class="box-title-secondary">compare to fields (using !==)</div>
-                <div class="mt-4 mb-4">
-                    <pre><code class="language-html">
-                        &lt;input type="password" name="pass1"/&gt;
-                        &lt;input type="password" data-validate="notequals=pass1" name="pass2"/&gt;
-                    </code></pre>
-                </div>
                 <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
                     <input type="password" name="pass1" class="metro-input" placeholder="Enter password..."/>
                     <input type="password" data-validate="notequals=pass1" name="pass2" class="metro-input mt-1" placeholder="Enter second password..."/>
@@ -404,16 +275,6 @@
         <div class="row">
             <div class="cell-md-6 border bd-default p-4 border-radius-10">
                 <div class="box-title-secondary">custom</div>
-                <div class="mt-4 mb-4">
-                    <pre><code class="language-html">
-                        &lt;input data-validate="custom=myCustomFn"/&gt;
-                    </code></pre>
-                    <pre class="mt-1"><code class="language-js">
-                        function myCustomFn(val){
-                            return val && (+val &gt; 35 && +val &lt; 45)
-                        }
-                    </code></pre>
-                </div>
                 <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
                     <input data-validate="required custom=myCustomFn" class="metro-input" placeholder="Enter value between 35 and 45..."/>
                     <div class="form-actions">

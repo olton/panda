@@ -51,21 +51,6 @@ class App {
         if (window["PAGE_TITLE"]) {
             this.setPageTitle(window["PAGE_TITLE"]);
         }
-
-        Metro.utils.cleanPreCode("pre code");
-
-        hljs.highlightAll();
-
-        $("pre").each((i, el) => {
-            const btn = $("<button>").addClass("button square small copy-code-button").html("<span class='mif-copy'>");
-            $(el).append(btn);
-        })
-
-        const showCode = Metro.storage.getItem("panda:showCode", false);
-        if (showCode) {
-            $("html").addClass("show-code");
-            $("#showCodeToggle").attr("checked", true);
-        }
     }
 
     eventHandler(){
@@ -96,22 +81,6 @@ class App {
             const {pathname: path = 'welcome', hash} = location;
             that.location = {path: path === "/" ? "welcome" : path.substring(1), hash}
             that.loadPage().then(() => {});
-        })
-
-        $("#showCodeToggle").on("click", function(e) {
-            const checked = this.checked;
-            if (checked) {
-                $("html").addClass("show-code");
-            } else {
-                $("html").removeClass("show-code");
-            }
-            Metro.storage.setItem("panda:showCode", checked);
-        })
-
-        $("document").on("click", ".copy-code-button", function() {
-            const code = $(this).siblings("code").text();
-            Metro.utils.copy2clipboard(code);
-            Metro.toast.create("Code copied to clipboard!", {})
         })
     }
 
