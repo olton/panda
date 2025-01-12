@@ -39,6 +39,28 @@
 <div class="box">
     <div class="box-title">Inputs</div>
     <p class="text-muted">
+        Use standard HTML input.
+    </p>
+    <div class="mt-4">
+        <div class="row">
+            <div class="cell-ld-6">
+                <form action="">
+                    <label class="label-for-input">Default input</label>
+                    <input type="text" placeholder="Enter text..." />
+                    <div class="mt-4">
+                        <input type="button" value="Buttons" >
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="box-title-secondary">
+        Extended Inputs
+    </div>
+    <p class="text-muted">
         Use standard HTML input with attribute <code>data-role="input"</code> to create input control with extended features.
     </p>
     <div class="mt-4">
@@ -94,14 +116,6 @@
                 />
             </div>
             <div class="cell-ld-6">
-                <input type="text"
-                       data-role="material-input"
-                       placeholder="Enter your email"
-                       data-label="Material Input"
-                       data-icon="<span class='mif-email'>"
-                       data-informer="Enter a valid email address"
-                       data-validate="required email"
-                >
             </div>
         </div>
     </div>
@@ -155,18 +169,19 @@
         <input type="checkbox" data-role="switch" disabled/>
         <input type="checkbox" data-role="switch" checked disabled/>
     </div>
-    <div class="mt-4">
-        <input type="checkbox" data-role="switch" data-material="true"/>
-        <input type="checkbox" data-role="switch" data-material="true" checked />
-        <input type="checkbox" data-role="switch" data-material="true" checked class="switch-red"/>
-        <input type="checkbox" data-role="switch" data-material="true" data-onoff="true" />
-        <input type="checkbox" data-role="switch" data-material="true" disabled />
-        <input type="checkbox" data-role="switch" data-material="true" checked disabled/>
-    </div>
 </div>
 
 <div class="box">
     <div class="box-title">Textarea</div>
+    <div class="box-title-secondary">Default</div>
+    <div class="row">
+        <div class="cell-ld-6">
+            <label class="label-for-input">Default textarea</label>
+            <textarea></textarea>
+        </div>
+    </div>
+    
+    <div class="box-title-secondary">Extended</div>
     <p class="text-muted">
         Use role <code>textarea</code> to extend standard HTML textarea element.
     </p>
@@ -184,6 +199,33 @@
 
 <div class="box">
     <div class="box-title">Select</div>
+    <div class="box-title-secondary">Default</div>
+    <div class="mt-4">
+        <div class="row">
+            <div class="cell-ld-6">
+                <label class="label-for-input">Default select</label>
+                <select>
+                    <option value="1">Value 1</option>
+                    <option value="2">Value 2</option>
+                    <option value="3">Value 3</option>
+                    <option value="4">Value 4</option>
+                    <option value="5">Value 5</option>
+                </select>
+            </div>
+            <div class="cell-ld-6">
+                <label class="label-for-input">Default multiple</label>
+                <select multiple style="height: 100px">
+                    <option value="1">Value 1</option>
+                    <option value="2" selected>Value 2</option>
+                    <option value="3" selected>Value 3</option>
+                    <option value="4">Value 4</option>
+                    <option value="5">Value 5</option>
+                </select>
+            </div>
+        </div>        
+    </div>
+    
+    <div class="box-title-secondary">Extended</div>
     <p class="text-muted">
         Use role <code>select</code> to extend standard HTML select element.
     </p>
