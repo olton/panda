@@ -27,7 +27,7 @@
     </div>
 
     <p class="text-muted">
-        You can expand tabs on the specified breakpoint with an attributes <code>data-expand="true"</code> or <code>data-expand-point="..."</code>. 
+        You can expand tabs on the specified breakpoint. 
     </p>
     
     <div class="mt-4">
@@ -36,6 +36,37 @@
             <li><a href="#">Tab 2</a></li>
             <li><a href="#">Tab 3</a></li>
         </ul>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Linked Content</div>
+    <p class="text-muted">
+        You can link content to tabs or use <code>href</code> attribute to create anchor tab.
+    </p>
+
+    <div class="mt-4">
+        <ul data-role="tabs" data-expand-point="fs">
+            <li><a href="#tab1">Tab 1</a></li>
+            <li><a href="#tab2">Tab 2</a></li>
+            <li><a href="#tab3">Tab 3</a></li>
+            <li><a href="https://pimenov.com.ua">Author <span class="mif-external"></span></a></li>
+        </ul>
+
+        <div>
+            <div id="tab1" class="p-4">
+                <h3>Tab1</h3>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, reiciendis.
+            </div>
+            <div id="tab2" class="p-4">
+                <h3>Tab2</h3>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, quas?
+            </div>
+            <div id="tab3" class="p-4">
+                <h3>Tab3</h3>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, quae.
+            </div>
+        </div>
     </div>
 </div>
 
@@ -65,7 +96,7 @@
 <div class="box">
     <div class="box-title">Tabs Position</div>
     <p class="text-muted">
-        You can set tabs position with attribute <code>data-position="top"</code> or <code>data-position="bottom"</code>.
+        You can set tabs position.
     </p>
     <div class="row mt-4">
         <div class="cell-ld-6">
@@ -94,7 +125,7 @@
 <div class="box">
     <div class="box-title">Tabs Type</div>
     <p class="text-muted">
-        You can change tabs type with attribute <code>data-type="..."</code>. Use values `default`, `pills`, `text`, or `group` to change tabs type.
+        You can change tabs type: <code>default</code>, <code>pills</code>, <code>text</code>, or <code>group</code> to change tabs type.
     </p>
     
     <div class="box-title-secondary">Default</div>
@@ -137,8 +168,7 @@
 <div class="box">
     <div class="box-title">Tabs Align</div>
     <p class="text-muted">
-        You can change tabs type with attribute <code>data-align="..."</code>. Use values <code>left</code> (default), <code>right</code>, or <code>center</code> to change tabs align.
-        Use this functionality with tabs type <code>default</code>, <code>pills</code>, or <code>text</code>.
+        You can change tabs type. Use this functionality with tabs type <code>default</code>, <code>pills</code>, or <code>text</code>.
     </p>
     
     <div class="box-title-secondary">Default</div>
