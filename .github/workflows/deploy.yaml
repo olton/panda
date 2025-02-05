@@ -1,0 +1,34 @@
+on:
+  push:
+    branches:
+      - master
+name: Deploy
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Get Version
+        id: get-version
+        uses: beaconbrigade/package-json-version@v0.3.2
+        with:
+          path: .
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
+      - name: Push files to Current folder
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: eg77.mirohost.net
+          username: metrouiS
+          password: ${{ secrets.FTP_PASSWORD }}
+          dangerous-clean-slate: true
+          local-dir: ./src/
+          server-dir: panda.metroui.org.ua/
