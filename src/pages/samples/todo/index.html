@@ -40,7 +40,7 @@
 </div>
 
 <script>
-    const taskInput = $('#task');
+    var taskInput = $('#task');
     
     function loadTasks(){
         const tasks = Metro.storage.getItem('panda:tasks', []);
