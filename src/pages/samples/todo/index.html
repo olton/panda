@@ -41,6 +41,7 @@
 
 <script>
     var taskInput = $('#task');
+    var taskList = $('#tasks');
     
     function loadTasks(){
         const tasks = Metro.storage.getItem('panda:tasks', []);
@@ -132,7 +133,7 @@
         window.print();
     }
     
-    $("#tasks").on("click", ".task-delete", function (){
+    taskList.on("click", ".task-delete", function (){
         const taskId = $(this).data("task-id");
         const tasks = Metro.storage.getItem('panda:tasks', []);
         const newTasks = tasks.filter(task => +task.id !== +taskId);
@@ -140,7 +141,7 @@
         loadTasks()
     })
     
-    $("#tasks").on("click",".task-done",  function (){
+    taskList.on("click",".task-done",  function (){
         const taskId = $(this).data("task-id");
         const tasks = Metro.storage.getItem('panda:tasks', []);
         const newTasks = tasks.map(task => {
@@ -153,7 +154,7 @@
         loadTasks()
     })
     
-    $("#tasks").on("click",".task-wrong",  function (){
+    taskList.on("click",".task-wrong",  function (){
         const taskId = $(this).data("task-id");
         const tasks = Metro.storage.getItem('panda:tasks', []);
         const newTasks = tasks.map(task => {
