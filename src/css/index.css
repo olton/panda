@@ -37,7 +37,7 @@
 }
 
 #page-content {
-    height: calc(100% - 2px);
+    height: calc(100% - 52px);
     width: calc(100% - 2px);
     overflow-y: auto;
     display: flex;
@@ -49,6 +49,7 @@
 @media screen and (min-width: 768px) {
     #page-content {
         padding: 1rem 1rem 4rem 1rem;
+        height: calc(100% - 2px);
     }
 }
 
