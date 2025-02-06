@@ -54,9 +54,9 @@
                     <td>${task.name}</td>
                     <td>${status}</td>
                     <td>
-                        <button title="Set as complete" class="square small task-done" data-task-id="${task.id}"><span class="mif-checkmark"></span></button>
-                        <button title="Set as wrong" class="square small task-wrong" data-task-id="${task.id}"><span class="mif-clear"></span></button>
-                        <button title="Delete task" class="square small task-delete" data-task-id="${task.id}"><span class="mif-bin"></span></button>                        
+                        <button title="Set as complete" class="square small task-done button-soft-green" data-task-id="${task.id}"><span class="mif-checkmark"></span></button>
+                        <button title="Set as wrong" class="square small task-wrong button-soft-coral" data-task-id="${task.id}"><span class="mif-clear"></span></button>
+                        <button title="Delete task" class="square small task-delete alert" data-task-id="${task.id}"><span class="mif-bin"></span></button>                        
                     </td>
                 </tr>
             `).appendTo(taskList);
