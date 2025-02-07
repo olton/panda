@@ -47,7 +47,7 @@
         const tasks = Metro.storage.getItem('panda:tasks', []);
         const taskList = $('#tasks');
         taskList.empty();
-        tasks.forEach(task => {
+        tasks.sort( (a, b) => b.id - a.id ).forEach(task => {
             const state = task.done === -1 
                 ? '<span data-role="bull" data-type="fail"></span>'
                 : task.done === 0 
