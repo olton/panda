@@ -69,12 +69,6 @@
             <div class="cell-md-4">
                 <div class="box">
                     <ul data-role="treeview" id="tv1">
-                        <li data-icon="<span class='mif-guitar'>" data-caption="Audio Type">
-                            <ul>
-                                <li><input type="radio" data-role="radio" name="audio" checked data-append="Stereo" title=""></li>
-                                <li><input type="radio" data-role="radio" name="audio" data-append="Mono" title=""></li>
-                            </ul>
-                        </li>
                         <li>
                             <input type="checkbox" data-role="checkbox" data-append="Play video" title="" data-three-state="true">
                             <ul>
@@ -84,8 +78,8 @@
                                 <li>
                                     <input type="checkbox" data-role="checkbox" data-append="DIV-X" title="">
                                     <ul>
-                                        <li><input checked type="checkbox" data-role="checkbox" data-append="VIDX" title=""></li>
-                                        <li><input checked type="checkbox" data-role="checkbox" data-append="XVID" title=""></li>
+                                        <li data-type="checkbox" data-name="divx" data-checked="true" data-value="divx" data-caption="DIVx"></li>
+                                        <li data-type="checkbox" data-name="xvid" data-checked="true" data-value="xvid" data-caption="xVID"></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -97,6 +91,21 @@
                                 <li><input type="checkbox" data-role="checkbox" data-append="English" title=""></li>
                                 <li><input checked type="checkbox" data-role="checkbox" data-append="Ukrainian" title=""></li>
                                 <li><input type="checkbox" data-role="checkbox" data-append="Dutch" title=""></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cell-md-4">
+                <div class="box">
+                    <ul data-role="treeview" id="tv2">
+                        <li data-icon="<span class='mif-guitar'>" data-caption="Audio Type">
+                            <ul>
+                                <li data-type="radio" data-name="audio" data-checked="true" data-value="stereo" data-caption="Stereo"></li>
+                                <li data-type="radio" data-name="audio" data-value="mono" data-caption="Mono"></li>
+                                <li data-type="checkbox" data-name="divx" data-checked="true" data-value="divx" data-caption="DIVx"></li>
+                                <li data-type="checkbox" data-name="xvid" data-checked="true" data-value="xvid" data-caption="xVID"></li>
+                                <li data-type="input" data-value="" data-placeholder="Enter remark..." data-caption=""></li>
                             </ul>
                         </li>
                     </ul>
