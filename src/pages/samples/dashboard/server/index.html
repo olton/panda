@@ -153,22 +153,22 @@
                     <div class="cell-xs-6">
                         <div class="box-title-secondary">Cores Loading</div>
                         <div class="cpu-load mt-4">
-                            <div data-role="progress" data-small="true" data-value="0" id="core-load-1"></div>
-                            <div data-role="progress" data-small="true" data-value="0" id="core-load-2"></div>
-                            <div data-role="progress" data-small="true" data-value="0" id="core-load-3"></div>
-                            <div data-role="progress" data-small="true" data-value="0" id="core-load-4"></div>
-                            <div data-role="progress" data-small="true" data-value="0" id="core-load-5"></div>
-                            <div data-role="progress" data-small="true" data-value="0" id="core-load-6"></div>
-                            <div data-role="progress" data-small="true" data-value="0" id="core-load-7"></div>
-                            <div data-role="progress" data-small="true" data-value="0" id="core-load-8"></div>
-                            <div data-role="progress" data-small="true" data-value="0" id="core-load-9"></div>
-                            <div data-role="progress" data-small="true" data-value="0" id="core-load-10"></div>
-                            <div data-role="progress" data-small="true" data-value="0" id="core-load-11"></div>
-                            <div data-role="progress" data-small="true" data-value="0" id="core-load-12"></div>
-                            <div data-role="progress" data-small="true" data-value="0" id="core-load-13"></div>
-                            <div data-role="progress" data-small="true" data-value="0" id="core-load-14"></div>
-                            <div data-role="progress" data-small="true" data-value="0" id="core-load-15"></div>
-                            <div data-role="progress" data-small="true" data-value="0" id="core-load-16"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-1" data-type="segment"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-2" data-type="segment"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-3" data-type="segment"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-4" data-type="segment"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-5" data-type="segment"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-6" data-type="segment"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-7" data-type="segment"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-8" data-type="segment"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-9" data-type="segment"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-10" data-type="segment"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-11" data-type="segment"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-12" data-type="segment"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-13" data-type="segment"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-14" data-type="segment"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-15" data-type="segment"></div>
+                            <div data-role="progress" data-small="true" data-value="0" id="core-load-16" data-type="segment"></div>
                         </div>
                     </div>
                     <div class="cell-xs-6">
@@ -327,7 +327,7 @@
                 const val = Math.floor(Math.random() * 100)
                 const id = '#core-load-' + i
                 const id2 = '#core-load-1-' + i
-                $(id).attr('data-value', val).removeClassBy("progress-").addClass('progress-cyan')
+                $(id).attr('data-value', val)//.removeClassBy("progress-").addClass('progress-cyan')
                 $(id2).attr('data-value', val).removeClassBy("progress-").addClass('progress-' + (val < 50 ? 'success' : val < 75 ? 'warning' : 'alert'))
                 cpuLoad += val
             }
