@@ -1,5 +1,32 @@
 <script>window.PAGE_TITLE = 'Welcome to Panda 1.0'</script>
 
+<style>
+    .work-preview {
+        border: 1px solid var(--border-color);
+        transition: border-radius .3s;
+        overflow: hidden;
+        z-index: 1;
+        position: relative;
+        border-radius: 16px;
+        &:hover {
+            border-bottom-right-radius: 120px;
+        }
+    }
+
+    .arrow {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        display: block;
+        color: #df6e68!important;
+        z-index: 0;
+    }
+
+    .work-preview:hover ~ .arrow {
+        opacity: 1;
+    }
+</style>
+
 <div class="mt-4 mb-4">
     <h1 class="text-weight-10 stroke-white text-center">Welcome to Panda 1.0</h1>
 </div>
@@ -25,7 +52,7 @@
 </div>
 
 <div class="mt-4 d-flex flex-justify-center">
-    <h4 class="text-bold">Set includes:</h4>
+    <h2 class="text-center">{ Includes }</h2>
 </div>
 
 <div class="row">
@@ -50,6 +77,76 @@
             <div class="box-title">Samples</div>
             <div class="mt-4">
                 Samples pages - ready to use HTML pages for any purposes.
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mt-10">
+    <h2 class="text-center">{ Action }</h2>
+    <div class="row">
+        <div class="cell-sm-3">
+            <div class="work-preview">
+                <a href="https://metroui.org.ua">
+                    <img src="/images/metroui.jpg" alt="Metroui.org.ua" style="width: 100%; height: auto;"/>
+                </a>
+            </div>
+            <div class="arrow"><span class="mif-arrow-right mif-4x"></span></div>
+        </div>
+        <div class="cell-sm-3">
+            <div class="work-preview">
+                <a href="https://minataur.net">
+                    <img src="/images/minataur.jpg" alt="Minataur.net" style="width: 100%; height: auto;"/>
+                </a>
+            </div>
+            <div class="arrow"><span class="mif-arrow-right mif-4x"></span></div>
+        </div>
+        <div class="cell-md-3">
+            <div class="work-preview">
+                <a href="https://themes.org.ua/mirohost">
+                    <img src="/images/mirohost.jpg" alt="Mirohost.net" style="width: 100%; height: auto;"/>
+                </a>
+            </div>
+            <div class="arrow"><span class="mif-arrow-right mif-4x"></span></div>
+        </div>
+        <div class="cell-sm-3">
+            <div class="work-preview">
+                <a href="https://korzh.com">
+                    <img src="/images/korzh.jpg" alt="Korzh.com" style="width: 100%; height: auto;"/>
+                </a>
+            </div>
+            <div class="arrow"><span class="mif-arrow-right mif-4x"></span></div>
+        </div>
+        <div class="cell-sm-3">
+            <div class="work-preview">
+                <a href="https://themes.org.ua/aistant">
+                    <img src="/images/aistant.jpg" alt="Aistant.com" style="width: 100%; height: auto;"/>
+                </a>
+            </div>
+            <div class="arrow"><span class="mif-arrow-right mif-4x"></span></div>
+        </div>
+        <div class="cell-sm-3">
+            <div class="work-preview">
+                <a href="https://cryptoscamalert.com">
+                    <img src="/images/cryptoscamalert.jpg" alt="Korzh.com" style="width: 100%; height: auto;"/>
+                </a>
+            </div>
+            <div class="arrow"><span class="mif-arrow-right mif-4x"></span></div>
+        </div>
+        <div class="cell-sm-3">
+            <div class="work-preview">
+                <a href="https://reserveplus.mod.gov.ua/">
+                    <img src="/images/reserve-plus.jpg" alt="Reserve Plus" style="width: 100%; height: auto;"/>
+                </a>
+            </div>
+            <div class="arrow"><span class="mif-arrow-right mif-4x"></span></div>
+        </div>
+        <div class="cell-sm-3 border bd-default border-radius-16 no-overflow d-flex flex-column flex-align-center flex-justify-center">
+            <div class="p-10">
+                Maybe your site will be next?...
+            </div>
+            <div class="">
+                <a href="#" class="button pill-button alert">Get Panda <span class="mif-external"></span></a>
             </div>
         </div>
     </div>
