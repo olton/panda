@@ -1,10 +1,10 @@
 <script>window.PAGE_TITLE = 'UI Elements | Special Buttons'</script>
 
 <div class="row">
-    <div class="cell-md-6 d-flex flex-align-center">
+    <div class="cell-md-6 d-flex flex-align-items-center">
         <h1>Special Buttons</h1>
     </div>
-    <div class="cell-md-6 d-flex flex-justify-end-md flex-align-center">
+    <div class="cell-md-6 d-flex flex-justify-content-end-md flex-align-items-center">
         <ul class="breadcrumbs default">
             <li><a href="#">Panda 1.0</a></li>
             <li><a href="#">UI</a></li>
@@ -259,16 +259,16 @@
     <div class="mt-2">
         <div class="toolbar movable">
             <button class="tool-button">
-                <span class="icon mif-align-left"></span>
+                <span class="icon mif-text-align-left"></span>
             </button>
             <button class="tool-button">
-                <span class="icon mif-align-center"></span>
+                <span class="icon mif-text-align-center"></span>
             </button>
             <button class="tool-button">
-                <span class="icon mif-align-right"></span>
+                <span class="icon mif-text-align-right"></span>
             </button>
             <button class="tool-button">
-                <span class="icon mif-align-justify"></span>
+                <span class="icon mif-text-align-justify"></span>
             </button>
         </div>
     </div>
@@ -287,9 +287,6 @@
             <button class="tool-button outline">
                 <span class="icon mif-align-right"></span>
             </button>
-            <button class="tool-button outline">
-                <span class="icon mif-align-justify"></span>
-            </button>
         </div>
     </div>
 
@@ -306,9 +303,6 @@
             </button>
             <button class="tool-button">
                 <span class="icon mif-align-right"></span>
-            </button>
-            <button class="tool-button">
-                <span class="icon mif-align-justify"></span>
             </button>
         </div>
     </div>
@@ -418,7 +412,6 @@
             <button class="button square active"><span class="mif-align-left"></span></button>
             <button class="button square"><span class="mif-align-center"></span></button>
             <button class="button square"><span class="mif-align-right"></span></button>
-            <button class="button square"><span class="mif-align-justify"></span></button>
         </div>
         <div data-role="button-group" data-mode="multi">
             <button class="button square active"><span class="mif-bold"></span></button>
@@ -489,6 +482,26 @@
             <li class="page-item service"><a class="page-link" href="#">Next</a></li>
         </ul>
         <ul class="pagination size-small">
+            <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item no-link"><a class="page-link">...</a></li>
+            <li class="page-item"><a class="page-link" href="#">7</a></li>
+            <li class="page-item"><a class="page-link" href="#">8</a></li>
+            <li class="page-item"><a class="page-link" href="#">9</a></li>
+            <li class="page-item service"><a class="page-link" href="#">Next</a></li>
+        </ul>
+    </div>
+    
+    <div class="box-title-secondary">Color</div>
+    <p class="text-muted">
+        You can change pagination color with add color name class to <code>.pagination</code> class (for example below: <code>pagination sand</code>).
+    </p>
+    <div class="mt-4">
+        <ul class="pagination sand">
             <li class="page-item disabled">
                 <a class="page-link" href="#" tabindex="-1">Previous</a>
             </li>
