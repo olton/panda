@@ -51,8 +51,21 @@
                                 </li>
                             </ul>
                         </li>
-                        <li data-icon="<span class='mif-github'>" data-caption="GitHub" data-link="https://github.com/olton/metroui" data-badge="new:alert" data-secondary="Repos"></li>
+                        <li data-icon="<span class='mif-github'>" data-caption="GitHub" data-link="https://github.com/olton/metroui" data-badge="new:alert"
+                            data-secondary="Repos"></li>
                     </ul>
+                </div>
+            </div>
+            <div class="cell-md-4">
+                <div class="box">
+                    <div class="h5">Treeview from Object</div>
+                    <ul data-role="treeview" data-leaves="leaves"></ul>
+                </div>
+            </div>
+            <div class="cell-md-4">
+                <div class="box">
+                    <div class="h5">Manual Treeview</div>
+                    <ul id="tv" data-role="treeview"></ul>
                 </div>
             </div>
         </div>
@@ -121,3 +134,48 @@
         With component methods, you can add or remove nodes in runtime.
     </p>
 </div>
+
+<script>
+    var leaves = [
+        {
+            icon: "<span class='mif-github'>",
+            caption: "GitHub",
+            link: "#",
+            items: [
+                {
+                    icon: "<span class='mif-vpn-publ'>",
+                    caption: "Metro UI",
+                    actions: [
+                        {icon: "<span class='mif-git-fork'>", caption: "Fork", },
+                        {icon: "<span class='mif-star-empty'>", caption: "Star",},
+                    ],
+                    current: true,
+                },
+                {icon: "<span class='mif-vpn-lock'>", caption: "Panda Templates",},
+            ]
+        },
+        {
+            icon: "<span class='mif-cloud'>",
+            caption: "Cloud",
+            link: "#",
+        },
+    ]
+
+    setTimeout(() => {
+        const tv = Metro.getPlugin("#tv", "treeview");
+
+        function fillTree(items, node = null) {
+            for (const item of items) {
+                const new_node = tv.addTo(node, {
+                    ...item,
+                    type: item.items ? "node" : "item"
+                });
+                if (item.items) {
+                    fillTree(item.items, new_node);
+                }
+            }
+        }
+
+        fillTree(leaves);
+    }, 1000);
+</script>
