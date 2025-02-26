@@ -83,90 +83,24 @@
 <div class="box">
     <div class="box-title">Action Button</div>
     <p class="text-muted">
-        You can create an action button with <code>.action-button</code> class. use color classes <code>.soft-*</code>,
-        <code>.normal-*</code>, and accent classes to change button color.
+        You can create an action button with <code>.action-button</code> class.
     </p>
-    <div class="mt-4">
-        <button class="action-button">
-            <span class="icon">
-                <span class="mif-share"></span>
-            </span>
-        </button>
-        <button class="action-button soft-emerald">
-            <span class="icon">
-                <span class="mif-share"></span>
-            </span>
-        </button>
-        <button class="action-button normal-coral">
-            <span class="icon">
-                <span class="mif-share"></span>
-            </span>
-        </button>
-        <button class="action-button info">
-            <span class="icon">
-                <span class="mif-share"></span>
-            </span>
-        </button>
-    </div>
-
-    <p class="text-muted">
-        Use class <code>.multi-action</code> to create a multi-action button.
-        You can use modifiers <code>.drop-up</code>, <code>.drop-down</code>, <code>.drop-left</code>, <code>.drop-right</code> for submenu to open it in required direction.
-    </p>
-    <div class="mt-4">
-        <div class="row">
-            <div class="cell-md-3">
-                <div class="multi-action">
-                    <button class="action-button rotate-minus bg-red fg-white" onclick="$(this).toggleClass('active')">
-                        <span class="icon"><span class="mif-plus"></span></span>
-                    </button>
-                    <ul class="actions drop-right">
-                        <li class="bg-blue"><a href="#"><span class="mif-add-person"></span></a></li>
-                        <li class="bg-teal"><a href="#"><span class="mif-library"></span></a></li>
-                        <li class="bg-pink"><a href="#"><span class="mif-alarm"></span></a></li>
-                        <li class="bg-orange"><a href="#"><span class="mif-lock"></span></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="cell-md-3 d-flex flex-justify-center">
-                <div class="multi-action">
-                    <button class="action-button rotate-minus bg-red fg-white" onclick="$(this).toggleClass('active')">
-                        <span class="icon"><span class="mif-plus"></span></span>
-                    </button>
-                    <ul class="actions drop-up">
-                        <li class="bg-blue"><a href="#"><span class="mif-add-person"></span></a></li>
-                        <li class="bg-teal"><a href="#"><span class="mif-library"></span></a></li>
-                        <li class="bg-pink"><a href="#"><span class="mif-alarm"></span></a></li>
-                        <li class="bg-orange"><a href="#"><span class="mif-lock"></span></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="cell-md-3 d-flex flex-justify-center">
-                <div class="multi-action">
-                    <button class="action-button rotate-minus bg-red fg-white" onclick="$(this).toggleClass('active')">
-                        <span class="icon"><span class="mif-plus"></span></span>
-                    </button>
-                    <ul class="actions drop-down">
-                        <li class="bg-blue"><a href="#"><span class="mif-add-person"></span></a></li>
-                        <li class="bg-teal"><a href="#"><span class="mif-library"></span></a></li>
-                        <li class="bg-pink"><a href="#"><span class="mif-alarm"></span></a></li>
-                        <li class="bg-orange"><a href="#"><span class="mif-lock"></span></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="cell-md-3 d-flex flex-justify-end">
-                <div class="multi-action">
-                    <button class="action-button rotate-minus bg-red fg-white" onclick="$(this).toggleClass('active')">
-                        <span class="icon"><span class="mif-plus"></span></span>
-                    </button>
-                    <ul class="actions drop-left">
-                        <li class="bg-blue"><a href="#"><span class="mif-add-person"></span></a></li>
-                        <li class="bg-teal"><a href="#"><span class="mif-library"></span></a></li>
-                        <li class="bg-pink"><a href="#"><span class="mif-alarm"></span></a></li>
-                        <li class="bg-orange"><a href="#"><span class="mif-lock"></span></a></li>
-                    </ul>
-                </div>
-            </div>
+    <div class="mt-4 d-flex flex-center">
+        <div class="action-button" style="--num-icons: 8;">
+            <button class="" onclick="$(this).toggleClass('active')">
+                <span class="icon"><span class="mif-git"></span></span>
+            </button>
+            <ul class="actions">
+                <li style="--i: 0;"><a href="#"><span class="mif-git-branch"></span></a></li>
+                <li style="--i: 1;"><a href="#"><span class="mif-git-clone"></span></a></li>
+                <li style="--i: 2"><a href="#"><span class="mif-git-commit"></span></a></li>
+                <li style="--i: 3;"><a href="#"><span class="mif-git-compare"></span></a></li>
+                <li style="--i: 4;"><a href="#"><span class="mif-git-diff"></span></a></li>
+                <li style="--i: 5;"><a href="#"><span class="mif-git-draft"></span></a></li>
+                <li style="--i: 6;"><a href="#"><span class="mif-git-fork"></span></a></li>
+                <li style="--i: 7;"><a href="#"><span class="mif-git-pull"></span></a></li>
+                <li style="--i: 8;"><a href="#"><span class="mif-git-push"></span></a></li>
+            </ul>
         </div>
     </div>
 </div>
