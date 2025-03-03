@@ -7,7 +7,7 @@ class App {
         this.sidebar = $("#side-menu");
         this.content = $("#page-content");
         this.location = {path: path === "/" ? "welcome" : path.substring(1), hash}
-        
+        console.log(this.location)
         this.loadPage().then(() => {})
         this.eventHandler()
         this.initSidebar()
