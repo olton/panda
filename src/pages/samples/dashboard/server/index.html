@@ -143,6 +143,51 @@
             </div>
         </div>
     </div>
+    
+    <div class="row">
+        <div class="cell-md-4">
+            <div class="chart-card">
+                <div class="content">
+                    <div class="title">Memory Usage</div>
+                    <div class="value" id="gpu-temp-value">0%</div>
+                    <div class="subtitle">
+                        Server memory usage.
+                    </div>
+                </div>
+                <div class="chart">
+                    <div id="gpu-temp-gauge" data-role="gauge" data-theme="temp" data-label-min="Cold" data-label-max="Hot" data-min="0" data-max="100" data-suffix="&deg;" data-values="11"></div>
+                </div>
+            </div>
+        </div>
+        <div class="cell-md-4">
+            <div class="chart-card">
+                <div class="content">
+                    <div class="title">Network Speed</div>
+                    <div class="value" id="network-speed-value">0</div>
+                    <div class="subtitle">
+                        Network speed.
+                    </div>
+                </div>
+                <div class="chart">
+                    <div id="network-speed-gauge" data-role="gauge" data-min="0" data-max="1000" data-label="Mbps" data-theme="speed"></div>
+                </div>
+            </div>
+        </div>
+        <div class="cell-md-4">
+            <div class="chart-card">
+                <div class="content">
+                    <div class="title">CPU Temp</div>
+                    <div class="value" id="cpu-temp-value">0%</div>
+                    <div class="subtitle">
+                        Server CPU temperature.
+                    </div>
+                </div>
+                <div class="chart">
+                    <div id="cpu-temp-gauge" data-role="gauge" data-theme="temp" data-label-min="Cold" data-label-max="Hot" data-min="0" data-max="100" data-suffix="&deg;" data-values="11"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="container-query mt-4">
@@ -306,9 +351,19 @@
 
 
         const updateCharts = () => {
+            const valGpuTemp = Math.floor(Math.random() * 100)
+            const valCpuTemp = Math.floor(Math.random() * 100)
             const valMemoryUsage = Math.floor(Math.random() * 100)
+            const valNetworkSpeed = Math.floor(Math.random() * 100) * 10
 
             Metro.getPlugin("#memory-usage", "donut").val(valMemoryUsage)
+            Metro.getPlugin("#gpu-temp-gauge", "gauge").val(valMemoryUsage)
+            Metro.getPlugin("#network-speed-gauge", "gauge").val(valNetworkSpeed)
+            Metro.getPlugin("#cpu-temp-gauge", "gauge").val(valCpuTemp)
+            Metro.getPlugin("#gpu-temp-gauge", "gauge").val(valGpuTemp)
+            $("#gpu-temp-value").html(valGpuTemp + '&deg;')
+            $("#cpu-temp-value").html(valCpuTemp + '&deg;')
+            $("#network-speed-value").html(valNetworkSpeed)
 
             let colorCpu = 'donut-red', colorRam = 'donut-red'
 
