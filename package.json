@@ -1,6 +1,6 @@
 {
   "name": "@olton/panda",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Templates set for general purpose, built with Metro UI",
   "type": "module",
   "main": "src/index.js",
@@ -27,7 +27,6 @@
     "esbuild": "^0.25.3",
     "esbuild-plugin-less": "^1.3.21",
     "esbuild-plugin-replace": "^1.4.0",
-    "ftp-deploy": "^2.4.7",
     "less": "^4.3.0",
     "vite": "^6.3.3"
   }
