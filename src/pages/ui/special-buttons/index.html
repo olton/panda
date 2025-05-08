@@ -45,7 +45,7 @@
     <p class="text-muted">
         Create a command button with <code>.command-button</code> class.
     </p>
-    <div class="d-flex">
+    <div class="d-flex flex-wrap">
         <button class="command-button">
             <span class="icon">
                 <span class="mif-share"></span>
@@ -70,6 +70,24 @@
             </span>
             <span class="caption">
                 Share and connect
+                <small>Use this option for home or work</small>
+            </span>
+        </button>
+        <button class="command-button shadow">
+            <span class="icon">
+                <span class="mif-share"></span>
+            </span>
+            <span class="caption">
+                Share and connect
+                <small>Use this option for home or work</small>
+            </span>
+        </button>
+        <button class="command-button shift">
+            <span class="icon">
+                <span class="mif-share"></span>
+            </span>
+            <span class="caption">
+                Shift Effect
                 <small>Use this option for home or work</small>
             </span>
         </button>
@@ -453,7 +471,7 @@
         You can change pagination color with add color name class to <code>.pagination</code> class (for example below: <code>pagination sand</code>).
     </p>
     <div class="mt-4">
-        <ul class="pagination sand">
+        <ul class="pagination terracotta">
             <li class="page-item disabled">
                 <a class="page-link" href="#" tabindex="-1">Previous</a>
             </li>
@@ -466,5 +484,17 @@
             <li class="page-item"><a class="page-link" href="#">9</a></li>
             <li class="page-item service"><a class="page-link" href="#">Next</a></li>
         </ul>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Audio Button</div>
+    <div class="mt-4">
+        <button data-role="audio-button" data-audio-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" onclick="$(this).toggleClass('loading animated-border-cyan')">
+            <span class="loader ani-spin">
+                <span class="mif-disc"></span>
+            </span>
+            <span class="caption">Play</span>
+        </button>
     </div>
 </div>
