@@ -136,7 +136,7 @@
         ["Confluence", "Changes to page \"Project Overview\"", "03:45"],
     ];
     
-    const table = $(".table").find("tbody");
+    var table = $(".table").find("tbody");
     for(let item of items) {
         const tr = $("<tr>").appendTo(table);
         $("<td>").css({width: 30}).appendTo(tr).html(`<input type="checkbox"/>`);
