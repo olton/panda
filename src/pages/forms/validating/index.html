@@ -53,7 +53,7 @@
     <div class="mt-4">
         <div class="row">
             <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
-                <div class="box-title-secondary">Required</div>
+                <div class="box-title-secondary">Required (data-validate="required")</div>
                 <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
                     <input data-validate="required" class="metro-input"/>
                     <div class="form-actions">
@@ -62,7 +62,7 @@
                 </form>
             </div>
             <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
-                <div class="box-title-secondary">Length</div>
+                <div class="box-title-secondary">Length (data-validate="length=4")</div>
                 <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
                     <input data-validate="length=4" class="metro-input"/>
                     <div class="form-actions">
@@ -71,7 +71,7 @@
                 </form>
             </div>
             <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
-                <div class="box-title-secondary">minLength</div>
+                <div class="box-title-secondary">minLength (data-validate="minlength=4")</div>
                 <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
                     <input data-validate="minlength=4" class="metro-input"/>
                     <div class="form-actions">
@@ -80,7 +80,7 @@
                 </form>
             </div>
             <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
-                <div class="box-title-secondary">maxLength</div>
+                <div class="box-title-secondary">maxLength (data-validate="maxlength=4")</div>
                 <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
                     <input data-validate="maxlength=4" class="metro-input"/>
                     <div class="form-actions">
@@ -89,18 +89,18 @@
                 </form>
             </div>
             <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
-                <div class="box-title-secondary">min</div>
+                <div class="box-title-secondary">min (data-validate="min=4")</div>
                 <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
-                    <input data-validate="min=4" class="metro-input"/>
+                    <input type="number" data-validate="min=4" class="metro-input"/>
                     <div class="form-actions">
                         <button type="submit" class="button primary">Submit</button>
                     </div>
                 </form>
             </div>
             <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
-                <div class="box-title-secondary">max</div>
+                <div class="box-title-secondary">max (data-validate="max=4")</div>
                 <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
-                    <input data-validate="max=4" class="metro-input"/>
+                    <input type="number" data-validate="max=4" class="metro-input"/>
                     <div class="form-actions">
                         <button type="submit" class="button primary">Submit</button>
                     </div>
@@ -197,7 +197,7 @@
                 </form>
             </div>
             <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
-                <div class="box-title-secondary">color</div>
+                <div class="box-title-secondary">color (hex, hsl, hsv, ...)</div>
                 <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
                     <input data-validate="color" class="metro-input"/>
                     <div class="form-actions">
@@ -206,7 +206,7 @@
                 </form>
             </div>
             <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
-                <div class="box-title-secondary">pattern</div>
+                <div class="box-title-secondary">pattern (regexp)</div>
                 <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
                     <input data-validate="pattern=(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)" class="metro-input"/>
                     <div class="form-actions">
