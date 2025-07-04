@@ -98,10 +98,15 @@
                 </div>
             </div>
             
-            <div class="box" style="overflow-y: auto; height: calc(100% - 70px);">
-                <table class="table row-border medium-padding row-hover" style="--table-body-font-size: 14px;">
-                    <tbody></tbody>
-                </table>
+            <div class="box inbox-data h-100" style="">
+                <div class="border-bottom bd-default" style="overflow-y: auto; height: calc(100% - 100px);">
+                    <table class="table row-border medium-padding row-hover" style="--table-body-font-size: 14px;">
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div class="mt-4">
+                    <div id="paging"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -145,4 +150,11 @@
         $("<td>").appendTo(tr).html(item[1]);
         $("<td>").css({width: 30}).appendTo(tr).html(item[2]);    
     }
+    
+    Metro.pagination({
+        target: "#paging",
+        current: 1,
+        length: 2500,
+        rows: 25,
+    })
 </script>
