@@ -14,7 +14,7 @@
     </div>
 </div>
 
-<div class="box p-0 no-overflow" style="height: calc(100% - 70px)">
+<div class="box p-4 no-overflow" style="height: calc(100% - 70px)">
     <div class="d-flex h-100">
         <nav class="inbox-sidebar h-100 z-1">
             <h3 class="m-3"><span class="mif-panda mr-2"></span>Panda Mail</h3>
@@ -23,7 +23,7 @@
                 <button class="medium pill-button" title="Write email..."><span class="mif-pencil"></span> Write...</button>
             </div>
             
-            <ul class="sidenav-m3" style="--sidenav-m3-width: 256px; --sidenav-m3-background: transparent">
+            <ul class="sidenav-m3" style="--sidenav-m3-width: 256px; --sidenav-m3-background: transparent;">
                 <li class="active"><a href="#"><span class="mif-inbox icon"></span>Inbox</a></li>
                 <li><a href="#"><span class="mif-star-empty icon"></span>Starred</a></li>
                 <li><a href="#"><span class="mif-more-time icon"></span>Postponed</a></li>
@@ -31,7 +31,7 @@
                 <li><a href="#"><span class="mif-drafts icon"></span>Drafts</a></li>
                 <li><a href="#"><span class="mif-spam-outline icon"></span>Spam</a></li>
                 <li>
-                    <a href="#" class="dropdown-toggle"><span class="mif-more-horiz icon"></span>More</a>
+                    <a href="#"><span class="mif-chevron-down icon"></span>More</a>
                     <ul class="d-menu" data-role="collapse" data-collapsed="true">
                         <li><a href="#"><span class="mif-schedule-send icon"></span>Planned</a></li>
                         <li><a href="#"><span class="mif-layers icon"></span>All emails</a></li>
@@ -48,7 +48,7 @@
             </ul>
         </nav>
         
-        <div class="inbox-content h-100 no-overflow w-100 p-2 z-2">
+        <div class="inbox-content no-overflow w-100 p-2 z-2 h-100">
             <div class="d-flex gap-10">
                 <div class="d-flex flex-center gap-2">
                     <button class="large cycle" title="Refresh"><span class="mif-refresh"></span></button>
@@ -98,8 +98,8 @@
                 </div>
             </div>
             
-            <div class="box inbox-data h-100" style="">
-                <div class="border-bottom bd-default" style="overflow-y: auto; height: calc(100% - 100px);">
+            <div class="box inbox-data"  style="height: calc(100% - 50px)">
+                <div class="border-bottom bd-default" style="overflow-y: auto; height: calc(100% - 50px);">
                     <table class="table row-border medium-padding row-hover" style="--table-body-font-size: 14px;">
                         <tbody></tbody>
                     </table>
@@ -158,3 +158,19 @@
         rows: 25,
     })
 </script>
+
+<style>
+    .sidenav-m3 {
+        .d-menu {
+            --d-menu-background: var(--default-background);
+            --d-menu-item-background-hover: var(--sidenav-m3-background-hover);
+            --d-menu-item-color-hover: var(--sidenav-m3-color-hover);
+        }
+        
+        .active-toggle {
+            .icon {
+                transform: rotate(180deg);
+            }
+        }
+    }
+</style>
