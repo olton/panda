@@ -59,10 +59,17 @@
 
 <div class="box">
     <div class="box-title">Color Variables</div>
-    <p class="text-muted">
+    <div class="text-muted">
         You can use a palette of 32 built-in colors. Each color is manually generated without auto-generation. 
-        For each color, you can use three different variants: light <code>--color-light-*</code>, normal <code>--color-*</code>, saturate <code>--color-sat-*</code> and dark <code>--color-dark-*</code>.
-    </p>
+        For each color, you can use three different variants:
+        <ul>
+            <li>light <code>--color-light-*</code></li>
+            <li>minor <code>--color-minor-*</code></li>
+            <li>minor <code>--color-*</code></li>
+            <li>minor <code>--color-sat-*</code></li>
+            <li>minor <code>--color-dark-*</code></li>
+        </ul>
+    </div>
     <div class="mt-4">
         <pre><code class="language-css">
             .box {
@@ -154,8 +161,8 @@
         These classes usefulness for buttons.
     </p>
     <div class="mt-4">
-        <div class="button pill-button soft-red">soft-red</div>
-        <div class="button normal-red">normal-red</div>
+        <div class="button pill-button button-soft-red">soft-red</div>
+        <div class="button button-red">normal-red</div>
     </div>
 </div>
 
@@ -233,10 +240,11 @@
         
         for (let c of colors) {
             $("#color-palette")
-                .append(`<div class="cell-sm-3 color-item light-color" style="background: var(--color-light-${c})">light-${c}</div>`)
-                .append(`<div class="cell-sm-3 color-item normal-color" style="background: var(--color-${c})">${c}</div>`)
-                .append(`<div class="cell-sm-3 color-item dark-color" style="background: var(--color-sat-${c})">sat-${c}</div>`)
-                .append(`<div class="cell-sm-3 color-item dark-color" style="background: var(--color-dark-${c})">dark-${c}</div>`)
+                .append(`<div class="cell-sm-one-fifth color-item light-color" style="background: var(--color-light-${c})">light</div>`)
+                .append(`<div class="cell-sm-one-fifth color-item minor-color" style="background: var(--color-minor-${c})">minor</div>`)
+                .append(`<div class="cell-sm-one-fifth color-item normal-color fg-white text-bold" style="background: var(--color-${c})">${c}</div>`)
+                .append(`<div class="cell-sm-one-fifth color-item dark-color" style="background: var(--color-sat-${c})">sat</div>`)
+                .append(`<div class="cell-sm-one-fifth color-item dark-color" style="background: var(--color-dark-${c})">dark</div>`)
         }
     })()
 </script>
