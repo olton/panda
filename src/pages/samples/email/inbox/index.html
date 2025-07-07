@@ -50,26 +50,6 @@
         
         <div class="inbox-content no-overflow w-100 p-2 z-2 h-100">
             <div class="d-flex gap-10">
-                <div class="d-flex flex-center gap-2">
-                    <button class="large cycle" title="Refresh"><span class="mif-refresh"></span></button>
-                    <div class="split-button no-gap">
-                        <button>
-                            <input type="checkbox" data-role="checkbox" />
-                        </button>
-                        <button class="split dropdown-toggle"></button>
-                        <ul class="d-menu place-left" data-role="dropdown">     
-                            <li><a href="#">Mark as read</a></li>
-                            <li><a href="#">Mark as unread</a></li>
-                            <li><a href="#">Mark as important</a></li>
-                            <li><a href="#">Mark as not important</a></li>
-                            <li><a href="#">Move to folder</a></li>
-                            <li><a href="#">Delete</a></li>
-                            <li><a href="#">Spam</a></li>
-                            <li><a href="#">Not Spam</a></li>
-                            <li><a href="#">Archive</a></li>
-                        </ul>                        
-                    </div>
-                </div>
                 <div class="">
                     <script>
                         var inputSearchCustomButtons = [
@@ -89,9 +69,9 @@
                            data-custom-buttons="inputSearchCustomButtons" />
                 </div>
                 <div class="d-flex flex-align-center gap-2">
-                    <button class="large cycle" title="Help"><span class="mif-help"></span></button>
-                    <button class="large cycle" title="Settings..."><span class="mif-cog"></span></button>
-                    <button class="large cycle" title="Applications"><span class="mif-apps"></span></button>
+                    <button class="flat large cycle" title="Help"><span class="mif-help"></span></button>
+                    <button class="flat large cycle" title="Settings..."><span class="mif-cog"></span></button>
+                    <button class="flat large cycle" title="Applications"><span class="mif-apps"></span></button>
                 </div>
                 <div class="ml-auto">
                     <button class="large cycle" title="Profile"><span data-role="gravatar" class="avatar" data-size="38" data-email="serhii@pimenov.com.ua"></span></button>
@@ -99,7 +79,46 @@
             </div>
             
             <div class="box inbox-data"  style="height: calc(100% - 50px)">
-                <div class="border-bottom bd-default" style="overflow-y: auto; height: calc(100% - 50px);">
+                <div class="d-flex flex-align-center gap-2 border-bottom bd-default pb-2">
+                    <div class="split-button no-gap">
+                        <button class="bg-transparent bd-transparent cycle">
+                            <input type="checkbox" data-role="checkbox" />
+                        </button>
+                        <button class="split bg-transparent bd-transparent dropdown-toggle"></button>
+                        <ul class="d-menu place-left" data-role="dropdown">
+                            <li><a href="#">Mark as read</a></li>
+                            <li><a href="#">Mark as unread</a></li>
+                            <li><a href="#">Mark as important</a></li>
+                            <li><a href="#">Mark as not important</a></li>
+                            <li><a href="#">Move to folder</a></li>
+                            <li><a href="#">Delete</a></li>
+                            <li><a href="#">Spam</a></li>
+                            <li><a href="#">Not Spam</a></li>
+                            <li><a href="#">Archive</a></li>
+                        </ul>
+                    </div>
+                    <button class="flat large cycle" title="Refresh"><span class="mif-refresh"></span></button>
+                    <div class="d-flex flex-align-center ml-4 mr-4">
+                        <button class="flat cycle "><span class="mif-archive icon"></span></button>
+                        <button class="flat cycle "><span class="mif-report icon"></span></button>
+                        <button class="flat cycle "><span class="mif-bin icon"></span></button>
+                        <button class="flat cycle  ml-4"><span class="mif-mark-email-unread icon"></span></button>
+                        <button class="flat cycle "><span class="mif-access-time icon"></span></button>
+                        <button class="flat cycle "><span class="mif-add-task icon"></span></button>
+                        <button class="flat cycle  ml-4"><span class="mif-folder-outline icon"></span></button>
+                        <button class="flat cycle "><span class="mif-tag-empty icon"></span></button>
+                    </div>
+                    <div class="dropdown-button no-dropdown-caret">
+                        <button class="flat cycle "><span class="mif-more-vert icon"></span></button>
+                        <ul class="d-menu" data-role="dropdown">
+                            <li><a href="#"><span class="icon mif-mark-email-read"></span> Mark as read</a></li>
+                            <li><a href="#"><span class="icon mif-tag1"></span> Mark as important</a></li>
+                            <li><a href="#"><span class="icon mif-star-empty"></span> Add star</a></li>
+                            <li><a href="#"><span class="icon mif-add-post"></span> Add event</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="border-bottom bd-default" style="overflow-y: auto; height: calc(100% - 90px);">
                     <table class="table row-border medium-padding row-hover" style="--table-body-font-size: 14px;">
                         <tbody></tbody>
                     </table>
