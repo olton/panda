@@ -1,0 +1,114 @@
+<script>window.PAGE_TITLE = 'Samples | Email :: Write Letter'</script>
+
+<div class="row">
+    <div class="cell-md-6 d-flex flex-align-items-center">
+        <h1>Email :: Write</h1>
+    </div>
+    <div class="cell-md-6 d-flex flex-justify-content-end-md flex-align-items-center">
+        <ul class="breadcrumbs default">
+            <li><a href="#">Panda 1.0</a></li>
+            <li><a href="#">Samples</a></li>
+            <li><a href="#">Email</a></li>
+            <li class="active"><a href="#">Write</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="box p-4 no-overflow" style="height: calc(100% - 70px)">
+    <div class="d-flex h-100">
+        <nav class="inbox-sidebar h-100 z-1">
+            <h3 class="m-3"><span class="mif-panda mr-2"></span>Panda Mail</h3>
+
+            <div class="ml-3 mr-3 mb-4 mt-6">
+                <button class="medium pill-button" title="Write email..."><span class="mif-pencil"></span> Write...</button>
+            </div>
+
+            <ul class="sidenav-m3" style="--sidenav-m3-width: 256px; --sidenav-m3-background: transparent;">
+                <li class="active"><a href="#"><span class="mif-inbox icon"></span>Inbox</a></li>
+                <li><a href="#"><span class="mif-star-empty icon"></span>Starred</a></li>
+                <li><a href="#"><span class="mif-more-time icon"></span>Postponed</a></li>
+                <li><a href="#"><span class="mif-send icon"></span>Sent</a></li>
+                <li><a href="#"><span class="mif-drafts icon"></span>Drafts</a></li>
+                <li><a href="#"><span class="mif-spam-outline icon"></span>Spam</a></li>
+                <li>
+                    <a href="#"><span class="mif-chevron-down icon"></span>More</a>
+                    <ul class="d-menu" data-role="collapse" data-collapsed="true">
+                        <li><a href="#"><span class="mif-schedule-send icon"></span>Planned</a></li>
+                        <li><a href="#"><span class="mif-layers icon"></span>All emails</a></li>
+                        <li><a href="#"><span class="mif-bin icon"></span>Deleted</a></li>
+                    </ul>
+                </li>
+
+                <li class="title">
+                    Labels
+                    <button class="cycle medium action">+</button>
+                </li>
+                <li><a href="#"><span class="mif-tag icon"></span>Important</a></li>
+                <li><a href="#"><span class="mif-tag icon"></span>Required Answer</a></li>
+            </ul>
+        </nav>
+
+        <div class="inbox-content no-overflow w-100 p-2 z-2 h-100">
+            <div class="d-flex gap-10">
+                <div class="">
+                    <script>
+                        var inputSearchCustomButtons = [
+                            {
+                                text: '<span class="mif-equalizer2"></span>',
+                                title: 'Search',
+                                onclick: function (e) {
+                                    alert('Settings clicked')
+                                }
+                            }
+                        ]
+                    </script>
+                    <input type="text" placeholder="Search mail"
+                           data-role="input"
+                           class="pill-input large"
+                           data-prepend="<span class='mif-search'>"
+                           data-custom-buttons="inputSearchCustomButtons"/>
+                </div>
+                <div class="d-flex flex-align-center gap-2 ml-auto mr-auto">
+                    <button class="large cycle" title="Help"><span class="mif-help"></span></button>
+                    <button class="large cycle" title="Settings..."><span class="mif-cog"></span></button>
+                    <button class="large cycle" title="Applications"><span class="mif-apps"></span></button>
+                </div>
+                <div class="ml-auto">
+                    <button class="large cycle" title="Profile"><span data-role="gravatar" class="avatar" data-size="38"
+                                                                      data-email="serhii@pimenov.com.ua"></span></button>
+                </div>
+            </div>
+
+            <div class="box inbox-data" style="height: calc(100% - 50px)">
+                <div class="letter-content">
+                    <form action="javascript:">
+                        <div class="form-group">
+                            <input type="text" data-role="input" placeholder="To">
+                            <input type="text" data-role="input" placeholder="Subject" class="mt-1">
+                        </div>
+                        <div class="form-group">
+                            <textarea data-role="textarea" data-initial-height="200" class="w-100"></textarea>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="main-toolbar d-flex gap-10 mt-6">
+                    <div>
+                        <button class="pill-button medium info"><span class="mif-send"></span> Send</button>
+                    </div>
+                    <div class="d-flex flex-nowrap flex-row gap-2">
+                        <button class="cycle medium"><span class="mif-color-text icon"></span></button>
+                        <button class="cycle medium"><span class="mif-attach-file icon"></span></button>
+                        <button class="cycle medium"><span class="mif-link-on icon"></span></button>
+                        <button class="cycle medium"><span class="mif-emoji-happy icon"></span></button>
+                        <button class="cycle medium"><span class="mif-add-image icon"></span></button>
+                        <button class="cycle medium"><span class="mif-add-task icon"></span></button>
+                    </div>
+                    <div class="ml-auto">
+                        <button class="cycle medium ml-auto"><span class="mif-bin icon"></span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
