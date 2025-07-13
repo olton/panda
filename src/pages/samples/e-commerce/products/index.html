@@ -15,8 +15,16 @@
 
 <div class="box" style="height: calc(100% - 70px); overflow-y: auto">
     <div class="product-list">
+        <div class="d-flex">
+            <h2>Products:</h2>
+            <div class="ml-auto">
+                <div data-role="toggle-button" data-on-change="changeView">
+                    <button data-view="block"><span class="mif-microsoft"></span></button>
+                    <button data-view="row"><span class="mif-tickets"></span></button>
+                </div>
+            </div>
+        </div>
         <div data-role="remote-dataset"
-             data-caption="Products:"
              data-key-offset="skip"
              data-key-data="products"
              data-key-limit="limit"
@@ -31,7 +39,7 @@
              data-sort="rating:desc"
              data-sort-rules="price:asc:Price:<span class='mif-arrow-up'>,price:desc:Price:<span class='mif-arrow-down'>,rating:desc:By rating:<span class='mif-star-empty'>"
              data-on-draw-entry="drawEntry"
-             data-limit="6"
+             data-rows="6"
              data-rows-steps="6, 24, 48, 96, 192"
              data-sort-label="<span class='mif-import-export'>"
         ></div>
@@ -39,6 +47,14 @@
 </div>
 
 <style>
+    .card {
+        position: relative;
+        display: flex;
+        flex-flow: column;
+        padding: 1rem;
+        height: 100%;
+    }
+    
     .product-image {
         height: 200px;
         display: flex;
@@ -86,31 +102,72 @@
         width: 64px;
         height: 64px;
     }
+    
+    .view-row {
+        flex-flow: row nowrap;
+        
+        .product-data {
+            margin-right: 2rem;
+        }
+        
+        .product-rating, .product-tags {
+            display: none;
+        }
+        
+        .product-image {
+            width: 120px;
+            height: 120px;
+            aspect-ratio: 1;
+            margin-right: 1rem;
+
+            img {
+                object-fit: cover;
+            }
+        }
+        
+        .actions {
+            margin-left: auto;
+        }
+    }
 </style>
 
 <script>
+    var viewMode = "block";
+    
+    function changeView(btn) {
+        const view = $(btn).data("view");
+        viewMode = view;
+        if (view === "row") {
+            $(".card").addClass("view-row").parent().removeClassBy("cell-").addClass("cell-fs-12")
+        } else {
+            $(".card").removeClass("view-row").parent().removeClassBy("cell-").addClass("cell-ld-6 cell-md-4")       
+        }
+    }
+    
     function drawEntry(entry, index, body) {
         const productCard =  entry ? `
-        <div class="cell-ld-6 cell-md-4">
-            <div class="card p-4 h-100">
+        <div class="${viewMode === "row" ? "cell-fs-12" : "cell-ld-6 cell-md-4"}">
+            <div class="card ${viewMode === "row" ? "view-row" : ""}">
                 <div class="product-image"><img src="${entry.thumbnail}" alt="${entry.title}"/></div>
-                <div class="product-title">${entry.title}</div>
-                <div>
-                    <span class="product-brand bg-sand">${entry.brand ? entry.brand : 'Noname'}</span>
-                    ${entry.tags.map(sel => `<span class="mr-1 product-brand bg-light-sand">${sel}</span>`).join('')}
-                </div>
-                <div><span class="product-desc">${entry.description}</span></div>
-                <div class="row mt-auto">
-                    <div class="cell-4">
-                        <div class="product-price"><span class="">$${entry.price}</span></div>
+                <div class="product-data">
+                    <div class="product-title">${entry.title}</div>
+                    <div class="product-rating mb-4">
+                        <input data-role="rating" data-static="true" data-value="${entry.rating}" data-stared-color="#f2c313" data-message="(${entry.rating})"/>
                     </div>
-                    <div class="cell-8">
-                        <div class="product-rating text-right">
-                            <input data-role="rating" data-static="true" data-value="${entry.rating}" data-stared-color="#f2c313" data-message="(${entry.rating})"/>
+                    <div class="product-tags">
+                        <span class="product-brand bg-sand">${entry.brand ? entry.brand : 'Noname'}</span>
+                        ${entry.tags.map(sel => `<span class="mr-1 product-brand bg-light-sand">${sel}</span>`).join('')}
+                    </div>
+                    <div><span class="product-desc">${entry.description}</span></div>
+                    <div class="row mt-auto">
+                        <div class="cell-4">
+                            <div class="product-price"><span class="">$${entry.price}</span></div>
                         </div>
-                    </div>
+                        <div class="cell-8">
+                        </div>
+                    </div>                
                 </div>
-                <div class="d-flex flex-row gap-2 mt-4">
+                <div class="d-flex flex-row gap-2 mt-4 actions">
                     <button class="button success"><span data-role="eval">{{ Metro.locale.label_buy}}</span> <span class="mif-add-shopping-cart icon"></span></button>
                
                     <button class="ml-auto button square outline fg-orange"><span class="mif-star-empty"></span></button>
