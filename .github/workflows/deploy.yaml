@@ -4,7 +4,7 @@ on:
       - master
 name: Deploy
 jobs:
-  build:
+  web-deploy:
     name: Build
     runs-on: ubuntu-latest
     steps:
@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Push files to Current folder
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: eg77.mirohost.net
           username: metrouiS
