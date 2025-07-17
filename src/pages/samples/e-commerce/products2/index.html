@@ -113,13 +113,8 @@
 </style>
 
 <script>
-    function changeView(btn) {
-        const view = $(btn).data("view");
-        if (view === "full") {
-            $(".product-list").removeClass("compact-view");
-        } else {
-            $(".product-list").addClass("compact-view");       
-        }
+    function changeView() {
+        $(".product-list").toggleClass("compact-view");
     }
     
     function drawEntry(entry, index, body) {
@@ -143,7 +138,7 @@
                         ${entry.description}
                     </a>
                     <div class="product-rating" style="--rating-on-color: #ffa500;">
-                        <input data-role="rating" data-static="true" data-value="5" />
+                        <input data-role="rating" data-static="true" data-value="${entry.rating}" />
                         <div class="d-flex flex-align-center mt-1 gap-1"><span class="mif-chat-line"></span> ${entry.reviews.length}</div>
                     </div>            
                     ${status}
@@ -158,16 +153,8 @@
                         <button class="square large flat"><span class="mif-add-shopping-cart enlarge-6 fg-green"></span></button>
                     </div>
                 </div>
-                <div class="product-props">
+                <div class="product-props border-top bd-default pt-4">
                     <div class="product-desc">${entry.description}</div>
-                    <div>
-                        <ul class="unstyled-list">
-                            <li>Weight: <b>${entry.weight}</b></li>                            
-                            <li>Width: <b>${entry.dimensions.width}</b></li>                            
-                            <li>Height: <b>${entry.dimensions.height}</b></li>                            
-                            <li>Depth: <b>${entry.dimensions.depth}</b></li>                            
-                        </ul>
-                    </div>
                 </div>
             </div>        
         `;
