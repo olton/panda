@@ -17,6 +17,5 @@ jobs:
           server: eg77.mirohost.net
           username: metrouiS
           password: ${{ secrets.FTP_PASSWORD }}
-#          dangerous-clean-slate: true
           local-dir: ./src/
           server-dir: panda.metroui.org.ua/

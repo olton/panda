@@ -27,8 +27,8 @@
         <a href="/pages/fullscreen/showcase.html" target="_blank" class="app-bar-item ml-auto ml-10-md"><span class="mif-external enlarge-9"></span></a>
     </nav>
     
-    <div class="container-fluid mt-4 d-flex flex-row flex-nowrap">
-        <nav data-role="catalog-menu" data-toggle="#catalog-toggle" class="z-2">
+    <div class="container-fluid container-query mt-4 d-flex flex-row flex-nowrap">
+        <nav data-role="catalog-menu" data-toggle="#catalog-toggle" class="z-2 d-none d-flex-md">
             <ul class="catalog-list">
                 <li class="catalog-item">
                     <a href="https://allo.ua/ua/xiaomi-store/" class="mm__a">
@@ -237,7 +237,7 @@
         </div>
     </div>
     
-    <div class="container-fluid mt-12">
+    <div class="container-fluid container-query mt-12">
         <div class="d-flex flex-row flex-nowrap gap-2 mt-4 flex-align-center">
             <div class="text-weight-8 h2">SALES LEADERS</div>
             <div class="ml-auto">
@@ -273,7 +273,7 @@
         </div>
     </div>
     
-    <div class="container-fluid mt-12">
+    <div class="container-fluid container-query mt-12">
         <div class="d-flex flex-row flex-nowrap gap-2 mt-4 flex-align-center">
             <div class="text-weight-8 h2">BEST PRICE</div>
             <div class="ml-auto">
@@ -309,7 +309,7 @@
         </div>
     </div>
     
-    <div class="container-fluid mt-12">
+    <div class="container-fluid container-query mt-12">
         <div class="d-flex flex-row flex-nowrap gap-2 mt-4 flex-align-center">
             <div class="text-weight-8 h2">NOVELTY</div>
             <div class="ml-auto">
@@ -375,10 +375,34 @@
         z-index: 0;
     }
     
-    .product-card {
-        --product-card-font-size: 12px;
-        width: calc(20% - 4px);
+    @container (min-width: 440px) {
+        .product-card {
+            --product-card-font-size: 11px;
+            width: calc(50% - 4px);
+        }
     }
+    
+    @container (min-width: 640px) {
+        .product-card {
+            --product-card-font-size: 12px;
+            width: calc(33% - 4px);
+        }
+    }
+    
+    @container (min-width: 768px) {
+        .product-card {
+            --product-card-font-size: 13px;
+            width: calc(25% - 4px);
+        }
+    }
+    
+    @container (min-width: 1200px) {
+        .product-card {
+            --product-card-font-size: 14px;
+            width: calc(20% - 4px);
+        }
+    }
+    
 </style>
 
 <script>
