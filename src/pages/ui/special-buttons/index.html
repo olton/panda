@@ -21,10 +21,20 @@
     </p>
     <div class="mt-4">
         <div class="text-bold">Default</div>
-        <ul class="breadcrumbs default p-4 border bd-default">
+        <ul class="breadcrumbs p-4 border bd-default" data-divider="/">
             <li><a href="#"><span class="mif-home icon"></span>Home</a></li>
             <li><a href="#">Library</a></li>
             <li><a href="#">Data</a></li>
+            <li class="active"><a href="#">Bootstrap</a></li>
+        </ul>
+    </div>
+
+    <div class="mt-4">
+        <div class="text-bold">Custom Divider</div>
+        <ul class="breadcrumbs chevron p-4 border bd-default">
+            <li data-divider="›"><a href="#"><span class="mif-home icon"></span>Home</a></li>
+            <li data-divider="›"><a href="#">Library</a></li>
+            <li data-divider="›"><a href="#">Data</a></li>
             <li class="active"><a href="#">Bootstrap</a></li>
         </ul>
     </div>
