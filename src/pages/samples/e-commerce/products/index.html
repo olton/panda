@@ -211,73 +211,6 @@
 
 <style>
     .product-card {
-        &::before {
-            content: '';
-            display: none;
-            position: absolute;
-            top: -1rem;
-            left: -1rem;
-            right: -1rem;
-            bottom: 0;
-            border-radius: 0.25rem;
-            background-color: var(--product-card-background);
-            box-shadow: 0 16px 16px #0000003d;
-            z-index: -1;
-            border: 1px solid var(--border-color);
-        }
-
-        .product-props {
-            display: none;
-            position: absolute;
-            top: calc(100% - 2px);
-            left: calc(-1rem + 1px);
-            right: calc(-1rem + 1px);
-            padding: 1rem;
-            background-color: var(--product-card-background);
-            z-index: -1;
-            box-shadow: 0 16px 16px #0000003d;
-            border-bottom-left-radius: 0.25rem;
-            border-bottom-right-radius: 0.25rem;
-        }
-
-        &:hover {
-            z-index: 2;
-            &::before {
-                display: block;
-            }
-
-            .product-props {
-                display: block;
-            }
-        }
-    }
-
-    @container (width > 320px) {
-        .product-card {
-            --product-card-font-size: 11px;
-            width: calc(50% - 4px);
-        }
-    }
-
-    @container (width >= 540px) {
-        .product-card {
-            --product-card-font-size: 12px;
-            width: calc(33% - 8px);
-        }
-    }
-
-    @container (width >= 768px) {
-        .product-card {
-            --product-card-font-size: 13px;
-            width: calc(25% - 12px);
-        }
-    }
-
-    @container (width >= 1200px) {
-        .product-card {
-            --product-card-font-size: 14px;
-            width: calc(15% - 16px);
-        }
     }
 </style>
 
@@ -297,7 +230,7 @@
         const status = statuses[Math.floor(Math.random() * statuses.length)];
         
         const card = `
-            <div class="product-card h-100">
+            <div class="product-card hovered h-100">
                 ${entry.brand ? "<div class=\"badge badge-blue\">"+entry.brand+"</div>" : ""}
                 <div class="product-image">
                     <img src="${entry.thumbnail}" alt="${entry.title}"/>                
