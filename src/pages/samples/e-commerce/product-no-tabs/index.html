@@ -1,30 +1,207 @@
 <script>window.PAGE_TITLE = 'Samples | Product'</script>
 
-<div class="row">
-    <div class="cell-md-6 d-flex flex-align-items-center">
-        <h1>Product Details</h1>
-    </div>
-    <div class="cell-md-6 d-flex flex-justify-content-end-md flex-align-items-center">
-        <ul class="breadcrumbs default">
-            <li><a href="#">Panda 1.0</a></li>
-            <li><a href="#">Samples</a></li>
-            <li><a href="#">E-Commerce</a></li>
-            <li class="active"><a href="#">Product</a></li>
-        </ul>
-    </div>
-</div>
+<div class="box landing p-0 container-query" style="height: 100%; overflow-y: auto; overflow-x: hidden;">
+    <nav class="bg-dark fg-white" data-role="app-bar" data-expand="true" style="--appbar-item-color: #fff; --appbar-item-background-hover: var(--color-indigo); --appbar-item-color-hover: var(--color-white);">
+        <div class="app-bar-container">
+            <button class="button-crimson" id="catalog-toggle" onclick="$('#stack-menu').toggleClass('open')">
+                <span class="mif-apps icon"></span>
+            </button>
 
-<div class="box" style="height: calc(100% - 0px); overflow-y: auto">
-    <div class="container-fluid mb-6">
-        <ul class="breadcrumbs">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Headphones</a></li>
-            <li><a href="#">Headphones Xiaomi</a></li>
-            <li><a href="#">Headphones Redmi Buds 6 Night Black</a></li>
+            <a href="#" class="app-bar-item-static">
+                <div class="text-leader text-weight-9 fg-white">Shop<span class="fg-crimson">Demo</span></div>
+            </a>
+        </div>
+
+        <div class="app-bar-container dark-side d-none d-flex-md ml-auto">
+            <input type="text" data-role="input" class="" data-search-button="true" data-cls-search-button="button-crimson" placeholder="Search..." data-search-button-icon="<span class='mif-search'>">
+        </div>
+
+        <div class="app-bar-container ml-auto d-none d-flex-ld">
+            <a href="#" class="app-bar-item"><span class="mif-user-settings enlarge-9"></span></a>
+            <a href="#" class="app-bar-item"><span class="mif-justice enlarge-9"></span></a>
+            <a href="#" class="app-bar-item"><span class="mif-favorite-outline enlarge-9"></span></a>
+            <a href="#" class="app-bar-item"><span class="mif-shopping-cart enlarge-9"></span></a>
+        </div>
+
+        <a href="/pages/fullscreen/showcase.html" target="_blank" class="app-bar-item ml-auto ml-10-md"><span class="mif-external enlarge-9"></span></a>
+    </nav>
+
+    <div id="stack-menu" class="pos-absolute" style="top: 52px; height: calc(100% - 52px);"
+         data-role="stack-menu"
+         data-root-title="Main Menu"
+         data-back-button-icon="<span class='mif-chevron-left'>"
+         data-size="320"
+
+    >
+        <div class="d-flex pr-3">
+            <div class="title"></div>
+            <button class="cycle ml-auto" onclick="$('#stack-menu').removeClass('open')"><span class="mif-cross"></span></button>
+        </div>
+        <ul>
+            <li><a href="#"><span class="mif-user-settings icon"></span> Enter to profile</a></li>
+            <li>
+                <a href="#" class="fg-crimson"><span class="mif-apps icon"></span> Product Catalog</a>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/Xiaomi_RED.svg" class="icon" loading="lazy">
+                            Xiaomi
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="#">Smartphones</a>
+                                <ul>
+                                    <li><a href="#">Xiaomi 15</a></li>
+                                    <li><a href="#">Xiaomi 14T</a></li>
+                                    <li><a href="#">Readmi Note 14</a></li>
+                                    <li><a href="#">Readmi 13</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Health and sports</a></li>
+                            <li><a href="#">Tablets</a></li>
+                            <li><a href="#">Laptops</a></li>
+                            <li><a href="#">Smart house</a></li>
+                            <li><a href="#">Multimedia</a></li>
+                            <li><a href="#">Lifestyle</a></li>
+                            <li><a href="#">Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/Scooter.svg" class="icon" loading="lazy">
+                            Transport and cycling
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_1.svg" class="icon" loading="lazy">
+                            Smartphones and phones
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_2.svg" class="icon" loading="lazy">
+                            TV and Multimedia
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_3.svg" class="icon" loading="lazy">
+                            Home Appliances
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_4.svg" class="icon" loading="lazy">
+                            Laptops, PCs and Tablets
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_16.svg" class="icon" loading="lazy">
+                            Gaming Products
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_5.svg" class="icon" loading="lazy">
+                            Smartwatches and Gadgets
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_6.svg" class="icon" loading="lazy">
+                            Audio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_7.svg" class="icon" loading="lazy">
+                            Sports and Health
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_8.svg" class="icon" loading="lazy">
+                            Tourism and Fishing
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_9.svg" class="icon" loading="lazy">
+                            Repair and Equipment
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_10.svg" class="icon" loading="lazy">
+                            Cottage, Home and Garden
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_11.svg" class="icon" loading="lazy">
+                            Pet Supplies
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_12.svg" class="icon" loading="lazy">
+                            Children's Products
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_13.svg" class="icon" loading="lazy">
+                            Auto and Moto Products
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/trumaj_zarjad_black.svg" class="icon" loading="lazy">
+                            Keep Charged
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_14.svg" class="icon" loading="lazy">
+                            Clothing and Accessories
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_15.svg" class="icon" loading="lazy">
+                            Perfumes, Care, Jewelry
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#"><span class="mif-favorite-outline icon"></span> Favorites</a></li>
+            <li><a href="#"><span class="mif-justice icon"></span> Comparing</a></li>
+            <li><a href="#"><span class="mif-tag-sale icon"></span> Sales</a></li>
         </ul>
+    </div>
+
+    <div class="container-fluid mb-6 mt-6" id="product-about">
+        <ul class="breadcrumbs">
+            <li><a href="#"><span class="mif-home"></span></a></li>
+            <li><a href="#">Small appliances</a></li>
+            <li><a href="#">Multi-cookers and air grills</a></li>
+            <li><a href="#">Multipic TEFAL Easy Fry&Grill Window</a></li>
+        </ul>
+    </div>
+
+    <div class="container-fluid pos-sticky z-absolute" style="top: 50px">
+        <div class="box p-1">
+            <ul class="h-menu product-menu">
+                <li class="active"><a href="#product-about">About</a></li>
+                <li><a href="#product-specification">Specification</a></li>
+                <li><a href="#product-reviews">Reviews</a></li>
+            </ul>
+        </div>
     </div>
     
-    <div class="container-fluid mt-4" id="product-about">
+    <div class="container-fluid mt-4">
         <div class="row">
             <div class="cell-md-6">
                 <div class="box pos-sticky" style="top: 20px">
@@ -56,7 +233,7 @@
                             Art: 412231971
                         </div>
                     </div>
-                    
+
                     <div class="product-options mt-4">
                         <div class="color-option">
                             <div class="mb-2">Color: <span id="product-color-value" class="text-weight-8"></span></div>
@@ -79,12 +256,12 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="description mt-4">
                         Tefal Easy Fry & Grill Window Ey506810 and Grill for cooking with or without oil use, as well as perfect grilled cooking.
-                        
+
                         <span id="more-toggle" class="c-pointer no-user-select fg-crimson text-bold">More...</span>
-                        
+
                         <div class="mt-4" data-role="collapse" data-collapsed="true" data-toggle-element="#more-toggle">
                             <p> Enjoy the perfect results with a viewing window that allows you to monitor the cooking process. </p>
                             <p>
@@ -125,7 +302,7 @@
                             </p>                        </div>
                     </div>
                 </div>
-                
+
                 <div class="box">
                     <div>
                         <span>Seller:</span>
@@ -263,10 +440,14 @@
                  data-show-pagination="false"
                  data-show-more="false"
             ></div>
+        </div>
     </div>
 </div>
-
 <style>
+    .landing {
+        scroll-margin-top: 150px;
+    }
+    
     .color-button-active {
         border: 3px solid var(--color-gray);
     }
@@ -303,9 +484,27 @@
             height: 110px;
         }
     }
+    
+    .product-menu {
+        .active {
+            border-bottom: 2px solid var(--color-primary);
+        }
+    }
 </style>
 
 <script>
+    $(".product-menu").on("click", "a", function (e) {
+        e.preventDefault();
+        const target = $(($(this).attr("href")))[0];
+        const li = $(this).closest("li");
+        $(".product-menu li").removeClass("active");
+        li.addClass("active");
+        $(".landing")[0].scrollTo({
+            top: target.offsetTop,
+            behavior: "smooth"       
+        });
+    })
+    
     function changeColor(btn) {
         const value = $(btn).attr("data-value");
         $("#product-color-value").html(value);
