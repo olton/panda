@@ -14,7 +14,7 @@
     </div>
 </div>
 
-<div class="box" style="height: calc(100% - 70px); overflow-y: auto">
+<div class="box" style="height: calc(100% - 0px); overflow-y: auto">
     <div class="container-fluid mb-6">
         <ul class="breadcrumbs">
             <li><a href="#">Home</a></li>
@@ -27,14 +27,14 @@
     <div class="container-fluid pos-sticky" style="top: 0; z-index: var(--z-index-sticky)">
         <div class="box" style="padding: 0 4px 1px;">
             <ul data-role="tabs" data-expand="true" class="border-none" style="--tabs-item-background-active: transparent;">
-                <li><a href="#">About Product</a></li>
-                <li><a href="#">Specification</a></li>
-                <li><a href="#">Reviews</a></li>
+                <li><a href="#product-about">About Product</a></li>
+                <li><a href="#product-specification">Specification</a></li>
+                <li><a href="#product-reviews">Reviews</a></li>
             </ul>
         </div>
     </div>
     
-    <div class="container-fluid mt-4">
+    <div class="container-fluid mt-4" id="product-about">
         <div class="row">
             <div class="cell-md-6">
                 <div class="box pos-sticky" style="top: 20px">
@@ -164,11 +164,37 @@
                 </div>
             </div>
         </div>
+
+        <div class="container-query mt-12">
+            <div class="text-weight-8 h2 no-wrap">Similar goods</div>
+            <div class="d-flex">
+                <div data-role="remote-dataset"
+                     data-key-offset="skip"
+                     data-key-data="products"
+                     data-key-limit="limit"
+                     data-key-total="total"
+                     data-key-sort="sortBy"
+                     data-key-order="order"
+                     data-key-search="q"
+                     data-url='https://dummyjson.com/products'
+                     data-url-search='https://dummyjson.com/products/search'
+                     data-cls-body="similar-products"
+                     data-cls-pagination="mt-4 d-flex flex-justify-center"
+                     data-on-draw-entry="drawProductEntry"
+                     data-rows="10"
+                     data-rows-steps="10,20"
+                     data-show-service-block="false"
+                     data-show-pagination="false"
+                     data-show-more="false"
+                ></div>
+            </div>
+        </div>
+
     </div>
 
-    <div class="container-fluid container-query mt-4">
+    <div class="container-fluid container-query mt-4" id="product-specification">
         <div class="box">
-            <div class="box-title">Characteristics:</div>
+            <div class="box-title">Specification:</div>
             <div>
                 <table class="table striped compact">
                     <tbody>
@@ -225,33 +251,28 @@
             </div>
         </div>
     </div>
-    
-    <div class="container-fluid container-query mt-12">
-        <div class="text-weight-8 h2 no-wrap">Similar goods</div>
-        <div class="d-flex sales-leaders">
+
+    <div class="container-fluid container-query mt-12" id="product-reviews">
+        <div class="text-weight-8 h2 no-wrap">Reviews</div>
+        <div class="d-flex" style="--rating-on-color: var(--color-orange)">
             <div data-role="remote-dataset"
                  data-key-offset="skip"
-                 data-key-data="products"
+                 data-key-data="comments"
                  data-key-limit="limit"
                  data-key-total="total"
                  data-key-sort="sortBy"
                  data-key-order="order"
                  data-key-search="q"
-                 data-url='https://dummyjson.com/products'
-                 data-url-search='https://dummyjson.com/products/search'
-                 data-cls-body="similar-products"
+                 data-url='https://dummyjson.com/comments'
+                 data-cls-body="product-reviews"
                  data-cls-pagination="mt-4 d-flex flex-justify-center"
-                 data-sort="rating:desc"
-                 data-sort-rules="price:asc:Price:<span class='mif-arrow-up'>,price:desc:Price:<span class='mif-arrow-down'>,rating:desc:By rating:<span class='mif-star-empty'>"
-                 data-on-draw-entry="drawEntry"
+                 data-on-draw-entry="drawProductReview"
                  data-rows="10"
                  data-rows-steps="10,20"
-                 data-sort-label="<span class='mif-import-export'>"
                  data-show-service-block="false"
                  data-show-pagination="false"
                  data-show-more="false"
             ></div>
-        </div>
     </div>
 </div>
 
@@ -277,6 +298,21 @@
         display: flex;
         flex-wrap: wrap;
     }
+    
+    .product-reviews {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        
+        .product-review {
+            width: 180px;
+            border: 1px solid var(--border-color);
+            border-radius: 0; 
+            padding: 10px;
+            font-size: 12px;
+            height: 110px;
+        }
+    }
 </style>
 
 <script>
@@ -288,7 +324,7 @@
         const value = $(btn).attr("data-value");
         $("#product-memory-value").html(value);
     }
-    function drawEntry(entry, index, body) {
+    function drawProductEntry(entry, index, body) {
         const statuses = [
             "<div class='fg-green product-status'>Ready to depart <span class=\"mif-truck-delivery icon\"></span></div>",
             "<div class='fg-blue product-status'>In stock <span class=\"mif-transport icon\"></span></div>",
@@ -328,6 +364,17 @@
             </div>        
         `;
 
+        $(body).append(card);
+    }
+    
+    function drawProductReview(entry, index, body) {
+        const card = `
+            <div class="product-review h-100">
+                <div>${entry.body}</div>
+                <div><input data-role="rating" data-static="true" data-value="${Math.random() * (5 - 3) + 3}"></div>
+                <div>${entry.user.fullName}</div>
+            </div>
+        `
         $(body).append(card);
     }
 </script>
