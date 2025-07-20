@@ -25,17 +25,19 @@
     </div>
     
     <div class="container-fluid pos-sticky" style="top: 0; z-index: var(--z-index-sticky)">
-        <ul data-role="tabs" data-expand="true">
-            <li><a href="#">About Product</a></li>
-            <li><a href="#">Specification</a></li>
-            <li><a href="#">Reviews</a></li>
-        </ul>
+        <div class="box" style="padding: 0 4px 1px;">
+            <ul data-role="tabs" data-expand="true" class="border-none" style="--tabs-item-background-active: transparent;">
+                <li><a href="#">About Product</a></li>
+                <li><a href="#">Specification</a></li>
+                <li><a href="#">Reviews</a></li>
+            </ul>
+        </div>
     </div>
     
     <div class="container-fluid mt-4">
         <div class="row">
             <div class="cell-md-6">
-                <div class="box">
+                <div class="box pos-sticky" style="top: 20px">
                     <div data-role="image-carousel">
                         <div class="badge -left bg-orange fg-white">
                             TOP SELLERS
@@ -62,6 +64,29 @@
                         </div>
                         <div class="ml-auto">
                             Art: 412231971
+                        </div>
+                    </div>
+                    
+                    <div class="product-options mt-4">
+                        <div class="color-option">
+                            <div class="mb-2">Color: <span id="product-color-value" class="text-weight-8"></span></div>
+                            <div data-role="button-group" data-required-button="true" data-cls-active="color-button-active" data-on-button-click="changeColor">
+                                <button class="square small bg-orange" data-value="Orange"></button>
+                                <button class="square small bg-red" data-value="Red"></button>
+                                <button class="square small bg-blue" data-value="Blue"></button>
+                                <button class="square small bg-green" data-value="Green"></button>
+                                <button class="square small bg-steel" data-value="Steel"></button>
+                            </div>
+                        </div>
+
+                        <div class="color-option">
+                            <div class="mb-2">Memory: <span id="product-memory-value" class="text-weight-8"></span></div>
+                            <div data-role="button-group" data-required-button="true" data-cls-active="color-button-active" data-on-button-click="changeMemory">
+                                <button class="small" data-value="128 GB">128 GB</button>
+                                <button class="small" data-value="256 GB">256 GB</button>
+                                <button class="small" data-value="512 GB">512 GB</button>
+                                <button class="small" data-value="1 TB">1 TB</button>
+                            </div>
                         </div>
                     </div>
                     
@@ -134,10 +159,175 @@
                     </div>
                     <div class="mt-4 d-flex flex-center gap-2">
                         <button class="success w-100"><span class="icon mif-add-shopping-cart"></span> Add to cart</button>
-                        <button class="outline success w-100"><span class="icon mif-bank"></span> Buy in credit</button>
+                        <button class="outline info w-100"><span class="icon mif-bank"></span> Buy in credit</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <div class="container-fluid container-query mt-4">
+        <div class="box">
+            <div class="box-title">Characteristics:</div>
+            <div>
+                <table class="table striped compact">
+                    <tbody>
+                    <tr>
+                        <td>Brand</td>
+                        <td>Tefal</td>
+                    </tr>
+                    <tr>
+                        <td>Model</td>
+                        <td>Easy Fry & Grill Window</td>
+                    </tr>
+                    <tr>
+                        <td>Capacity</td>
+                        <td>4.5 L</td>
+                    </tr>
+                    <tr>
+                        <td>Power</td>
+                        <td>1500W</td>
+                    </tr>
+                    <tr>
+                        <td>Temperature Range</td>
+                        <td>80-200°C</td>
+                    </tr>
+                    <tr>
+                        <td>Timer</td>
+                        <td>60 minutes</td>
+                    </tr>
+                    <tr>
+                        <td>Programs</td>
+                        <td>8 automatic programs</td>
+                    </tr>
+                    <tr>
+                        <td>Display</td>
+                        <td>Digital touch screen</td>
+                    </tr>
+                    <tr>
+                        <td>Material</td>
+                        <td>Stainless steel, plastic</td>
+                    </tr>
+                    <tr>
+                        <td>Dishwasher Safe Parts</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Warranty</td>
+                        <td>2 years</td>
+                    </tr>
+                    <tr>
+                        <td>Weight</td>
+                        <td>5.2 kg</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container-fluid container-query mt-12">
+        <div class="text-weight-8 h2 no-wrap">Similar goods</div>
+        <div class="d-flex sales-leaders">
+            <div data-role="remote-dataset"
+                 data-key-offset="skip"
+                 data-key-data="products"
+                 data-key-limit="limit"
+                 data-key-total="total"
+                 data-key-sort="sortBy"
+                 data-key-order="order"
+                 data-key-search="q"
+                 data-url='https://dummyjson.com/products'
+                 data-url-search='https://dummyjson.com/products/search'
+                 data-cls-body="similar-products"
+                 data-cls-pagination="mt-4 d-flex flex-justify-center"
+                 data-sort="rating:desc"
+                 data-sort-rules="price:asc:Price:<span class='mif-arrow-up'>,price:desc:Price:<span class='mif-arrow-down'>,rating:desc:By rating:<span class='mif-star-empty'>"
+                 data-on-draw-entry="drawEntry"
+                 data-rows="10"
+                 data-rows-steps="10,20"
+                 data-sort-label="<span class='mif-import-export'>"
+                 data-show-service-block="false"
+                 data-show-pagination="false"
+                 data-show-more="false"
+            ></div>
+        </div>
+    </div>
 </div>
+
+<style>
+    .color-button-active {
+        border: 3px solid var(--color-gray);
+    }
+    
+    .dark-side {
+        .color-button-active {
+            border-color: var(--color-sand);
+        }
+    }
+
+    .product-card {
+        --product-card-font-size: 11px;
+        width: 160px;
+        border: 1px solid var(--border-color);
+        border-radius: 0; 
+    }
+
+    .similar-products {
+        display: flex;
+        flex-wrap: wrap;
+    }
+</style>
+
+<script>
+    function changeColor(btn) {
+        const value = $(btn).attr("data-value");
+        $("#product-color-value").html(value);
+    }
+    function changeMemory(btn) {
+        const value = $(btn).attr("data-value");
+        $("#product-memory-value").html(value);
+    }
+    function drawEntry(entry, index, body) {
+        const statuses = [
+            "<div class='fg-green product-status'>Ready to depart <span class=\"mif-truck-delivery icon\"></span></div>",
+            "<div class='fg-blue product-status'>In stock <span class=\"mif-transport icon\"></span></div>",
+            "<div class='fg-coral product-status'>Waiting for stock <span class=\"mif-truck2 icon\"></span></div>",
+            "<div class='fg-red product-status'>Out of stock</div>",
+        ]
+
+        const status = statuses[Math.floor(Math.random() * statuses.length)];
+
+        const card = `
+            <div class="product-card h-100">
+                <div class="badge bg-transparent">
+                    <button class="square small flat"><span class="mif-favorite-outline enlarge-6 fg-orange"></span></button>
+                </div>
+                <div class="product-image">
+                    <img src="${entry.thumbnail}" alt="${entry.title}"/>                
+                </div>            
+                <div class="product-info">
+                    <a href="#" class="product-title fg-sat-green-hover">
+                        ${entry.description}
+                    </a>
+                    <div class="product-rating" style="--rating-on-color: #ffa500; --rating-star-size: 14px">
+                        <input class="small" data-role="rating" data-static="true" data-value="${entry.rating}" />
+                        <div class="d-flex flex-align-center mt-1 gap-1"><span class="mif-chat-line"></span> ${entry.reviews.length}</div>
+                    </div>            
+                    ${status}
+                </div>
+                <div class="product-footer mt-auto">
+                    <div class="product-price">
+                        ${entry.discountPercentage ? "<div class='-old'>$"+(entry.price)+"</div>" : ""}
+                        <div class="fg-red reduce-2">$${(entry.price - entry.price/100*entry.discountPercentage).toFixed(2)}</div>
+                    </div>
+                    <div class="ml-auto">
+                        <button class="square small flat"><span class="mif-add-shopping-cart enlarge-6 fg-green"></span></button>
+                    </div>
+                </div>
+            </div>        
+        `;
+
+        $(body).append(card);
+    }
+</script>
