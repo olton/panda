@@ -182,7 +182,7 @@
         </ul>
     </div>
 
-    <div class="container-fluid mb-6 mt-6">
+    <div class="container-fluid mb-6 mt-6" id="product-about">
         <ul class="breadcrumbs">
             <li><a href="#"><span class="mif-home"></span></a></li>
             <li><a href="#">Small appliances</a></li>
@@ -191,17 +191,17 @@
         </ul>
     </div>
 
-    <div class="container-fluid pos-sticky" style="top: 0; z-index: var(--z-index-sticky)">
-        <div class="box" style="padding: 0 4px 1px;">
-            <ul data-role="tabs" data-expand="true" class="border-none" style="--tabs-item-background-active: transparent;">
-                <li><a href="#product-about">About Product</a></li>
+    <div class="container-fluid pos-sticky z-absolute" style="top: 50px">
+        <div class="box p-1">
+            <ul class="h-menu product-menu">
+                <li class="active"><a href="#product-about">About</a></li>
                 <li><a href="#product-specification">Specification</a></li>
                 <li><a href="#product-reviews">Reviews</a></li>
             </ul>
         </div>
     </div>
-
-    <div class="container-fluid mt-4" id="product-about">
+    
+    <div class="container-fluid mt-4">
         <div class="row">
             <div class="cell-md-6">
                 <div class="box pos-sticky" style="top: 20px">
@@ -359,7 +359,7 @@
 
     </div>
 
-    <div class="container-fluid container-query mt-4" id="product-specification">
+    <div class="container-fluid container-query mt-12" id="product-specification">
         <div class="box">
             <div class="box-title">Specification:</div>
             <div>
@@ -441,9 +441,13 @@
                  data-show-more="false"
             ></div>
         </div>
+    </div>
 </div>
-
 <style>
+    .landing {
+        scroll-margin-top: 150px;
+    }
+    
     .color-button-active {
         border: 3px solid var(--color-gray);
     }
@@ -456,7 +460,7 @@
 
     .product-card {
         --product-card-font-size: 11px;
-        width: 160px;
+        width: max(20%, 160px);
         border: 1px solid var(--border-color);
         border-radius: 0; 
     }
@@ -480,9 +484,27 @@
             height: 110px;
         }
     }
+    
+    .product-menu {
+        .active {
+            border-bottom: 2px solid var(--color-primary);
+        }
+    }
 </style>
 
 <script>
+    $(".product-menu").on("click", "a", function (e) {
+        e.preventDefault();
+        const target = $(($(this).attr("href")))[0];
+        const li = $(this).closest("li");
+        $(".product-menu li").removeClass("active");
+        li.addClass("active");
+        $(".landing")[0].scrollTo({
+            top: target.offsetTop,
+            behavior: "smooth"       
+        });
+    })
+    
     function changeColor(btn) {
         const value = $(btn).attr("data-value");
         $("#product-color-value").html(value);
