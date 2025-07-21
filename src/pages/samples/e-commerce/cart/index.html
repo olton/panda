@@ -1,4 +1,4 @@
-<script>window.PAGE_TITLE = 'E-Commerce | Product List'</script>
+<script>window.PAGE_TITLE = 'Samples | Product'</script>
 
 <div class="box landing p-0 container-query" style="height: 100%; overflow-y: auto; overflow-x: hidden;">
     <nav class="bg-dark fg-white" data-role="app-bar" data-expand="true" style="--appbar-item-color: #fff; --appbar-item-background-hover: var(--color-indigo); --appbar-item-color-hover: var(--color-white);">
@@ -23,7 +23,7 @@
             <a href="#" class="app-bar-item"><span class="mif-shopping-cart enlarge-9"></span></a>
         </div>
 
-<!--        <a href="/pages/fullscreen/showcase.html" target="_blank" class="app-bar-item ml-auto ml-10-md"><span class="mif-external enlarge-9"></span></a>-->
+        <!--        <a href="/pages/fullscreen/showcase.html" target="_blank" class="app-bar-item ml-auto ml-10-md"><span class="mif-external enlarge-9"></span></a>-->
     </nav>
 
     <div id="stack-menu" class="pos-absolute" style="top: 52px; height: calc(100% - 52px);"
@@ -182,33 +182,14 @@
         </ul>
     </div>
 
-    <div class="container-fluid mt-6 product-list">
-        <div class="d-flex">
-            <h2><span class="text-weight-2">Products:</span> in Category</h2>
+    <div class="container-fluid mt-6 mb-6">
+        <div class="box">
+            
         </div>
-        <div data-role="remote-dataset"
-             data-key-offset="skip"
-             data-key-data="products"
-             data-key-limit="limit"
-             data-key-total="total"
-             data-key-sort="sortBy"
-             data-key-order="order"
-             data-key-search="q"
-             data-url='https://dummyjson.com/products'
-             data-url-search='https://dummyjson.com/products/search'
-             data-cls-body="d-flex flex-row flex-wrap gap-1 mt-4 flex-center"
-             data-cls-pagination="mt-4 d-flex flex-justify-center"
-             data-sort="rating:desc"
-             data-sort-rules="price:asc:Price:<span class='mif-arrow-up'>,price:desc:Price:<span class='mif-arrow-down'>,rating:desc:By rating:<span class='mif-star-empty'>"
-             data-on-draw-entry="drawEntry"
-             data-rows="24"
-             data-rows-steps="10, 24, 48, 96, 192"
-             data-sort-label="<span class='mif-import-export'>"
-        ></div>
     </div>
 
 
-    <footer class="bg-dark pt-20 mt-20 w-100">
+    <footer class="bg-dark pt-20 mt-6 w-100">
         <div class="p-20 d-flex flex-column flex-center">
             <ul class="h-menu bg-transparent fg-white">
                 <li><a href="#">Home</a></li>
@@ -228,60 +209,3 @@
     </footer>
 
 </div>
-
-
-<style>
-    .product-card {
-    }
-</style>
-
-<script>
-    function changeView() {
-        $(".product-list").toggleClass("compact-view");
-    }
-    
-    function drawEntry(entry, index, body) {
-        const statuses = [
-            "<div class='fg-green product-status'>Ready to depart <span class=\"mif-truck-delivery icon\"></span></div>",
-            "<div class='fg-blue product-status'>In stock <span class=\"mif-transport icon\"></span></div>",
-            "<div class='fg-coral product-status'>Waiting for stock <span class=\"mif-truck2 icon\"></span></div>",
-            "<div class='fg-red product-status'>Out of stock</div>",
-        ]
-        
-        const status = statuses[Math.floor(Math.random() * statuses.length)];
-        
-        const card = `
-            <div class="product-card hovered h-100">
-                ${entry.brand ? "<div class=\"badge badge-blue\">"+entry.brand+"</div>" : ""}
-                <div class="product-image">
-                    <img src="${entry.thumbnail}" alt="${entry.title}"/>                
-                </div>            
-                <div class="product-info">
-                    <a href="#" class="product-title fg-sat-green-hover">
-                        ${entry.description}
-                    </a>
-                    <div class="product-rating" style="--rating-on-color: #ffa500;">
-                        <input data-role="rating" data-static="true" data-value="${entry.rating}" />
-                        <div class="d-flex flex-align-center mt-1 gap-1"><span class="mif-chat-line"></span> ${entry.reviews.length}</div>
-                    </div>            
-                    ${status}
-                </div>
-                <div class="product-footer mt-auto">
-                    <div class="product-price">
-                        ${entry.discountPercentage ? "<div class='-old'>$"+(entry.price)+"</div>" : ""}
-                        <div class="fg-red">$${(entry.price - entry.price/100*entry.discountPercentage).toFixed(2)}</div>
-                    </div>
-                    <div class="ml-auto">
-                        <button class="square large flat"><span class="mif-favorite-outline enlarge-6 fg-orange"></span></button>
-                        <button class="square large flat ${status.includes('Out of stock') ? 'd-none' : ''}"><span class="mif-add-shopping-cart enlarge-6 fg-green"></span></button>
-                    </div>
-                </div>
-                <div class="product-props border-top bd-default pt-4">
-                    <div class="product-desc">${entry.description}</div>
-                </div>
-            </div>        
-        `;
-
-        $(body).append(card);
-    }
-</script>
