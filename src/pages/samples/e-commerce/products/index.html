@@ -397,7 +397,9 @@
         
         const card = `
             <div class="product-card hovered h-100">
-                ${entry.brand ? "<div class=\"badge badge-blue\">"+entry.brand+"</div>" : ""}
+                <div class="badge bg-transparent">
+                        <button class="square large flat"><span class="mif-favorite-outline enlarge-6 fg-orange"></span></button>                
+                </div>
                 <div class="product-image">
                     <img src="${entry.thumbnail}" alt="${entry.title}"/>                
                 </div>            
@@ -405,7 +407,7 @@
                     <a href="#" class="product-title fg-sat-green-hover">
                         ${entry.description}
                     </a>
-                    <div class="product-rating" style="--rating-on-color: #ffa500;">
+                    <div class="product-rating" style="--rating-on-color: #ffa500; --rating-star-size: 14px">
                         <input data-role="rating" data-static="true" data-value="${entry.rating}" />
                         <div class="d-flex flex-align-center mt-1 gap-1"><span class="mif-chat-line"></span> ${entry.reviews.length}</div>
                     </div>            
@@ -417,7 +419,6 @@
                         <div class="fg-red">$${(entry.price - entry.price/100*entry.discountPercentage).toFixed(2)}</div>
                     </div>
                     <div class="ml-auto">
-                        <button class="square large flat"><span class="mif-favorite-outline enlarge-6 fg-orange"></span></button>
                         <button class="square large flat ${status.includes('Out of stock') ? 'd-none' : ''}"><span class="mif-add-shopping-cart enlarge-6 fg-green"></span></button>
                     </div>
                 </div>
