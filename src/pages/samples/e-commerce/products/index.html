@@ -182,31 +182,121 @@
         </ul>
     </div>
 
-    <div class="container-fluid mt-6 product-list">
-        <div class="d-flex">
-            <h2><span class="text-weight-2">Products:</span> in Category</h2>
-        </div>
-        <div data-role="remote-dataset"
-             data-key-offset="skip"
-             data-key-data="products"
-             data-key-limit="limit"
-             data-key-total="total"
-             data-key-sort="sortBy"
-             data-key-order="order"
-             data-key-search="q"
-             data-url='https://dummyjson.com/products'
-             data-url-search='https://dummyjson.com/products/search'
-             data-cls-body="d-flex flex-row flex-wrap gap-1 mt-4 flex-center"
-             data-cls-pagination="mt-4 d-flex flex-justify-center"
-             data-sort="rating:desc"
-             data-sort-rules="price:asc:Price:<span class='mif-arrow-up'>,price:desc:Price:<span class='mif-arrow-down'>,rating:desc:By rating:<span class='mif-star-empty'>"
-             data-on-draw-entry="drawEntry"
-             data-rows="24"
-             data-rows-steps="10, 24, 48, 96, 192"
-             data-sort-label="<span class='mif-import-export'>"
-        ></div>
+    <div class="container-fluid mb-6 mt-6" id="product-about">
+        <ul class="breadcrumbs">
+            <li><a href="#"><span class="mif-home"></span></a></li>
+            <li><a href="#">Small appliances</a></li>
+            <li><a href="#">All Goods</a></li>
+        </ul>
     </div>
 
+    <div class="container-fluid d-flex">
+        <h2><span class="">Category</span></h2>
+    </div>
+
+    <div class="container-fluid d-flex flex-row mt-10-minus">
+        <div>
+            <div class="d-flex flex-align-end mb-2" style="height: 70px;">
+                Found <span class="ml-2 mr-2 enlarge-2">12345</span> goods
+            </div>
+            <div class="filters">
+                <div class="filter filter-seller">
+                    <div>Seller <span class="text-muted">2</span></div>
+                    <ul class="unstyled-list">
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Seller 1"><span class='text-weight-2'>(123)</span></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Seller 2"><span class='text-weight-2'>(123)</span></li>
+                    </ul>
+                </div>
+
+                <div class="filter filter-seller">
+                    <div>Brand <span class="text-muted">10</span></div>
+                    <ul class="unstyled-list">
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Samsung"> <span class='text-weight-2'>(458)</span></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Apple"> <span class='text-weight-2'>(367)</span></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Sony"> <span class='text-weight-2'>(289)</span></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="LG"> <span class='text-weight-2'>(234)</span></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Philips"> <span class='text-weight-2'>(198)</span></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Panasonic"> <span class='text-weight-2'>(167)</span></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Xiaomi"> <span class='text-weight-2'>(145)</span></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Huawei"> <span class='text-weight-2'>(134)</span></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Asus"> <span class='text-weight-2'>(112)</span></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Lenovo"> <span class='text-weight-2'>(98)</span></li>
+                    </ul>
+                </div>
+                
+                <div class="filter filter-price">
+                    <div>Price in $ (USD)</div>
+                    <div class="d-flex flex-row flex-center mt-4">
+                        <input type="text" id="min-price"> <span class="mif-minus"></span> <input type="text" id="max-price">
+                    </div>
+                    <input type="text" data-role="double-slider" data-min="0" data-max="1000000" data-on-change="filterPriceChange">
+                </div>
+                
+                <div class="filter filter-delivery">
+                    <div>Delivery <span class="text-muted">3</span></div>
+                    <ul class="unstyled-list">
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Ready to depart"><span class='text-weight-2'>(123)</span></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Delivery to shop"><span class='text-weight-2'>(123)</span></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Delivery to address"><span class='text-weight-2'>(123)</span></li>
+                    </ul>
+                </div>
+                
+                <div class="filter filter-delivery">
+                    <div>Option <span class="text-muted">3</span></div>
+                    <div data-role="button-group" data-mode="multiple" class="mt-4 flex-wrap gap-2">
+                        <button class="button outline square">1</button>
+                        <button class="button outline square">2</button>
+                        <button class="button outline square">3</button>
+                        <button class="button outline square">4</button>
+                        <button class="button outline square">5</button>
+                        <button class="button outline square">6</button>
+                        <button class="button outline square">7</button>
+                        <button class="button outline square">8</button>
+                        <button class="button outline square">9</button>
+                        <button class="button outline square">10</button>
+                    </div>
+                </div>
+                
+                <div class="filter filter-delivery">
+                    <div>Country manufacturer <span class="text-muted">10</span></div>
+                    <ul class="unstyled-list">
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Ukraine"><span class='text-weight-2'>(123)</span></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="China"><span class='text-weight-2'>(456)</span></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="USA"><span class='text-weight-2'>(345)</span></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Germany"><span class='text-weight-2'>(234)</span></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Japan"><span class='text-weight-2'>(189)</span></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="South Korea"><span class='text-weight-2'>(167)</span></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Taiwan"><span class='text-weight-2'>(145)</span></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Vietnam"><span class='text-weight-2'>(134)</span></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Malaysia"><span class='text-weight-2'>(112)</span></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="India"><span class='text-weight-2'>(98)</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-query mt-6 product-list w-100">
+            <div data-role="remote-dataset"
+                 data-key-offset="skip"
+                 data-key-data="products"
+                 data-key-limit="limit"
+                 data-key-total="total"
+                 data-key-sort="sortBy"
+                 data-key-order="order"
+                 data-key-search="q"
+                 data-url='https://dummyjson.com/products'
+                 data-url-search='https://dummyjson.com/products/search'
+                 data-cls-body="d-flex flex-row flex-wrap gap-1 mt-4 flex-center"
+                 data-cls-pagination="mt-4 d-flex flex-justify-center"
+                 data-sort="rating:desc"
+                 data-sort-rules="price:asc:Price:<span class='mif-arrow-up'>,price:desc:Price:<span class='mif-arrow-down'>,rating:desc:By rating:<span class='mif-star-empty'>"
+                 data-on-draw-entry="drawEntry"
+                 data-rows="24"
+                 data-rows-steps="10, 24, 48, 96, 192"
+                 data-sort-label="<span class='mif-import-export'>"
+                 data-cls-search-block="no-visible"
+            ></div>
+        </div>
+    </div>
 
     <footer class="bg-dark pt-20 mt-20 w-100">
         <div class="p-20 d-flex flex-column flex-center">
@@ -231,7 +321,28 @@
 
 
 <style>
-    .product-card {
+    .filters {
+        min-width: 270px;
+        border-top: 1px solid var(--border-color);
+        border-right: 1px solid var(--border-color);
+    }
+    
+    .filter {
+        padding: 10px;
+        border-bottom: 1px solid var(--border-color);
+        
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5px 0;
+
+            .checkbox:hover {
+                span {
+                    color: var(--color-green)!important;
+                }
+            }
+        }
     }
 </style>
 
@@ -283,5 +394,12 @@
         `;
 
         $(body).append(card);
+    }
+    
+    function filterPriceChange(values) {
+        console.log(arguments)
+        const [min, max] = values.toArray(",", "number");
+        $("#min-price").val(min);
+        $("#max-price").val(max);
     }
 </script>
