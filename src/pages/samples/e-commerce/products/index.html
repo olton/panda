@@ -13,7 +13,7 @@
         </div>
 
         <div class="app-bar-container dark-side d-none d-flex-md ml-auto">
-            <input type="text" data-role="input" class="" data-search-button="true" data-cls-search-button="button-crimson" placeholder="Search..." data-search-button-icon="<span class='mif-search'>">
+            <input id="search-control" type="text" data-cls-search-button="button-crimson" placeholder="Search..." data-search-button-icon="<span class='mif-search'>">
         </div>
 
         <div class="app-bar-container ml-auto d-none d-flex-ld">
@@ -190,11 +190,17 @@
         </ul>
     </div>
 
-    <div class="container-fluid d-flex">
+    <div class="container-fluid d-flex flex-wrap">
         <h2>
             <button class="success" id="btn-show-filter" onclick="toggleFilterPanel()"><span class="mif-filter-list"></span>Filter</button>
             <span class="">Category</span> <small>(Found <span class="enlarge-2">12345</span> goods)</small>
         </h2>
+        <div class="ml-auto mr-4">
+            <div class="d-flex flex-row gap-1">
+                <select id="sorting" class="medium"></select>
+                <select id="rows-count" class="medium"></select>
+            </div>
+        </div>
     </div>
 
     <div class="container-fluid d-flex flex-row">
@@ -275,7 +281,7 @@
             </div>
         </div>
         <div class="container-query product-list w-100">
-            <div data-role="remote-dataset"
+            <div class="mt-4-minus" data-role="remote-dataset"
                  data-key-offset="skip"
                  data-key-data="products"
                  data-key-limit="limit"
@@ -292,9 +298,10 @@
                  data-on-draw-entry="drawEntry"
                  data-rows="12"
                  data-rows-steps="12, 24, 48, 96, 192"
-                 data-sort-label="<span class='mif-import-export'>"
-                 data-quick-search="false"
-                 data-cls-service-block="ml-4 mr-4"
+                 data-show-service-block="false"
+                 data-search-control="#search-control"
+                 data-sorting-control="#sorting"
+                 data-rows-count-control="#rows-count"
             ></div>
         </div>
     </div>
@@ -377,6 +384,13 @@
             transform: translateX(0);
             height: auto;
         }
+    }
+    
+    .select:has( #sorting ) {
+        flex: 0 0 240px;
+    }
+    .select:has( #rows-count ) {
+        flex: 0 0 140px;
     }
 </style>
 
