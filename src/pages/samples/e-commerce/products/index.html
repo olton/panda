@@ -191,14 +191,14 @@
     </div>
 
     <div class="container-fluid d-flex">
-        <h2><span class="">Category</span></h2>
+        <h2>
+            <button class="success" id="btn-show-filter" onclick="toggleFilterPanel()"><span class="mif-filter-list"></span>Filter</button>
+            <span class="">Category</span> <small>(Found <span class="enlarge-2">12345</span> goods)</small>
+        </h2>
     </div>
 
-    <div class="container-fluid d-flex flex-row mt-10-minus">
-        <div>
-            <div class="d-flex flex-align-end mb-2" style="height: 70px;">
-                Found <span class="ml-2 mr-2 enlarge-2">12345</span> goods
-            </div>
+    <div class="container-fluid d-flex flex-row">
+        <div class="filters-container">
             <div class="filters">
                 <div class="filter filter-seller">
                     <div>Seller <span class="text-muted">2</span></div>
@@ -274,7 +274,7 @@
                 </div>
             </div>
         </div>
-        <div class="container-query mt-6 product-list w-100">
+        <div class="container-query product-list w-100">
             <div data-role="remote-dataset"
                  data-key-offset="skip"
                  data-key-data="products"
@@ -293,7 +293,8 @@
                  data-rows="12"
                  data-rows-steps="12, 24, 48, 96, 192"
                  data-sort-label="<span class='mif-import-export'>"
-                 data-cls-search-block="no-visible"
+                 data-quick-search="false"
+                 data-cls-service-block="ml-4 mr-4"
             ></div>
         </div>
     </div>
@@ -316,13 +317,11 @@
             </div>
         </div>
     </footer>
-
 </div>
 
 
 <style>
     .filters {
-        min-width: 270px;
         border-top: 1px solid var(--border-color);
         border-right: 1px solid var(--border-color);
     }
@@ -342,6 +341,41 @@
                     color: var(--color-green)!important;
                 }
             }
+        }
+    }
+    
+    #btn-show-filter {
+        
+    }
+    
+    .filters-container {
+        width: 320px;
+        opacity: 0;
+        position: fixed;
+        transform: translateX(-100%);
+        transition: all 0.3s ease-in-out;
+        z-index: var(--z-index-fixed);
+        background: var(--default-background);
+        overflow-y: auto;
+        height: calc(100vh - 240px);
+        padding-bottom: 20px;
+        
+        &.open {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    
+    @container (width >= 800px) {
+        #btn-show-filter {
+            display: none;
+        }
+
+        .filters-container {
+            opacity: 1;
+            position: relative;
+            transform: translateX(0);
+            height: auto;
         }
     }
 </style>
@@ -397,9 +431,12 @@
     }
     
     function filterPriceChange(values) {
-        console.log(arguments)
         const [min, max] = values.toArray(",", "number");
         $("#min-price").val(min);
         $("#max-price").val(max);
+    }
+    
+    function toggleFilterPanel() {
+        $(".filters-container").toggleClass("open");
     }
 </script>
