@@ -544,7 +544,7 @@
 
         const status = statuses[Math.floor(Math.random() * statuses.length)];
 
-        const card = `
+        return `
             <div class="product-card h-100">
                 <div class="badge bg-transparent">
                     <button class="square small flat"><span class="mif-favorite-outline enlarge-6 fg-orange"></span></button>
@@ -573,8 +573,6 @@
                 </div>
             </div>        
         `;
-
-        $(body).append(card);
     }
     
     function drawProductReview(entry, index, body) {

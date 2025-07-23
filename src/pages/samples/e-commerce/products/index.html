@@ -185,15 +185,15 @@
     <div class="container-fluid mb-6 mt-6" id="product-about">
         <ul class="breadcrumbs">
             <li><a href="#"><span class="mif-home"></span></a></li>
-            <li><a href="#">Small appliances</a></li>
-            <li><a href="#">All Goods</a></li>
+            <li><a href="#">Smartphones and phones</a></li>
+            <li><a href="#">Smartphones</a></li>
         </ul>
     </div>
 
     <div class="container-fluid d-flex flex-wrap">
         <h2>
             <button class="success" id="btn-show-filter" onclick="toggleFilterPanel()"><span class="mif-filter-list"></span>Filter</button>
-            <span class="">Category</span> <small>(Found <span class="enlarge-2">12345</span> goods)</small>
+            <span class="">Smartphones</span> <small>(Found <span class="enlarge-2" id="goods-found">0</span> goods)</small>
         </h2>
         <div class="ml-auto mr-4">
             <div class="d-flex flex-row gap-1">
@@ -289,7 +289,7 @@
                  data-key-sort="sortBy"
                  data-key-order="order"
                  data-key-search="q"
-                 data-url='https://dummyjson.com/products'
+                 data-url='https://dummyjson.com/products/category/smartphones'
                  data-url-search='https://dummyjson.com/products/search'
                  data-cls-body="d-flex flex-row flex-wrap gap-1 mt-4 flex-center"
                  data-cls-pagination="mt-4 d-flex flex-justify-center"
@@ -302,6 +302,7 @@
                  data-search-control="#search-control"
                  data-sorting-control="#sorting"
                  data-rows-count-control="#rows-count"
+                 data-on-load="onLoadData"
             ></div>
         </div>
     </div>
@@ -351,10 +352,6 @@
         }
     }
     
-    #btn-show-filter {
-        
-    }
-    
     .filters-container {
         width: 320px;
         opacity: 0;
@@ -398,8 +395,13 @@
     function changeView() {
         $(".product-list").toggleClass("compact-view");
     }
-    
-    function drawEntry(entry, index, body) {
+
+    function onLoadData(data) {
+        $("#goods-found").html(data.total)
+        return data
+    }
+
+    function drawEntry(entry, index) {
         const statuses = [
             "<div class='fg-green product-status'>Ready to depart <span class=\"mif-truck-delivery icon\"></span></div>",
             "<div class='fg-blue product-status'>In stock <span class=\"mif-transport icon\"></span></div>",
@@ -409,7 +411,7 @@
         
         const status = statuses[Math.floor(Math.random() * statuses.length)];
         
-        const card = `
+        return `
             <div class="product-card hovered h-100">
                 <div class="badge bg-transparent">
                         <button class="square large flat"><span class="mif-favorite-outline enlarge-6 fg-orange"></span></button>                
@@ -441,8 +443,6 @@
                 </div>
             </div>        
         `;
-
-        $(body).append(card);
     }
     
     function filterPriceChange(values) {
