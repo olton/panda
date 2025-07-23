@@ -99,8 +99,8 @@
                  data-sort="rating:desc"
                  data-sort-rules="date:asc:Date:<span class='mif-arrow-up'>,date:desc:Date:<span class='mif-arrow-down'>"
                  data-on-draw-entry="drawEntry"
-                 data-rows="24"
-                 data-rows-steps="12, 24, 48, 96, 192"
+                 data-rows="18"
+                 data-rows-steps="18, 36, 54"
                  data-show-service-block="false"
                  data-search-control="#search-control"
                  data-sorting-control="#sorting"
@@ -238,6 +238,21 @@
         }
         const authors = ['olton', 'smith', 'johnson', 'williams', 'brown', 'davis']
         const author = authors[Math.floor(Math.random() * authors.length)]
+        const labels = ['bug', 'feature', 'enhancement', 'documentation', 'help wanted', 'priority', 'question', 'invalid', 'duplicate', 'wontfix']
+        const label = labels[Math.floor(Math.random() * labels.length)]
+        const labels_colors = {
+            bug: 'bg-red fg-white',
+            feature: 'bg-green fg-white',
+            enhancement: 'bg-yellow fg-dark',
+            documentation: 'bg-blue fg-white',
+            "help wanted": 'bg-light-gray fg-dark',
+            priority: 'bg-orange fg-white',
+            question: 'bg-cyan fg-dark',
+            invalid: 'bg-brown fg-white',
+            duplicate: 'bg-pink fg-dark',
+        }
+        const label_color = labels_colors[label]
+        
         return `
             <div class="ticket-card">
                 <div class="ticket-checkbox">
@@ -247,7 +262,7 @@
                     <span data-role="bull" data-type="${type}" class="${bull_colors[type]}"></span>
                 </div>            
                 <div class="ticket-title">
-                    ${entry.title}
+                    ${entry.title} <span class="badge ${label_color} ticket-label">${label}</span>
                     <div class="ticket-secondary-info d-flex flex-row flex-align-center">
                         <div class="ticket-id">#${entry.id}</div>
                         <div class="ticket-author"><a href="#">${author}</a></div>                    
