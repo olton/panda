@@ -203,7 +203,7 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        padding: 10px;
+        padding: 4px;
         border-bottom: 1px solid var(--border-color);
         
         .ticket-checkbox, .ticket-bull {
@@ -262,7 +262,7 @@
                     <span data-role="bull" data-type="${type}" class="${bull_colors[type]}"></span>
                 </div>            
                 <div class="ticket-title">
-                    ${entry.title} <span class="badge ${label_color} ticket-label">${label}</span>
+                    <a href="#" class="fg-default">${entry.title}</a> <span class="badge ${label_color} ticket-label">${label}</span>
                     <div class="ticket-secondary-info d-flex flex-row flex-align-center">
                         <div class="ticket-id">#${entry.id}</div>
                         <div class="ticket-author"><a href="#">${author}</a></div>                    
