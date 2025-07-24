@@ -80,12 +80,12 @@ pre:has(code) {
     border: 1px solid var(--border-color);
 }
 
-#content-title {
-    display: none;
-}
+/*#content-title {*/
+/*    display: none;*/
+/*}*/
 
-@media screen and (min-width: 500px) {
-    #content-title {
-        display: block;
-    }
-}
+/*@media screen and (min-width: 500px) {*/
+/*    #content-title {*/
+/*        display: block;*/
+/*    }*/
+/*}*/

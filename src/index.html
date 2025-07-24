@@ -37,13 +37,6 @@
             </a>
         </div>
 
-<!--        <div class="suggest-box mt-4">-->
-<!--            <input type="text" data-role="input" data-clear-button="false" data-search-button="true">-->
-<!--            <button class="holder">-->
-<!--                <span class="mif-search"></span>-->
-<!--            </button>-->
-<!--        </div>-->
-
         <ul class="navview-menu pad-second-level" id="side-menu">
             <li>
                 <a href="/welcome" class="z-1">
@@ -83,7 +76,7 @@
                             <span class="caption">E-Commerce</span>
                         </a>
                     </li>
-                    <li>
+                    <li class="disabled">
                         <a href="/samples/dashboard/crypto">
                             <span class="icon"><span class="mif-crypto-portfolio"></span></span>
                             <span class="caption">Cryptocurrency</span>
@@ -257,7 +250,7 @@
                     <span class="caption">Prices</span>
                 </a>
             </li>
-            <li>
+            <li class="disabled">
                 <a href="/samples/multimedia">
                     <span class="icon"><span class="mif-youtube"></span></span>
                     <span class="caption">Multimedia</span>
@@ -653,21 +646,35 @@
     </div>
 
     <div class="navview-content">
-        <div data-role="appbar" class="bg-reserve-steppe border-bottom bd-default" data-expand-point="fs">
-            <div class="app-bar-item-static d-none-fs d-flex-md">
+        <div data-role="appbar" class="container-query border-bottom bd-default" data-expand-point="fs">
+            <div class="app-bar-item-static">
                 <div class="text-bold enlarge-2" id="content-title">[...]</div>
             </div>
 
-            <ul class="app-bar-menu ml-auto">
-                <li><a href="https://metroui.org.ua">Get Panda</a></li>
-                <li><a href="https://metroui.org.ua">Metro UI</a></li>
-                <li><a href="https://docs.metroui.org.ua">Docs</a></li>
-                <li><a href="https://pimenov.com.ua">Author</a></li>
-                <li><a href="https://github.com/olton/metroui"><span class="mif-github mif-2x"></span></a></li>
-            </ul>
+            <div class="app-bar-container ml-auto">
+                <ul class="unstyled-list d-flex-ld" style="display: none">
+                    <li class="app-bar-item"><a class="fg-default no-decor" href="https://metroui.org.ua">Get Panda</a></li>
+                    <li class="app-bar-item"><a class="fg-default no-decor" href="https://metroui.org.ua">Metro UI</a></li>
+                    <li class="app-bar-item"><a class="fg-default no-decor" href="https://docs.metroui.org.ua">Docs</a></li>
+                    <li class="app-bar-item"><a class="fg-default no-decor" href="https://pimenov.com.ua">Author</a></li>
+                    <li class="app-bar-item"><a class="fg-default no-decor" href="https://github.com/olton/metroui"><span class="mif-github mif-2x"></span></a></li>
+                </ul>
 
-            <div class="app-bar-item-static">
-                <input type="checkbox" data-role="theme-switcher" />
+                <div class="app-bar-item-static dropdown-button d-none-ld">
+                    <button class="small info dropdown-toggle fc-white">About...</button>
+                    <ul class="d-menu no-icon" data-role="dropmenu">
+                        <li><a href="#">Get Panda</a></li>
+                        <li><a href="https://metroui.org.ua">Metro UI</a></li>
+                        <li><a href="https://docs.metroui.org.ua">Metro UI Docs</a></li>
+                        <li><a href="https://pimenov.com.ua">Author</a></li>
+                        <li class="menu-title">GitHub</li>
+                        <li><a href="https://github.com/olton/metroui">Metro UI Library</a></li>
+                    </ul>
+                </div>
+                
+                <div class="app-bar-item-static">
+                    <input type="checkbox" data-role="theme-switcher" />
+                </div>
             </div>
         </div>
 
