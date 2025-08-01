@@ -8,7 +8,7 @@
         <div class="app-bar-container ml-4">
             <div class="dropdown-button">
                 <button class="medium dropdown-toggle bg-light-orange bd-orange">Select Service</button>
-                <ul class="d-menu w-100" data-role="dropdown" style="max-height: 300px; overflow-y: auto;">
+                <ul class="d-menu" data-role="dropdown" style="min-width: 100%; max-height: 300px; overflow-y: auto;">
                     <li class="menu-title">Hosting</li>
                     <li><a href="#"><span class="icon mif-cog"></span>Service 1</a></li>
                     <li><a href="#"><span class="icon mif-cog"></span>Service 2</a></li>
@@ -69,7 +69,7 @@
         </nav>
     </section>
     
-    <div class="layout" style="height: calc(100% - 54px)">
+    <div class="layout-sidenav" style="height: calc(100% - 54px)">
         <div>
             <ul data-role="sidenav" data-expand-point="lg" data-toggle="#sidenav-toggler">
                 <li class="bg-default gradient-border animated-border-orange"><a href="#">
@@ -273,7 +273,7 @@
                             
                             <div class="mt-4">
                                 <div class="row gap-2">
-                                    <div class="cell-fs-6 cell-ld-4">
+                                    <div class="cell-fs-6 cell-sm-4">
                                         <div class="box">
                                             <div id="gauge-network-bandwidth"
                                                  data-role="gauge"
@@ -287,7 +287,7 @@
                                             <div class="text-center">Network Bandwidth</div>
                                         </div>
                                     </div>
-                                    <div class="cell-fs-6 cell-ld-4">
+                                    <div class="cell-fs-6 cell-sm-4">
                                         <div class="box">
                                             <div id="gauge-cpu"
                                                  data-role="gauge"
@@ -302,7 +302,7 @@
                                             <div class="text-center">CPU</div>
                                         </div>
                                     </div>
-                                    <div class="cell-fs-6 cell-ld-4">
+                                    <div class="cell-fs-6 cell-sm-4">
                                         <div class="box">
                                             <div id="gauge-disk"
                                                  data-role="gauge"
@@ -478,17 +478,6 @@
 </div>
 
 <style>
-    .layout {
-        display: grid;
-        grid-template-columns: 54px 1fr;
-        grid-gap: 10px;
-        transition: grid-template-columns .3s ease-in-out;
-    }
-    
-    .layout:has(.sidenav.expanded) {
-        grid-template-columns: var(--sidenav-width) 1fr;
-    }
-    
     .sidenav {
         .dropdown-toggle::after {
             display: block!important;
