@@ -15,41 +15,45 @@
 </div>
 
 <div class="box p-4 no-overflow" style="height: calc(100% - 70px)">
-    <div class="d-flex h-100">
+    <div class="layout-sidenav">
         <nav class="inbox-sidebar h-100 z-1">
-            <h3 class="m-3"><span class="mif-panda mr-2"></span>Panda Mail</h3>
-            
-            <div class="ml-3 mr-3 mb-4 mt-6">
-                <button class="medium pill-button" title="Write email..."><span class="mif-pencil"></span> Write...</button>
-            </div>
-            
-            <ul class="sidenav-m3" style="--sidenav-m3-width: 256px; --sidenav-m3-background: transparent;">
-                <li class="active"><a href="#"><span class="mif-inbox icon"></span>Inbox</a></li>
-                <li><a href="#"><span class="mif-star-empty icon"></span>Starred</a></li>
-                <li><a href="#"><span class="mif-more-time icon"></span>Postponed</a></li>
-                <li><a href="#"><span class="mif-send icon"></span>Sent</a></li>
-                <li><a href="#"><span class="mif-drafts icon"></span>Drafts</a></li>
-                <li><a href="#"><span class="mif-spam-outline icon"></span>Spam</a></li>
+            <h3 class="m-3"><span class="mif-panda mr-2"></span></h3>
+
+            <ul id="email-sidenav" data-role="sidenav" data-expand-point="lg" data-toggle="#sidenav-toggler" style="--sidenav-background: var(--default-background);">
+                <li><a href="#"><span class="mif-plus icon"></span><span class="caption">Create</span></a></li>
+                <li><a href="#">
+                    <span class="mif-inbox icon"></span>
+                    <span class="caption">Inbox</span>
+                    <span class="badge">200</span>
+                </a></li>
+                <li><a href="#"><span class="mif-star-empty icon"></span><span class="caption">Starred</span></a></li>
+                <li><a href="#"><span class="mif-more-time icon"></span><span class="caption">Postponed</span></a></li>
+                <li><a href="#"><span class="mif-send icon"></span><span class="caption">Sent</span></a></li>
+                <li><a href="#"><span class="mif-drafts icon"></span><span class="caption">Drafts</span></a></li>
+                <li><a href="#"><span class="mif-spam-outline icon"></span><span class="caption">Spam</span></a></li>
                 <li>
-                    <a href="#"><span class="mif-chevron-down icon"></span>More</a>
+                    <a href="#"><span class="mif-chevron-down icon"></span><span class="caption">More</span></a>
                     <ul class="d-menu" data-role="collapse" data-collapsed="true">
-                        <li><a href="#"><span class="mif-schedule-send icon"></span>Planned</a></li>
-                        <li><a href="#"><span class="mif-layers icon"></span>All emails</a></li>
-                        <li><a href="#"><span class="mif-bin icon"></span>Deleted</a></li>
+                        <li><a href="#"><span class="mif-schedule-send icon"></span><span class="caption">Planned</span></a></li>
+                        <li><a href="#"><span class="mif-layers icon"></span><span class="caption">All emails</span></a></li>
+                        <li><a href="#"><span class="mif-bin icon"></span><span class="caption">Deleted</span></a></li>
                     </ul>
                 </li>
-                
+
                 <li class="title">
                     Labels
                     <button class="flat cycle medium action">+</button>
                 </li>
-                <li><a href="#"><span class="mif-tag icon"></span>Important</a></li>
-                <li><a href="#"><span class="mif-tag icon"></span>Required Answer</a></li>
+                <li><a href="#"><span class="mif-tag icon"></span><span class="caption">Important</span></a></li>
+                <li><a href="#"><span class="mif-tag icon"></span><span class="caption">Required Answer</span></a></li>
             </ul>
         </nav>
         
         <div class="inbox-content no-overflow w-100 p-2 z-2 h-100">
             <div class="d-flex gap-10">
+                <div class="">
+                    <button id="sidenav-toggler" class="flat square"><span class="mif-menu"></span></button>
+                </div>
                 <div class="">
                     <script>
                         var inputSearchCustomButtons = [

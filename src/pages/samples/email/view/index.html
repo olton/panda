@@ -15,27 +15,28 @@
 </div>
 
 <div class="box p-4 no-overflow" style="height: calc(100% - 70px)">
-    <div class="d-flex h-100">
+    <div class="layout-sidenav">
         <nav class="inbox-sidebar h-100 z-1">
-            <h3 class="m-3"><span class="mif-panda mr-2"></span>Panda Mail</h3>
+            <h3 class="m-3"><span class="mif-panda mr-2"></span></h3>
 
-            <div class="ml-3 mr-3 mb-4 mt-6">
-                <button class="medium pill-button" title="Write email..."><span class="mif-pencil"></span> Write...</button>
-            </div>
-
-            <ul class="sidenav-m3" style="--sidenav-m3-width: 256px; --sidenav-m3-background: transparent;">
-                <li class="active"><a href="#"><span class="mif-inbox icon"></span>Inbox</a></li>
-                <li><a href="#"><span class="mif-star-empty icon"></span>Starred</a></li>
-                <li><a href="#"><span class="mif-more-time icon"></span>Postponed</a></li>
-                <li><a href="#"><span class="mif-send icon"></span>Sent</a></li>
-                <li><a href="#"><span class="mif-drafts icon"></span>Drafts</a></li>
-                <li><a href="#"><span class="mif-spam-outline icon"></span>Spam</a></li>
+            <ul id="email-sidenav" data-role="sidenav" data-expand-point="lg" data-toggle="#sidenav-toggler" style="--sidenav-background: var(--default-background);">
+                <li><a href="#"><span class="mif-plus icon"></span><span class="caption">Create</span></a></li>
+                <li><a href="#">
+                    <span class="mif-inbox icon"></span>
+                    <span class="caption">Inbox</span>
+                    <span class="badge">200</span>
+                </a></li>
+                <li><a href="#"><span class="mif-star-empty icon"></span><span class="caption">Starred</span></a></li>
+                <li><a href="#"><span class="mif-more-time icon"></span><span class="caption">Postponed</span></a></li>
+                <li><a href="#"><span class="mif-send icon"></span><span class="caption">Sent</span></a></li>
+                <li><a href="#"><span class="mif-drafts icon"></span><span class="caption">Drafts</span></a></li>
+                <li><a href="#"><span class="mif-spam-outline icon"></span><span class="caption">Spam</span></a></li>
                 <li>
-                    <a href="#"><span class="mif-chevron-down icon"></span>More</a>
+                    <a href="#"><span class="mif-chevron-down icon"></span><span class="caption">More</span></a>
                     <ul class="d-menu" data-role="collapse" data-collapsed="true">
-                        <li><a href="#"><span class="mif-schedule-send icon"></span>Planned</a></li>
-                        <li><a href="#"><span class="mif-layers icon"></span>All emails</a></li>
-                        <li><a href="#"><span class="mif-bin icon"></span>Deleted</a></li>
+                        <li><a href="#"><span class="mif-schedule-send icon"></span><span class="caption">Planned</span></a></li>
+                        <li><a href="#"><span class="mif-layers icon"></span><span class="caption">All emails</span></a></li>
+                        <li><a href="#"><span class="mif-bin icon"></span><span class="caption">Deleted</span></a></li>
                     </ul>
                 </li>
 
@@ -43,13 +44,16 @@
                     Labels
                     <button class="flat cycle medium action">+</button>
                 </li>
-                <li><a href="#"><span class="mif-tag icon"></span>Important</a></li>
-                <li><a href="#"><span class="mif-tag icon"></span>Required Answer</a></li>
+                <li><a href="#"><span class="mif-tag icon"></span><span class="caption">Important</span></a></li>
+                <li><a href="#"><span class="mif-tag icon"></span><span class="caption">Required Answer</span></a></li>
             </ul>
         </nav>
 
-        <div class="inbox-content no-overflow w-100 p-2 z-2 h-100">
+        <div class="inbox-content no-overflow w-100 p-2 h-100">
             <div class="d-flex gap-10">
+                <div class="">
+                    <button id="sidenav-toggler" class="flat square"><span class="mif-menu"></span></button>
+                </div>
                 <div class="">
                     <script>
                         var inputSearchCustomButtons = [
@@ -75,7 +79,7 @@
                 </div>
                 <div class="ml-auto">
                     <button class="flat large cycle" title="Profile"><span data-role="gravatar" class="avatar" data-size="38"
-                                                                      data-email="serhii@pimenov.com.ua"></span></button>
+                                                                           data-email="serhii@pimenov.com.ua"></span></button>
                 </div>
             </div>
 
@@ -139,6 +143,8 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Main body -->
                     <div class="letter-text mt-4">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium dolores in, incidunt minima nostrum sunt. Asperiores at,
                         consectetur consequuntur dignissimos doloremque impedit neque non nulla, quae repudiandae, similique suscipit. Ab consectetur cumque ea
@@ -147,10 +153,42 @@
                         consequuntur corporis cumque doloribus dolorum enim, error est eum inventore itaque libero magnam magni nisi nostrum numquam officia
                         officiis quam reiciendis rerum sapiente similique suscipit veritatis vitae voluptate. Accusamus, eum!
                     </div>
+
+                    <!-- Attachments -->
+                    <div class="mt-4 border-top bd-default pt-4">
+                        <h4 class="">Attachments <span>(3)</span> </h4>
+                        <div class="d-flex flex-row flex-wrap gap-4">
+                            <div class="box attachment">
+                                <div class="attachment-preview">
+                                    <img src="/images/395273680.webp" height="630" width="664"/>
+                                </div>
+                                <div class="attachment-title">
+                                    Multipic TEFAL Easy Fry&Grill Window
+                                </div>
+                            </div>
+                            <div class="box attachment">
+                                <div class="attachment-preview">
+                                    <img src="/images/395273681.webp" height="630" width="664"/>
+                                </div>
+                                <div class="attachment-title">
+                                    Multipic TEFAL Easy Fry&Grill Window
+                                </div>
+                            </div>
+                            <div class="box attachment">
+                                <div class="attachment-preview">
+                                    <img src="/images/395273682.webp" height="630" width="664"/>
+                                </div>
+                                <div class="attachment-title">
+                                    Multipic TEFAL Easy Fry&Grill Window
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="mt-4 border-top bd-default pt-4">
                         <div>
-                            <button class="pill-button"><span class="mif-undo"></span>Answer</button>                            
-                            <button class="pill-button"><span class="mif-redo"></span>Forward</button>                            
+                            <button class="pill-button"><span class="mif-undo"></span>Answer</button>
+                            <button class="pill-button"><span class="mif-redo"></span>Forward</button>
                         </div>
                     </div>
                 </div>
@@ -158,3 +196,36 @@
         </div>
     </div>
 </div>
+
+<style>
+    .attachment {
+        border-radius: 0;
+        padding: 4px 0 0;
+        width: 180px;
+        aspect-ratio: 16/9;
+        margin: 0;
+        cursor: pointer;
+        
+        .attachment-preview {
+            height: 100px;
+            border-radius: 0;
+            overflow: hidden;
+            
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+        
+        .attachment-title {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: 12px;
+            font-weight: 500;
+            background: #f6f6f6;
+            padding: 5px 10px;
+        }
+    }
+</style>
