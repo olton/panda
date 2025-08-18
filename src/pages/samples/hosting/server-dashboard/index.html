@@ -7,7 +7,7 @@
         </a>
         <div class="app-bar-container ml-4">
             <div class="dropdown-button">
-                <button class="medium dropdown-toggle bg-light-orange bd-orange">Select Service</button>
+                <button class="medium dropdown-toggle bg-light-orange bd-orange">Service</button>
                 <ul class="d-menu" data-role="dropdown" style="min-width: 100%; max-height: 300px; overflow-y: auto;">
                     <li class="menu-title">Hosting</li>
                     <li><a href="#"><span class="icon mif-cog"></span>Service 1</a></li>
@@ -36,8 +36,14 @@
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contacts</a></li>
             </ul>
-            <button class="warning medium pill-button">Login</button>
-            <button class="medium link"><span class="mif-shopping-cart icon"></span>Cart</button>
+            <div class="app-bar-container gap-1">
+                <button class="small square flat warning"><span class="mif-user-settings"></span></button>
+                <button class="small square flat alert"><span class="mif-exit"></span></button>
+            </div>
+            <button class="medium link no-decor">
+                <span class="mif-shopping-cart mif-2x"></span>
+                <span class="badge corner">2</span>
+            </button>
         </div>
     </nav>
     
@@ -60,10 +66,6 @@
                 </div>
                 <div>
                     <a href="#" class="fg-default"><small>Balance:</small> <span class="text-bold" id="user-balance">$2,500.69</span></a>
-                </div>
-                <div class="d-flex gap-1">
-                    <button class="small square flat warning"><span class="mif-user-settings"></span></button>
-                    <button class="small square flat alert"><span class="mif-exit"></span></button>
                 </div>
             </div>
         </nav>
@@ -177,7 +179,7 @@
                 
                 <div class="mt-4">
                     <div class="row">
-                        <div class="cell-md-6 cell-lg-3">
+                        <div class="cell-sm-6 cell-lg-3">
                             <div class="info-box2">
                                 <div class="title">Image</div>
                                 <div class="value mono">
@@ -186,7 +188,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="cell-md-6 cell-lg-3">
+                        <div class="cell-sm-6 cell-lg-3">
                             <div class="info-box2">
                                 <div class="title">IPv4</div>
                                 <div class="value mono">
@@ -198,7 +200,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="cell-md-6 cell-lg-3">
+                        <div class="cell-sm-6 cell-lg-3">
                             <div class="info-box2">
                                 <div class="title">IPv6</div>
                                 <div class="value mono">
@@ -209,7 +211,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="cell-md-6 cell-lg-3">
+                        <div class="cell-sm-6 cell-lg-3">
                             <div class="info-box2">
                                 <span data-role="bull" data-type="success" data-size="32" class="pos-absolute" style="top: 6px; right: 6px"></span>
                                 <div class="title">Status</div>
