@@ -134,13 +134,26 @@
 
     <div class="box-title-secondary">Gradients</div>
     <p class="text-muted">
-        Use classes <code>gr-***</code> to set the background color with a gradient. These classes change only the background color.
-        You can change gradient direction with css var <code>--gradient-direction</code>
+        Use classes <code>gradient</code>, <code>gradient-[color]</code>, and <code>gradient-radial-[color]</code> to set the background color with a gradient. 
+        These classes change only the background color.
+        You can change gradient direction with css var <code>--gradient-direction</code>.
     </p>
-    <div class="mt-4 d-flex flex-row">
-        <div class="demo-box gr-light-red"></div>
-        <div class="demo-box gr-red"></div>
-        <div class="demo-box gr-dark-red"></div>
+    <div class="mt-4 d-flex flex-row gap-2">
+        <div class="demo-box gradient gradient-red"></div>
+        <div class="demo-box gradient gradient-red" style="--gradient-direction: to bottom"></div>
+    </div>
+    <p class="text-muted">
+        Also, custom gradients available to the developer: 
+    </p>
+    <ul>
+        <li>Colored transitions with adjacent colors</li>
+        <li>Three-part transitions with adjacent colors</li>
+        <li>Themed gradients</li>
+    </ul>
+    <div class="mt-4 d-flex flex-row gap-2">
+        <div class="demo-box gradient gradient-cyan-blue"></div>
+        <div class="demo-box gradient gradient-indigo-violet-pink"></div>
+        <div class="demo-box gradient gradient-sunset-dream"></div>
     </div>
 
     <div class="box-title-secondary">Ribbed</div>
@@ -184,14 +197,25 @@
     <div class="box-title-secondary">Border Color</div>
     <p class="text-muted">
         To set a border color use classes <code>bd-***</code>.
-        A special classes <code>.animated-border</code>, <code>.animated-border-***</code> will add an animated border to your element.
-        To use animated border, the element must have a background and a parent element must have a <code>z-index</code>.
+        A special classes <code>.gradient-border</code>, <code>.animated-border</code>, and <code>.animated-border-***</code> will add an animated border to your element.
     </p>
     <div class="mt-4 d-flex flex-row gap-2 z-1"> 
         <div class="demo-box border bd-red"></div>
-        <div class="demo-box bg-white rainbow-border"></div>
-        <div class="demo-box bg-white animated-border border-radius-10"></div>
-        <div class="demo-box bg-white border bd-cyan animated-border-cyan"></div>
+        <div class="demo-box bg-white gradient-border"></div>
+        <div class="demo-box bg-white gradient-border animated-border"></div>
+        <div class="demo-box bg-white gradient-border animated-border-cyan"></div>
+        <div class="demo-box bg-white gradient-border animated-border" style="
+                --gradient-border-colors: 
+                    var(--color-red) 0deg, 
+                    var(--color-red) 60deg, 
+                    transparent 61deg, 
+                    transparent 177deg, 
+                    var(--color-red) 180deg, 
+                    var(--color-red) 240deg, 
+                    transparent 241deg, 
+                    transparent 357deg, 
+                    var(--color-red) 360deg;
+            ">Box</div>
     </div>
 
     <div class="box-title-secondary">Outline Color</div>

@@ -18,9 +18,8 @@
     <p class="text-muted">
         Create <code>calendar</code> with role <code>data-role="calendar"</code>.
     </p>
-    <div class="mt-4 d-flex flex-row gap-2 flex-align-items-start">
+    <div class="mt-4 d-flex flex-row flex-wrap gap-2 flex-align-items-start">
         <div data-role="calendar" data-buttons="today"></div>
-        <div data-role="calendar" data-wide="true" data-buttons="today" data-show="1972/12/21" data-preset="1972/12/21"></div>
     </div>
 </div>
 
@@ -29,9 +28,8 @@
     <p class="text-muted">
         Use attribute <code>data-compact="true"</code> to set compact mode.
     </p>
-    <div class="mt-4 d-flex flex-row gap-2 flex-align-items-start">
+    <div class="mt-4 d-flex flex-row flex-wrap gap-2 flex-align-items-start">
         <div data-role="calendar" data-compact="true"></div>
-        <div data-role="calendar" data-wide="true" data-compact="true" data-buttons="today"></div>
     </div>
 </div>
 
@@ -41,7 +39,7 @@
         The Calendar can draw week start from Sunday or Monday. This option sets automatically based on the current locale. For <code>lang=en</code> week starts from Sunday, for <code>lang=ua</code> week starts from Monday.
         Also, you can use attribute <code>data-week-start="0"</code> to set week start from Sunday or <code>data-week-start="1"</code> to set week start from Monday.
     </p>
-    <div class="mt-4 d-flex flex-row gap-2 flex-align-items-start">
+    <div class="mt-4 d-flex flex-row flex-wrap gap-2 flex-align-items-start">
         <div data-role="calendar" data-compact="true"></div>
         <div data-role="calendar" data-compact="true" data-week-start="1"></div>
     </div>
@@ -50,10 +48,13 @@
 <div class="box">
     <div class="box-title">i18n</div>
     <p class="text-muted">
-        The Calendar can be localized to different languages. The default language is English. You can set the language using the <code>lang</code> attribute.
+        The Calendar can be localized to different languages. 
+        The default language is English. 
+        You can set the language using the <code>lang</code> attribute.
+        In the example below <code>lang="uk"</code>.
     </p>
-    <div class="mt-4 d-flex flex-row gap-2" lang="ua">
-        <div data-role="calendar" data-compact="true" data-wide="true"></div>
+    <div class="mt-4 d-flex flex-row gap-2" lang="uk">
+        <div data-role="calendar" data-compact="true"></div>
     </div>
 </div>
 
